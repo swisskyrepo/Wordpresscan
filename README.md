@@ -8,6 +8,5 @@ A simple Wordpress scanner written in python
 ```bash
 git clone https://github.com/swisskyrepo/Wordpresscan.git
 cd Wordpresscan
-chmod +x main.py
-./main.py -u blog.example.com
+python main.py -u "http://localhost/wordpress" --update
 ```

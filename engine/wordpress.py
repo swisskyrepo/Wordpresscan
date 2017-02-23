@@ -9,6 +9,7 @@ class Wordpress:
 	version = "0.0.0"
 	plugins = False
 	themes  = False
+	robots  = False
 
 	def __init__(self, url):
 		self.url = url
@@ -16,6 +17,10 @@ class Wordpress:
 		self.is_readme()
 		self.is_debug_log()
 		self.is_backup_file()
+		self.is_xml_rpc()
+		self.is_directory_listing()
+		self.is_robots_text()
+		self.full_path_disclosure()
 
 
 	"""
@@ -45,7 +50,7 @@ class Wordpress:
 	  				exit()
 
 		except Exception as e:
-			print critical("Website down!"),e
+			print critical("Website down!")
 	  		exit()
 	  	
 
@@ -76,15 +81,66 @@ class Wordpress:
 
 	"""
 	name        : is_backup_file()
-	description : determine 
+	description : determine if there is any unsafe wp-config backup
 	""" 
 	def is_backup_file(self):
 		backup = ['wp-config.php~', 'wp-config.php.save', '.wp-config.php.swp', 'wp-config.php.swp', '.wp-config.php.swp', 'wp-config.php.swp', 'wp-config.php.swo', 'wp-config.php_bak', 'wp-config.bak', 'wp-config.php.bak', 'wp-config.save', 'wp-config.old', 'wp-config.php.old', 'wp-config.php.orig', 'wp-config.orig', 'wp-config.php.original', 'wp-config.original', 'wp-config.txt']
 		for b in backup:
 			r = requests.get(self.url + "/" + b)
 			if "200" in str(r) and not "404" in r.text :
-				print critical("A wp-config.php backup file has been found in: %s" % (self.url + "/" + b) ) 
-        
+				print critical("A wp-config.php backup file has been found in: %s" % (self.url + "/" + b) )  
+
+
+	"""
+	name        : is_backup_file()
+	description : determine if there is an xml rpc interface
+	""" 
+	def is_xml_rpc(self):
+		r = requests.get(self.url + "/xmlrpc.php")
+		if "200" in str(r) and "404" in r.text :
+			print info("XML-RPC Interface available under: %s " % (self.url+"/xmlrpc.php") )
+
+
+	"""
+	name        : is_directory_listing()
+	description : detect if a directory is misconfigured
+	""" 
+	def is_directory_listing(self):
+		directories = ["/wp-content/uploads/","/wp-includes/"]
+		dir_name    = ["Uploads", "Includes"]
+
+		for directory, name in zip(directories,dir_name):
+			r = requests.get(self.url + directory)
+			if "Index of" in r.text:
+				print warning("%s directory has directory listing enabled : %s" % (name, self.url + directory))
+
+
+	"""
+	name        : is_robots_text()
+	description : detect if a robots.txt file
+	""" 
+	def is_robots_text(self):
+		r = requests.get(self.url + "/robots.txt")
+		if "200" in str(r) and not "404" in r.text :
+			print info("robots.txt available under: %s " % (self.url+"/robots.txt") )
+			lines = r.text.split('\n')
+			for l in lines:
+				if "Disallow:" in l:
+					print info("\tInteresting entry from robots.txt: %s" % (l))
+
+
+	"""
+	name        : full_path_disclosure()
+	description : detect a full path disclosure
+	""" 
+	def full_path_disclosure(self):
+		r = requests.get(self.url + "/wp-includes/rss-functions.php").text
+		regex = re.compile("Fatal error:.*? in (.*?) on", re.S)
+		matches = regex.findall(r)
+
+		if matches != []:
+			print warning("Full Path Disclosure (FPD) in %s" % matches[0].replace('\n',''))
+
 
 	"""
 	name        : to_string()

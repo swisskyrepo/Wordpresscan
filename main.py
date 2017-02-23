@@ -24,8 +24,7 @@ if __name__ == "__main__":
 	
 	# Check wordpress url
 	if results.url != None:
-		print "Target: " + results.url
-
+		
 		# Update scripts	
 		if results.update != None:		
 			database_update()

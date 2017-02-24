@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 import requests
 import re
+import json
 from core import *
 
 class Wordpress:
@@ -13,6 +14,7 @@ class Wordpress:
 
 	def __init__(self, url):
 		self.url = url
+		self.clean_url()
 		self.is_up_and_installed()
 		self.is_readme()
 		self.is_debug_log()
@@ -21,6 +23,17 @@ class Wordpress:
 		self.is_directory_listing()
 		self.is_robots_text()
 		self.full_path_disclosure()
+		self.enum_wordpress_users()
+
+
+
+	"""
+	name        : clean_url()
+	description : set the url to http(s)://example.com/
+	""" 
+	def clean_url(self):
+		if self.url[-1] != '/':
+			self.url = self.url + '/'
 
 
 	"""
@@ -59,24 +72,27 @@ class Wordpress:
 	description : get the readme file and extract the version is there is any
 	""" 
 	def is_readme(self):
-		r = requests.get(self.url + '/readme.html').text
-		regex = 'Version (.*)'
-		regex = re.compile(regex)
-		matches = regex.findall(r)
+		r = requests.get(self.url + 'readme.html')
+		
+		if "200" in str(r):
 
-		if matches[0] != None and matches[0] != "":
-			self.version = matches[0]
-			print warning("The wordpress %s file exposing a version number %s" % (self.url+'/readme.html', matches[0]))
+			# Basic version fingerprinting
+			regex = 'Version (.*)'
+			regex = re.compile(regex)
+			matches = regex.findall(r.text)
 
+			if matches[0] != None and matches[0] != "":
+				self.version = matches[0]
+				print warning("The wordpress %s file exposing a version number %s" % (self.url+'readme.html', matches[0]))
 
 	"""
 	name        : is_debug_log()
 	description : determine if there is a debug.log file
 	""" 
 	def is_debug_log(self):
-		r = requests.get(self.url + '/debug.log')
+		r = requests.get(self.url + 'debug.log')
 		if "200" in str(r) and not "404" in r.text :
-			print critical( "Debug log file found: %s" % (self.url + '/debug.log') )
+			print critical( "Debug log file found: %s" % (self.url + 'debug.log') )
 
 
 	"""
@@ -86,9 +102,9 @@ class Wordpress:
 	def is_backup_file(self):
 		backup = ['wp-config.php~', 'wp-config.php.save', '.wp-config.php.swp', 'wp-config.php.swp', '.wp-config.php.swp', 'wp-config.php.swp', 'wp-config.php.swo', 'wp-config.php_bak', 'wp-config.bak', 'wp-config.php.bak', 'wp-config.save', 'wp-config.old', 'wp-config.php.old', 'wp-config.php.orig', 'wp-config.orig', 'wp-config.php.original', 'wp-config.original', 'wp-config.txt']
 		for b in backup:
-			r = requests.get(self.url + "/" + b)
+			r = requests.get(self.url + b)
 			if "200" in str(r) and not "404" in r.text :
-				print critical("A wp-config.php backup file has been found in: %s" % (self.url + "/" + b) )  
+				print critical("A wp-config.php backup file has been found in: %s" % (self.url + b) )  
 
 
 	"""
@@ -96,9 +112,9 @@ class Wordpress:
 	description : determine if there is an xml rpc interface
 	""" 
 	def is_xml_rpc(self):
-		r = requests.get(self.url + "/xmlrpc.php")
+		r = requests.get(self.url + "xmlrpc.php")
 		if "200" in str(r) and "404" in r.text :
-			print info("XML-RPC Interface available under: %s " % (self.url+"/xmlrpc.php") )
+			print info("XML-RPC Interface available under: %s " % (self.url+"xmlrpc.php") )
 
 
 	"""
@@ -106,7 +122,7 @@ class Wordpress:
 	description : detect if a directory is misconfigured
 	""" 
 	def is_directory_listing(self):
-		directories = ["/wp-content/uploads/","/wp-includes/"]
+		directories = ["wp-content/uploads/","wp-includes/"]
 		dir_name    = ["Uploads", "Includes"]
 
 		for directory, name in zip(directories,dir_name):
@@ -120,9 +136,9 @@ class Wordpress:
 	description : detect if a robots.txt file
 	""" 
 	def is_robots_text(self):
-		r = requests.get(self.url + "/robots.txt")
+		r = requests.get(self.url + "robots.txt")
 		if "200" in str(r) and not "404" in r.text :
-			print info("robots.txt available under: %s " % (self.url+"/robots.txt") )
+			print info("robots.txt available under: %s " % (self.url+"robots.txt") )
 			lines = r.text.split('\n')
 			for l in lines:
 				if "Disallow:" in l:
@@ -134,12 +150,26 @@ class Wordpress:
 	description : detect a full path disclosure
 	""" 
 	def full_path_disclosure(self):
-		r = requests.get(self.url + "/wp-includes/rss-functions.php").text
+		r = requests.get(self.url + "wp-includes/rss-functions.php").text
 		regex = re.compile("Fatal error:.*? in (.*?) on", re.S)
 		matches = regex.findall(r)
 
 		if matches != []:
-			print warning("Full Path Disclosure (FPD) in %s" % matches[0].replace('\n',''))
+			print warning("Full Path Disclosure (FPD) in %s exposing %s" % (self.url + "wp-includes/rss-functions.php", matches[0].replace('\n','')) )
+
+
+	"""
+	name        : enum_wordpress_users()
+	description : enumerate every users of the wordpress
+	"""
+	def enum_wordpress_users(self):
+		r = requests.get(self.url + "wp-json/wp/v2/users" )
+
+		if "200" in str(r):
+			print info("Enumerating Wordpress users")
+			users = json.loads(r.text)
+			for user in users:
+				print info("\tIdentified the following user : %s, %s, %s" % (user['id'], user['name'], user['slug']) )
 
 
 	"""

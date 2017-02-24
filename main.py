@@ -5,6 +5,7 @@ import argparse
 from engine.core import *
 from engine.load_plugins import *
 from engine.wordpress import *
+from engine.scan import *
 
 if __name__ == "__main__":
 
@@ -31,6 +32,7 @@ if __name__ == "__main__":
 
 		# Build a new wordpress object
 		wp = Wordpress(results.url)
+		Scan_Engine(wp)
 		wp.to_string()
 
 	else:

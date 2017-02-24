@@ -3,6 +3,7 @@
 import requests
 import os
 import time
+import hashlib
 
 """
 name        : notice(msg), critical(msg), warning(msg), info(msg)
@@ -35,20 +36,8 @@ def database_update():
 
   for f in update_files:
     print "\t\033[93mDownloading \033[0m"+ f +" \033[92mFile updated !\033[0m"
-    source = requests.get( update_url+f, stream=True).raw
-
-    # Write the file
-    with open( 'database/'+f, 'wb' ) as ddl_file:
-      progress = 0
-      while True:
-          length = 16*1024
-          buf = source.read(length)
-          if not buf:
-              break
-          ddl_file.write(buf)
-          progress += len(buf)
-          print('\tDownloaded : %.2f Mo\r' % (float(progress)/(1024*1024))),
-        
+    download_raw_file(update_url+f, "database/"+f, True)
+    
 
 """
 name        : database_last_date()
@@ -58,3 +47,70 @@ return      : string
 def database_last_date(filename):
   (mode, ino, dev, nlink, uid, gid, size, atime, mtime, ctime) = os.stat(filename)
   return time.ctime(mtime)
+
+
+"""
+name        : download_raw_file(url, filename)
+description : will download a raw file from url into filename
+""" 
+def download_raw_file(url, filename, verbosity):
+  try:
+
+    # Open the request
+    source = requests.get( url, stream=True).raw
+
+    # Write the file
+    with open( filename, 'wb' ) as ddl_file:
+      progress = 0
+      while True:
+          length = 16*1024
+          buf = source.read(length)
+          if not buf:
+              break
+          ddl_file.write(buf)
+          progress += len(buf)
+          
+          if verbosity == True:
+            print('\tDownloaded : %.2f Mo\r' % (float(progress)/(1024*1024))),
+        
+  except Exception as e:
+    raise e
+ 
+ 
+"""
+name        : download_file(url, filename)
+description : will download a file from url into filename
+""" 
+def download_file(url, filename, verbosity):
+  try:
+
+    # Open the request
+    source = requests.get( url).text
+
+    # Write the file
+    with open( filename, 'wb' ) as ddl_file:
+      ddl_file.write(source.encode('utf8'))
+        
+  except Exception as e:
+    raise e
+
+
+"""
+name        : remove_file(filename)
+description : will remove a file from the computer
+""" 
+def remove_file(filename):
+  try:
+    os.remove(filename)
+  except Exception as e:
+    raise e
+  
+
+
+"""
+name        : md5_hash(filename):
+description : will compute the md5 hash of the file
+return      : string
+""" 
+def md5_hash(filename):
+  return hashlib.md5(open(filename, 'rb').read()).hexdigest()

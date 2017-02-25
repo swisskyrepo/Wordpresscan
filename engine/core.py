@@ -10,17 +10,20 @@ name        : notice(msg), critical(msg), warning(msg), info(msg)
 description : add color to message based on their impact
 return      : string
 """
+def ask(msg):
+  return "\033[1m[?] " + msg + "\033[0m"
+
 def notice(msg):
-  return "\033[1m" + msg + "\033[0m"
+  return "\033[1m[i] " + msg + "\033[0m"
 
 def critical(msg):
-  return "\033[91;1m/!\ ️" + msg + "\033[0m"
+  return "\033[91m[!] " + msg + "\033[0m"
 
 def warning(msg):
-  return "\033[92m" + msg + "\033[0m"
+  return "\033[93m[i] " + msg + "\033[0m"
 
 def info(msg):
-  return "\033[93m" + msg + "\033[0m"
+  return "\033[0m[+] " + msg + "\033[0m"
 
 
 """
@@ -108,9 +111,37 @@ def remove_file(filename):
 
 
 """
-name        : md5_hash(filename):
+name        : md5_hash(filename)
 description : will compute the md5 hash of the file
 return      : string
 """ 
 def md5_hash(filename):
   return hashlib.md5(open(filename, 'rb').read()).hexdigest()
+
+
+"""
+name        : is_lower(str_one, str_two)
+description : will compare two string version
+return      : boolean
+""" 
+def is_lower(str_one, str_two):
+  sum_one = 0
+  sum_two = 0
+
+  # Fix for X.X <= X.X.X and X.X.X <= X.X
+  if len(str_one) < 5:
+    str_one += '.0'
+  if len(str_two) < 5:
+    str_two += '.0'
+
+  str_one = str_one[::-1].split('.')
+  str_two = str_two[::-1].split('.')
+
+  for i in range(len(str_one)):
+    sum_one += ((i+1) ** 10) * (int(str_one[i]))
+    sum_two += ((i+1) ** 10) * (int(str_two[i]))
+  
+  if sum_one < sum_two:
+    return True
+
+  return False

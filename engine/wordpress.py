@@ -13,6 +13,7 @@ class Wordpress:
 	robots  = False
 
 	def __init__(self, url):
+		print info("URL: %s \n" % url)
 		self.url = url
 		self.clean_url()
 		self.is_up_and_installed()
@@ -83,7 +84,7 @@ class Wordpress:
 
 			if matches[0] != None and matches[0] != "":
 				self.version = matches[0]
-				print warning("The wordpress %s file exposing a version number %s" % (self.url+'readme.html', matches[0]))
+				print critical("The Wordpress '%s' file exposing a version number: %s" % (self.url+'readme.html', matches[0]))
 
 	"""
 	name        : is_debug_log()
@@ -166,7 +167,7 @@ class Wordpress:
 		r = requests.get(self.url + "wp-json/wp/v2/users" )
 
 		if "200" in str(r):
-			print info("Enumerating Wordpress users")
+			print notice("Enumerating Wordpress users")
 			users = json.loads(r.text)
 			for user in users:
 				print info("\tIdentified the following user : %s, %s, %s" % (user['id'], user['name'], user['slug']) )

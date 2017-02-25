@@ -13,15 +13,23 @@ class Scan_Engine:
 
 	def __init__(self, wordpress):
 		self.fingerprint_wp_version(wordpress)
-		self.list_wp_vulnerabilities(wordpress, "plugins")
-		self.list_wp_vulnerabilities(wordpress, "themes")
-		self.list_wp_vulnerabilities(wordpress, "wordpresses")
+		self.list_wp_version_vulnerabilities(wordpress, "wordpresses")
 
 	"""
 	name        : fingerprint_wp_version(wordpress)
 	description : compare hashes of unique files in order to detect the version
 	"""
 	def fingerprint_wp_version(self, wordpress):
+		# Meta tag based
+		regex = re.compile('meta name="generator" content="WordPress (.*?)"')
+		match = regex.findall( requests.get(wordpress.url).text )
+		
+		if match != []:
+			wordpress.version = match[0]
+			print info("WordPress version %s identified from advanced fingerprinting" % wordpress.version)
+			return
+
+		# Hash based
 		tree = etree.parse("database/wp_versions.xml")
 		root = tree.getroot()
 
@@ -46,37 +54,33 @@ class Scan_Engine:
 					# Detect the version
 					if ddl_hash == root[i][j].get('md5'): 
 						wordpress.version =  root[i][j][0].text
-						print warning("Advanced fingerprinting detected wp version : %s" % wordpress.version)
+						print info("WordPress version %s identified from advanced fingerprinting" % wordpress.version)
 						return
 					
 
 	"""
-	name        : list_wp_vulnerabilities(self, wordpress, file)
-	description : display info about a vulnerability
+	name        : list_wp_version_vulnerabilities(self, wordpress, file)
+	description : display info about vulnerabilities affecting the current wordpress
 	"""
-	def list_wp_vulnerabilities(self, wordpress, file):
+	def list_wp_version_vulnerabilities(self, wordpress, file):
 		# Load json file
 		with open('database/'+file+'.json') as data_file:
 			data = json.load(data_file)
+		
+		for vuln in data[wordpress.version]["vulnerabilities"]: 
+				
+			# Basic infos
+			print warning("\t%s : %s - ID:%s" % (vuln['vuln_type'], vuln['title'] , vuln['id']) )
+			print info("\tFixed in %s"% vuln['fixed_in']) 
 
-		# Extract plugin's infos
-		for key in data.keys():
+			# Display references
+			print info("\tReferences:")
+			for refkey in vuln['references'].keys():
+				for ref in vuln['references'][refkey]:
+							
+					if refkey != 'url':
+						print "\t\t - %s %s" % (refkey.capitalize(), ref)
+					else:
+						print "\t\t - %s" %ref
 
-			# Skip the useless plugins
-			if data[key]["vulnerabilities"] == []:
-				continue
-
-			# Display vulnerabilities
-			print warning("%s: %s" % (file.capitalize(), key) )
-			for vuln in data[key]["vulnerabilities"]:
-
-				print notice("\t%s : %s - ID:%s" % (vuln['vuln_type'], vuln['title'] , vuln['id']) )
-				print info("\tFixed in %s"% vuln['fixed_in'])
-
-				# Display references
-				if 'url' in vuln['references']:
-					print info("\tReferences:")
-					for ref in vuln['references']['url']:
-						print "\t\t -",ref
-
-				print ""
+			print ""

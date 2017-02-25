@@ -9,6 +9,7 @@ from engine.scan import *
 
 if __name__ == "__main__":
 
+	print "_______________________________________________________________ "
 	print " _    _               _                                         "
 	print "| |  | |             | |                                        "
 	print "| |  | | ___  _ __ __| |_ __  _ __ ___  ___ ___  ___ __ _ _ __  "
@@ -17,6 +18,8 @@ if __name__ == "__main__":
 	print " \/  \/ \___/|_|  \__,_| .__/|_|  \___||___/___/\___\__,_|_| |_|"
 	print "                       | |                                      "
 	print "                       |_|                                      "
+	print " Wordpress scanner based on wpscan work - @pentest_swissky      "
+	print "_______________________________________________________________ "
 
 	parser = argparse.ArgumentParser()
 	parser.add_argument('-u', action ='store', dest='url', help="Wordpress URL")
@@ -25,7 +28,7 @@ if __name__ == "__main__":
 	
 	# Check wordpress url
 	if results.url != None:
-		
+
 		# Update scripts	
 		if results.update != None:		
 			database_update()

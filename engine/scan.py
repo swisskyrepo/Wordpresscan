@@ -67,7 +67,16 @@ class Scan_Engine:
 		with open('database/'+file+'.json') as data_file:
 			data = json.load(data_file)
 		
-		for vuln in data[wordpress.version]["vulnerabilities"]: 
+		# Try to get a close result if the version is not in the list
+		version = wordpress.version
+		if data[wordpress.version]["vulnerabilities"] == []:
+			versions = data.keys()
+			for v in versions:
+				if v[:4] in wordpress.version and is_lower(wordpress.version, v):
+					version = v
+
+		# Best accurate result
+		for vuln in data[version]["vulnerabilities"]: 
 				
 			# Basic infos
 			print warning("\t%s : %s - ID:%s" % (vuln['vuln_type'], vuln['title'] , vuln['id']) )

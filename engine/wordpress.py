@@ -27,7 +27,6 @@ class Wordpress:
 		self.enum_wordpress_users()
 
 
-
 	"""
 	name        : clean_url()
 	description : set the url to http(s)://example.com/

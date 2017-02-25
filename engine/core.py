@@ -138,8 +138,11 @@ def is_lower(str_one, str_two):
   str_two = str_two[::-1].split('.')
 
   for i in range(len(str_one)):
-    sum_one += ((i+1) ** 10) * (int(str_one[i]))
-    sum_two += ((i+1) ** 10) * (int(str_two[i]))
+    try:
+      sum_one += ((i+1) ** 10) * (int(str_one[i]))
+      sum_two += ((i+1) ** 10) * (int(str_two[i]))
+    except Exception as e:
+      return True
   
   if sum_one < sum_two:
     return True

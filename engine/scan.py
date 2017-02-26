@@ -22,14 +22,27 @@ class Scan_Engine:
 	description : compare hashes of unique files in order to detect the version
 	"""
 	def fingerprint_wp_version(self, wordpress):
+		r = requests.get(wordpress.url).text
+
 		# Meta tag based
 		regex = re.compile('meta name="generator" content="WordPress (.*?)"')
-		match = regex.findall( requests.get(wordpress.url).text )
+		match = regex.findall(r)
 		
 		if match != []:
 			wordpress.version = match[0]
 			print critical("WordPress version %s identified from advanced fingerprinting" % wordpress.version)
 			return
+
+
+		# Feed based <generator>
+		r = requests.get(wordpress.url + "index.php/feed").text
+		regex = re.compile('generator>https://wordpress.org/\?v=(.*?)<\/generator')
+		match = regex.findall(r)
+		if match != []:
+			wordpress.version = match[0]
+			print critical("WordPress version %s identified from advanced fingerprinting" % wordpress.version)
+			return
+
 
 		# Hash based
 		tree = etree.parse("database/wp_versions.xml")

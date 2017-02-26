@@ -42,7 +42,7 @@ class Wordpress:
 	"""  
 	def is_wordpress(self):
 		r = requests.get(self.url).text
-		if not "wp_" in r:
+		if not "wp-" in r:
 			print critical("Not a WordPress !")
 			exit()
 

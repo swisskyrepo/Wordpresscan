@@ -13,7 +13,7 @@ class Wordpress:
 	robots  = False
 
 	def __init__(self, url):
-		print info("URL: %s \n" % url)
+		print info("URL: %s" % url)
 		self.url = url
 		self.clean_url()
 		self.is_up_and_installed()

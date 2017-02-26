@@ -14,6 +14,8 @@ class Scan_Engine:
 	def __init__(self, wordpress):
 		self.fingerprint_wp_version(wordpress)
 		self.list_wp_version_vulnerabilities(wordpress, "wordpresses")
+		self.enumerating_themes_passive(wordpress)
+		self.enumerating_plugins_passive(wordpress)
 
 	"""
 	name        : fingerprint_wp_version(wordpress)
@@ -26,7 +28,7 @@ class Scan_Engine:
 		
 		if match != []:
 			wordpress.version = match[0]
-			print info("WordPress version %s identified from advanced fingerprinting" % wordpress.version)
+			print critical("WordPress version %s identified from advanced fingerprinting" % wordpress.version)
 			return
 
 		# Hash based
@@ -54,7 +56,7 @@ class Scan_Engine:
 					# Detect the version
 					if ddl_hash == root[i][j].get('md5'): 
 						wordpress.version =  root[i][j][0].text
-						print info("WordPress version %s identified from advanced fingerprinting" % wordpress.version)
+						print critical("WordPress version %s identified from advanced fingerprinting" % wordpress.version)
 						return
 					
 
@@ -72,7 +74,7 @@ class Scan_Engine:
 		if data[wordpress.version]["vulnerabilities"] == []:
 			versions = data.keys()
 			for v in versions:
-				if v[:4] in wordpress.version and is_lower(wordpress.version, v):
+				if v[:4] in wordpress.version and is_lower(wordpress.version, v, False):
 					version = v
 
 		# Best accurate result
@@ -93,3 +95,91 @@ class Scan_Engine:
 						print "\t\t - %s" %ref
 
 			print ""
+
+
+	"""
+	name        : display_vulnerable_component(self, name, version):
+	description : display info about vulnerability from the file
+	"""
+	def display_vulnerable_component(self, name, version, file):
+		# Load json file
+		with open('database/' + file + '.json') as data_file:
+			data = json.load(data_file)
+		
+		print warning("Name: %s - v%s" % (name, version))
+		if name in data.keys():
+
+			# Display the out of date info if the version is lower of the latest version
+			if is_lower(version, data[name]['latest_version'], False):	
+				print info("The version is out of date, the latest version is %s" % data[name]['latest_version'])			
+			
+			# Display the vulnerability if it's not patched version
+			for vuln in data[name]['vulnerabilities']:
+				if 'fixed_in' in vuln.keys() and (vuln['fixed_in'] == None or is_lower(version, vuln['fixed_in'], True)):
+
+					# Main informations
+					print "\t",vulnerable("%s : %s - ID:%s" % (vuln['vuln_type'], vuln['title'] , vuln['id']) )
+					print "\t",display("Fixed in %s"% vuln['fixed_in']) 
+
+					# Display references
+					print "\t",display("References:")
+					for refkey in vuln['references'].keys():
+						for ref in vuln['references'][refkey]:							
+							if refkey != 'url':
+								print "\t\t - %s %s" % (refkey.capitalize(), ref)
+							else:
+								print "\t\t - %s" %ref
+
+
+	"""
+	name        : enumerating_themes_passive(self, wordpress)
+	description : enumerate every theme used by the wordpress
+	"""
+	def enumerating_themes_passive(self, wordpress):
+		print notice("Enumerating themes from passive detection ...")
+		r = requests.get(wordpress.url).text
+	
+		# Theme name (css file)
+		regex = re.compile('wp-content/themes/(.*?)/.*?[css|js].*?ver=([0-9\.]*)') #.replace('min','')
+		match = regex.findall(r)
+		theme = {}
+
+		# Unique theme
+		for m in match:
+			
+			# Remove minified and github version
+			theme_name = m[0]
+			theme_name = theme_name.replace('-master','')
+			theme_name = theme_name.replace('.min','')
+			theme_version = m[1]
+
+			if m[0] not in theme.keys():
+				theme[m[0]] = m[1]
+				self.display_vulnerable_component(theme_name, theme_version, "themes")
+
+		
+	"""
+	name        : enumerating_plugins_passive(self, wordpress)
+	description : enumerate every plugins used by the wordpress
+	"""
+	def enumerating_plugins_passive(self, wordpress):
+		print notice("Enumerating plugins from passive detection ...")
+		r = requests.get(wordpress.url).text
+
+		# Plugin name (js file)
+		regex = re.compile('wp-content/plugins/(.*?)/.*?[css|js].*?ver=([0-9\.]*)') #.replace('min','')
+		match = regex.findall(r)
+		plugin = {}
+
+		# Unique plugin
+		for m in match:
+
+			# Remove minified and github version
+			plugin_name = m[0]
+			plugin_name = plugin_name.replace('-master','')
+			plugin_name = plugin_name.replace('.min','')
+			plugin_version = m[1]
+
+			if plugin_name not in plugin.keys():
+				plugin[plugin_name] = m[1]
+				self.display_vulnerable_component(plugin_name, plugin_version, "plugins")

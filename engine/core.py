@@ -14,16 +14,22 @@ def ask(msg):
   return "\033[1m[?] " + msg + "\033[0m"
 
 def notice(msg):
-  return "\033[1m[i] " + msg + "\033[0m"
+  return "\n\033[1m[i] " + msg + "\033[0m"
 
 def critical(msg):
-  return "\033[91m[!] " + msg + "\033[0m"
+  return "\n\033[91m[!] " + msg + "\033[0m"
 
 def warning(msg):
   return "\033[93m[i] " + msg + "\033[0m"
 
 def info(msg):
   return "\033[0m[+] " + msg + "\033[0m"
+
+def vulnerable(msg):
+  return "\033[91m[!]" + msg + "\033[0m"
+
+def display(msg):
+  return "\033[0m | " + msg + "\033[0m"
 
 
 """
@@ -124,7 +130,7 @@ name        : is_lower(str_one, str_two)
 description : will compare two string version
 return      : boolean
 """ 
-def is_lower(str_one, str_two):
+def is_lower(str_one, str_two, equal):
   sum_one = 0
   sum_two = 0
 
@@ -145,6 +151,9 @@ def is_lower(str_one, str_two):
       return True
   
   if sum_one < sum_two:
+    return True
+
+  if equal and sum_one == sum_two:
     return True
 
   return False

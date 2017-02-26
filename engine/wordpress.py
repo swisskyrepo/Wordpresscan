@@ -17,6 +17,7 @@ class Wordpress:
 		self.url = url
 		self.clean_url()
 		self.is_up_and_installed()
+		self.is_wordpress()
 		self.is_readme()
 		self.is_debug_log()
 		self.is_backup_file()
@@ -35,6 +36,15 @@ class Wordpress:
 		if self.url[-1] != '/':
 			self.url = self.url + '/'
 
+	"""
+	name        : is_wordpress()
+	description : detect a WordPress instance
+	"""  
+	def is_wordpress(self):
+		r = requests.get(self.url).text
+		if not "wp_" in r:
+			print critical("Not a WordPress !")
+			exit()
 
 	"""
 	name        : is_up_and_installed()
@@ -53,7 +63,7 @@ class Wordpress:
 
 		  		# Redirect
 	  			print notice("The remote host tried to redirect to: %s" % r.headers['location'])
-	  			user_input = str(raw_input("[?] Do you want follow the redirection ? [Y]es [N]o, "))
+	  			user_input = str(raw_input("[?] Do you want to follow the redirection ? [Y]es [N]o, "))
 
 	  			if user_input == "Y":
 	  				self.url = r.headers['location']

@@ -140,7 +140,7 @@ class Scan_Engine:
 		r = requests.get(wordpress.url).text
 	
 		# Theme name (css file)
-		regex = re.compile('wp-content/themes/(.*?)/.*?[css|js].*?ver=([0-9\.]*)') #.replace('min','')
+		regex = re.compile('wp-content/themes/(.*?)/.*?[css|js].*?ver=([0-9\.]*)')
 		match = regex.findall(r)
 		theme = {}
 
@@ -167,7 +167,7 @@ class Scan_Engine:
 		r = requests.get(wordpress.url).text
 
 		# Plugin name (js file)
-		regex = re.compile('wp-content/plugins/(.*?)/.*?[css|js].*?ver=([0-9\.]*)') #.replace('min','')
+		regex = re.compile('wp-content/plugins/(.*?)/.*?[css|js].*?ver=([0-9\.]*)') 
 		match = regex.findall(r)
 		plugin = {}
 
@@ -180,6 +180,6 @@ class Scan_Engine:
 			plugin_name = plugin_name.replace('.min','')
 			plugin_version = m[1]
 
-			if plugin_name not in plugin.keys():
+			if plugin_name not in plugin.keys() and m[1]!='1':
 				plugin[plugin_name] = m[1]
 				self.display_vulnerable_component(plugin_name, plugin_version, "plugins")

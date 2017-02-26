@@ -36,6 +36,7 @@ if __name__ == "__main__":
 		# Build a new wordpress object
 		wp = Wordpress(results.url)
 		Scan_Engine(wp)
+		wp.to_string()
 
 	else:
 		parser.print_help()

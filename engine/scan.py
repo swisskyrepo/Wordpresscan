@@ -18,33 +18,39 @@ class Scan_Engine:
 		self.enumerating_plugins_passive(wordpress)
 
 	"""
-	name        : fingerprint_wp_version(wordpress)
-	description : compare hashes of unique files in order to detect the version
+	name        : fingerprint_wp_version_meta_based(wordpress)
+	description : detect the version of WordPress based on the meta tag
 	"""
-	def fingerprint_wp_version(self, wordpress):
-		r = requests.get(wordpress.url).text
-
-		# Meta tag based
+	def fingerprint_wp_version_meta_based(self, wordpress):
 		regex = re.compile('meta name="generator" content="WordPress (.*?)"')
-		match = regex.findall(r)
-		
+		match = regex.findall(wordpress.index.text)
 		if match != []:
 			wordpress.version = match[0]
 			print critical("WordPress version %s identified from advanced fingerprinting" % wordpress.version)
-			return
+			return True
+		return False
 
 
-		# Feed based <generator>
+	"""
+	name        : fingerprint_wp_version_feed_based(wordpress)
+	description : detect the version of WordPress based on the generator tag in index.php/feed/
+	"""
+	def fingerprint_wp_version_feed_based(self, wordpress):
 		r = requests.get(wordpress.url + "index.php/feed").text
 		regex = re.compile('generator>https://wordpress.org/\?v=(.*?)<\/generator')
 		match = regex.findall(r)
 		if match != []:
 			wordpress.version = match[0]
 			print critical("WordPress version %s identified from advanced fingerprinting" % wordpress.version)
-			return
+			return True
+		return False
 
 
-		# Hash based
+	"""
+	name        : fingerprint_wp_version_hash_based(wordpress)
+	description : compare hashes of unique files in order to detect the version
+	"""
+	def fingerprint_wp_version_hash_based(self, wordpress):
 		tree = etree.parse("database/wp_versions.xml")
 		root = tree.getroot()
 
@@ -71,7 +77,20 @@ class Scan_Engine:
 						wordpress.version =  root[i][j][0].text
 						print critical("WordPress version %s identified from advanced fingerprinting" % wordpress.version)
 						return
-					
+
+
+	"""
+	name        : fingerprint_wp_version(wordpress)
+	description : launch different methods to get the wordpress version
+	"""
+	def fingerprint_wp_version(self, wordpress):
+		# Meta tag based
+		if self.fingerprint_wp_version_meta_based(wordpress) != True:
+			# Feed based <generator>
+			if self.fingerprint_wp_version_feed_based(wordpress) != True:
+				# Hash based
+				self.fingerprint_wp_version_hash_based(wordpress)
+			
 
 	"""
 	name        : list_wp_version_vulnerabilities(self, wordpress, file)
@@ -89,6 +108,7 @@ class Scan_Engine:
 			for v in versions:
 				if v[:4] in wordpress.version and is_lower(wordpress.version, v, False):
 					version = v
+
 
 		# Best accurate result
 		for vuln in data[version]["vulnerabilities"]: 
@@ -150,11 +170,10 @@ class Scan_Engine:
 	"""
 	def enumerating_themes_passive(self, wordpress):
 		print notice("Enumerating themes from passive detection ...")
-		r = requests.get(wordpress.url).text
 	
 		# Theme name (css file)
 		regex = re.compile('wp-content/themes/(.*?)/.*?[css|js].*?ver=([0-9\.]*)')
-		match = regex.findall(r)
+		match = regex.findall(wordpress.index.text)
 		theme = {}
 
 		# Unique theme
@@ -170,6 +189,8 @@ class Scan_Engine:
 				theme[m[0]] = m[1]
 				self.display_vulnerable_component(theme_name, theme_version, "themes")
 
+		wordpress.themes = theme
+
 		
 	"""
 	name        : enumerating_plugins_passive(self, wordpress)
@@ -177,11 +198,10 @@ class Scan_Engine:
 	"""
 	def enumerating_plugins_passive(self, wordpress):
 		print notice("Enumerating plugins from passive detection ...")
-		r = requests.get(wordpress.url).text
 
 		# Plugin name (js file)
 		regex = re.compile('wp-content/plugins/(.*?)/.*?[css|js].*?ver=([0-9\.]*)') 
-		match = regex.findall(r)
+		match = regex.findall(wordpress.index.text)
 		plugin = {}
 
 		# Unique plugin
@@ -196,3 +216,5 @@ class Scan_Engine:
 			if plugin_name not in plugin.keys() and m[1]!='1':
 				plugin[plugin_name] = m[1]
 				self.display_vulnerable_component(plugin_name, plugin_version, "plugins")
+
+		wordpress.plugins = plugin

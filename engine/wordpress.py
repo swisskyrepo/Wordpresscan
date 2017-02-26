@@ -8,9 +8,9 @@ from core import *
 class Wordpress:
 	url     = "http://wp-example.com"
 	version = "0.0.0"
-	plugins = False
-	themes  = False
-	robots  = False
+	plugins = {}
+	themes  = {}
+	index   = None
 
 	def __init__(self, url):
 		print info("URL: %s" % url)
@@ -41,8 +41,8 @@ class Wordpress:
 	description : detect a WordPress instance
 	"""  
 	def is_wordpress(self):
-		r = requests.get(self.url).text
-		if not "wp-" in r:
+		self.index = requests.get(self.url)
+		if not "wp-" in self.index.text:
 			print critical("Not a WordPress !")
 			exit()
 

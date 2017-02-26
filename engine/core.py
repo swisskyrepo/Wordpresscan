@@ -150,9 +150,11 @@ def is_lower(str_one, str_two, equal):
     except Exception as e:
       return True
   
+  # For inferior
   if sum_one < sum_two:
     return True
 
+  # Handle < and = if define in equal
   if equal and sum_one == sum_two:
     return True
 

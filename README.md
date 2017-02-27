@@ -15,7 +15,10 @@ You agree that you use this software at your own risk.
 ```bash
 git clone https://github.com/swisskyrepo/Wordpresscan.git
 cd Wordpresscan
-python main.py -u "http://localhost/wordpress" --update
+python main.py -u "http://localhost/wordpress" --update --aggressive
+-u : Url of the WordPress
+--update : Update the wpscan database
+--aggressive : Launch an aggressive version to scan for plugins/themes
 ```
 
 ## Output example from a test environment
@@ -23,4 +26,4 @@ python main.py -u "http://localhost/wordpress" --update
 
 
 ## Credits and Contributor
- 
+* Original idea and script from [WPScan Team](https://wpscan.org/)

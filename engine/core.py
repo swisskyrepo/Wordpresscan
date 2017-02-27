@@ -4,6 +4,7 @@ import requests
 import os
 import time
 import hashlib
+import json
 
 """
 name        : notice(msg), critical(msg), warning(msg), info(msg)
@@ -159,3 +160,38 @@ def is_lower(str_one, str_two, equal):
     return True
 
   return False
+
+
+
+"""
+name        : display_vulnerable_component(self, name, version):
+description : display info about vulnerability from the file
+"""
+def display_vulnerable_component(name, version, file):
+    # Load json file
+    with open('database/' + file + '.json') as data_file:
+      data = json.load(data_file)
+    
+    print warning("Name: %s - v%s" % (name, version))
+    if name in data.keys():
+
+      # Display the out of date info if the version is lower of the latest version
+      if is_lower(version, data[name]['latest_version'], False):  
+        print info("The version is out of date, the latest version is %s" % data[name]['latest_version'])     
+      
+      # Display the vulnerability if it's not patched version
+      for vuln in data[name]['vulnerabilities']:
+        if 'fixed_in' in vuln.keys() and (vuln['fixed_in'] == None or is_lower(version, vuln['fixed_in'], True)):
+
+          # Main informations
+          print "\t",vulnerable("%s : %s - ID:%s" % (vuln['vuln_type'], vuln['title'] , vuln['id']) )
+          print "\t",display("Fixed in %s"% vuln['fixed_in']) 
+
+          # Display references
+          print "\t",display("References:")
+          for refkey in vuln['references'].keys():
+            for ref in vuln['references'][refkey]:              
+              if refkey != 'url':
+                print "\t\t - %s %s" % (refkey.capitalize(), ref)
+              else:
+                print "\t\t - %s" %ref

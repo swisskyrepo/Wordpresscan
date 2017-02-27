@@ -4,18 +4,23 @@ import requests
 import re
 import json
 
+from tornado import ioloop, httpclient
 from core import *
 from wordpress import *
 from lxml import etree
+from multiprocessing import Process, Pool
 
 
 class Scan_Engine:
-
-	def __init__(self, wordpress):
+	def __init__(self, wordpress, aggressive):
 		self.fingerprint_wp_version(wordpress)
 		self.list_wp_version_vulnerabilities(wordpress, "wordpresses")
-		self.enumerating_themes_passive(wordpress)
-		self.enumerating_plugins_passive(wordpress)
+		if aggressive == False:
+			self.enumerating_themes_passive(wordpress)
+			self.enumerating_plugins_passive(wordpress)
+		else:
+			self.enumerating_themes_aggressive(wordpress)
+			self.enumerating_plugins_aggressive(wordpress)
 
 	"""
 	name        : fingerprint_wp_version_meta_based(wordpress)
@@ -131,40 +136,6 @@ class Scan_Engine:
 
 
 	"""
-	name        : display_vulnerable_component(self, name, version):
-	description : display info about vulnerability from the file
-	"""
-	def display_vulnerable_component(self, name, version, file):
-		# Load json file
-		with open('database/' + file + '.json') as data_file:
-			data = json.load(data_file)
-		
-		print warning("Name: %s - v%s" % (name, version))
-		if name in data.keys():
-
-			# Display the out of date info if the version is lower of the latest version
-			if is_lower(version, data[name]['latest_version'], False):	
-				print info("The version is out of date, the latest version is %s" % data[name]['latest_version'])			
-			
-			# Display the vulnerability if it's not patched version
-			for vuln in data[name]['vulnerabilities']:
-				if 'fixed_in' in vuln.keys() and (vuln['fixed_in'] == None or is_lower(version, vuln['fixed_in'], True)):
-
-					# Main informations
-					print "\t",vulnerable("%s : %s - ID:%s" % (vuln['vuln_type'], vuln['title'] , vuln['id']) )
-					print "\t",display("Fixed in %s"% vuln['fixed_in']) 
-
-					# Display references
-					print "\t",display("References:")
-					for refkey in vuln['references'].keys():
-						for ref in vuln['references'][refkey]:							
-							if refkey != 'url':
-								print "\t\t - %s %s" % (refkey.capitalize(), ref)
-							else:
-								print "\t\t - %s" %ref
-
-
-	"""
 	name        : enumerating_themes_passive(self, wordpress)
 	description : enumerate every theme used by the wordpress
 	"""
@@ -187,7 +158,7 @@ class Scan_Engine:
 
 			if m[0] not in theme.keys():
 				theme[m[0]] = m[1]
-				self.display_vulnerable_component(theme_name, theme_version, "themes")
+				display_vulnerable_component(theme_name, theme_version, "themes")
 
 		wordpress.themes = theme
 
@@ -215,6 +186,67 @@ class Scan_Engine:
 
 			if plugin_name not in plugin.keys() and m[1]!='1':
 				plugin[plugin_name] = m[1]
-				self.display_vulnerable_component(plugin_name, plugin_version, "plugins")
+				display_vulnerable_component(plugin_name, plugin_version, "plugins")
 
 		wordpress.plugins = plugin
+
+
+	"""
+	name        : enumerating_themes_aggressive(self, wordpress)
+	description : enumerate every themes used by the wordpress
+	"""
+	def enumerating_themes_aggressive(self, wordpress):
+		print notice("Enumerating themes from aggressive detection ...")
+		
+		# Load json file
+		with open('database/plugins.json') as data_file:
+			data = json.load(data_file)
+
+			# Run through every themes
+			global iter_aggressive
+			iter_aggressive = 0
+			http_client = httpclient.AsyncHTTPClient()
+			for plugin in data.keys():
+				iter_aggressive += 1
+				http_client.fetch('http://localhost/wordpress/wp-content/themes/' + plugin, aggressive_request_plugins, method='HEAD') == True
+			ioloop.IOLoop.instance().start()	
+
+
+	"""
+	name        : enumerating_plugins_aggressive(self, wordpress)
+	description : enumerate every plugins used by the wordpress
+	"""
+	def enumerating_plugins_aggressive(self, wordpress):
+		print notice("Enumerating plugins from aggressive detection ...")
+		
+		# Load json file
+		with open('database/plugins.json') as data_file:
+			data = json.load(data_file)
+
+			# Run through every plugin
+			global iter_aggressive
+			iter_aggressive = 0
+			http_client = httpclient.AsyncHTTPClient()
+			for plugin in data.keys():
+				iter_aggressive += 1
+				http_client.fetch('http://localhost/wordpress/wp-content/plugins/' + plugin, aggressive_request_plugins, method='HEAD') == True
+			ioloop.IOLoop.instance().start()
+
+
+def aggressive_request_plugins(response):
+	if (response.code) == 200:
+		display_vulnerable_component(response.effective_url.split('/')[-2], "Unknown", "plugins")
+	
+	global iter_aggressive
+	iter_aggressive-= 1
+	if iter_aggressive == 0:
+		ioloop.IOLoop.instance().stop()
+
+def aggressive_request_themes(response):
+	if (response.code) == 200:
+		display_vulnerable_component(response.effective_url.split('/')[-2], "Unknown", "themes")
+	
+	global iter_aggressive
+	iter_aggressive-= 1
+	if iter_aggressive == 0:
+		ioloop.IOLoop.instance().stop()

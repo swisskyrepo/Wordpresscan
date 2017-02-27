@@ -1,8 +1,5 @@
 # Wordpresscan
-A simple Wordpress scanner written in python
-```
-WORK IN PROGRESS - DO NOT USE
-```
+A simple Wordpress scanner written in python based on the work of WPScan (Ruby version)
 
 ## Disclaimer
 ```

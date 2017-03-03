@@ -19,7 +19,8 @@ Install
 ```bash
 git clone https://github.com/swisskyrepo/Wordpresscan.git
 cd Wordpresscan
-python main.py -u "http://localhost/wordpress" --update --aggressive
+python main.py -u "http://localhost/wordpress" --update
+
 -u : Url of the WordPress
 --update : Update the wpscan database
 --aggressive : Launch an aggressive version to scan for plugins/themes

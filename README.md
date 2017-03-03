@@ -9,6 +9,12 @@ You agree that you use this software at your own risk.
 
 
 ## Install & Launch
+Dependancies
+```
+pip install requests
+pip install tornado
+```
+
 ```bash
 git clone https://github.com/swisskyrepo/Wordpresscan.git
 cd Wordpresscan

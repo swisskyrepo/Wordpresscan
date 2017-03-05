@@ -36,6 +36,7 @@ def display(msg):
 """
 name        : database_update()
 description : download and update the database from wpscan website
+warning     : user-agents.txt and timthumbs.txt are zip files
 """
 def database_update():
   print "\033[93mUpdating database\033[92m - Last update: \033[0m" + database_last_date('database/local_vulnerable_files.xml')
@@ -55,6 +56,8 @@ description : get the date of the last update through file modification date
 return      : string
 """        
 def database_last_date(filename):
+  if not os.path.isfile(filename):
+    return "Never"
   (mode, ino, dev, nlink, uid, gid, size, atime, mtime, ctime) = os.stat(filename)
   return time.ctime(mtime)
 
@@ -70,7 +73,7 @@ def download_raw_file(url, filename, verbosity):
     source = requests.get( url, stream=True).raw
 
     # Write the file
-    with open( filename, 'wb' ) as ddl_file:
+    with open( filename, 'wb+' ) as ddl_file:
       progress = 0
       while True:
           length = 16*1024

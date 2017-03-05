@@ -41,7 +41,7 @@ class Scan_Engine:
 	description : detect the version of WordPress based on the generator tag in index.php/feed/
 	"""
 	def fingerprint_wp_version_feed_based(self, wordpress):
-		r = requests.get(wordpress.url + "index.php/feed").text
+		r = requests.get(wordpress.url + "index.php/feed", headers={"User-Agent":wordpress.agent}).text
 		regex = re.compile('generator>https://wordpress.org/\?v=(.*?)<\/generator')
 		match = regex.findall(r)
 		if match != []:

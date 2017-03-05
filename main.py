@@ -27,7 +27,7 @@ if __name__ == "__main__":
 	parser.add_argument('--aggressive', action ='store_const', const='aggressive', dest='aggressive', default=False, help="Update the database")
 	parser.add_argument('--random-agent', action ='store_const', const='random_agent', dest='random_agent', default=False, help="Random User-Agent")
 	results = parser.parse_args()
-	
+
 	# Check wordpress url
 	if results.url != None:
 
@@ -38,6 +38,7 @@ if __name__ == "__main__":
 		# Build a new wordpress object
 		wp = Wordpress(results.url, results.random_agent)
 		Scan_Engine(wp, results.aggressive)
+		Load_Plugins(wp)
 
 	else:
 		parser.print_help()

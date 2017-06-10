@@ -16,8 +16,6 @@ class Fuzz_Engine:
 			self.fuzzing_component_aggressive(wordpress)
 			self.fuzzing_themes_aggressive(wordpress)
 			self.fuzzing_plugins_aggressive(wordpress)
-			exit()
-
 
 	"""
 	name        : fuzzing_component_aggressive(self, wordpress)

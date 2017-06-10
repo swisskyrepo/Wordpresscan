@@ -7,6 +7,7 @@ from engine.load_plugins import *
 from engine.wordpress import *
 from engine.scan import *
 from engine.fuzz import *
+from engine.brute import *
 
 if __name__ == "__main__":
 
@@ -27,6 +28,7 @@ if __name__ == "__main__":
 	parser.add_argument('--update', action ='store_const', const='update', dest='update', help="Update the database")
 	parser.add_argument('--aggressive', action ='store_const', const='aggressive', dest='aggressive', default=False, help="Update the database")
 	parser.add_argument('--fuzz', action ='store_const', const='fuzz', dest='fuzz', default=False, help="Fuzz the files")
+	parser.add_argument('--brute', action ='store', dest='brute', default=None, help="Bruteforce users and passwords")
 	parser.add_argument('--random-agent', action ='store_const', const='random_agent', dest='random_agent', default=False, help="Random User-Agent")
 	results = parser.parse_args()
 
@@ -39,6 +41,9 @@ if __name__ == "__main__":
 
 		# Build a new wordpress object
 		wp = Wordpress(results.url, results.random_agent)
+
+		# Launch bruteforce
+		Brute_Engine(wp, results.brute)
 
 		# Launch fuzzing
 		Fuzz_Engine(wp, results.fuzz)

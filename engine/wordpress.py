@@ -12,6 +12,7 @@ class Wordpress:
 	themes  = {}
 	index   = None
 	agent   = False
+	users   = {}
 
 	def __init__(self, url, user_agent):
 		print info("URL: %s" % url)
@@ -34,7 +35,7 @@ class Wordpress:
 	"""
 	name        : clean_url()
 	description : set the url to http(s)://example.com/
-	""" 
+	"""
 	def clean_url(self):
 		if self.url[-1] != '/':
 			self.url = self.url + '/'
@@ -43,7 +44,7 @@ class Wordpress:
 	name        : random_agent()
 	description : give a random user agent
 	todo : user-agent.txt -> unzip -> random line
-	""" 
+	"""
 	def random_agent(self):
 		if self.agent != "random_agent":
 			self.agent = "Wordpresscan - For educational purpose only !"
@@ -54,7 +55,7 @@ class Wordpress:
 	"""
 	name        : is_wordpress()
 	description : detect a WordPress instance
-	"""  
+	"""
 	def is_wordpress(self):
 		self.index = requests.get(self.url, headers={"User-Agent":self.agent})
 		if not "wp-" in self.index.text:
@@ -64,7 +65,7 @@ class Wordpress:
 	"""
 	name        : is_up_and_installed()
 	description : check if a website is up or down, then check the installation and a forced redirect
-	"""  
+	"""
 	def is_up_and_installed(self):
 		try:
 			r = requests.get(self.url, allow_redirects=False, headers={"User-Agent":self.agent} )
@@ -91,15 +92,15 @@ class Wordpress:
 			print e
 			print critical("Website down!")
 	  		exit()
-	  	
+
 
 	"""
 	name        : is_readme()
 	description : get the readme file and extract the version is there is any
-	""" 
+	"""
 	def is_readme(self):
 		r = requests.get(self.url + 'readme.html', headers={"User-Agent":self.agent})
-		
+
 		if "200" in str(r):
 
 			# Basic version fingerprinting
@@ -114,7 +115,7 @@ class Wordpress:
 	"""
 	name        : is_debug_log()
 	description : determine if there is a debug.log file
-	""" 
+	"""
 	def is_debug_log(self):
 		r = requests.get(self.url + 'debug.log', headers={"User-Agent":self.agent})
 		if "200" in str(r) and not "404" in r.text :
@@ -124,19 +125,19 @@ class Wordpress:
 	"""
 	name        : is_backup_file()
 	description : determine if there is any unsafe wp-config backup
-	""" 
+	"""
 	def is_backup_file(self):
 		backup = ['wp-config.php~', 'wp-config.php.save', '.wp-config.php.swp', 'wp-config.php.swp', '.wp-config.php.swp', 'wp-config.php.swp', 'wp-config.php.swo', 'wp-config.php_bak', 'wp-config.bak', 'wp-config.php.bak', 'wp-config.save', 'wp-config.old', 'wp-config.php.old', 'wp-config.php.orig', 'wp-config.orig', 'wp-config.php.original', 'wp-config.original', 'wp-config.txt']
 		for b in backup:
 			r = requests.get(self.url + b, headers={"User-Agent":self.agent})
 			if "200" in str(r) and not "404" in r.text :
-				print critical("A wp-config.php backup file has been found in: %s" % (self.url + b) )  
+				print critical("A wp-config.php backup file has been found in: %s" % (self.url + b) )
 
 
 	"""
 	name        : is_backup_file()
 	description : determine if there is an xml rpc interface
-	""" 
+	"""
 	def is_xml_rpc(self):
 		r = requests.get(self.url + "xmlrpc.php", headers={"User-Agent":self.agent})
 		if "200" in str(r) and "404" in r.text :
@@ -146,7 +147,7 @@ class Wordpress:
 	"""
 	name        : is_directory_listing()
 	description : detect if a directory is misconfigured
-	""" 
+	"""
 	def is_directory_listing(self):
 		directories = ["wp-content/uploads/","wp-includes/"]
 		dir_name    = ["Uploads", "Includes"]
@@ -160,7 +161,7 @@ class Wordpress:
 	"""
 	name        : is_robots_text()
 	description : detect if a robots.txt file
-	""" 
+	"""
 	def is_robots_text(self):
 		r = requests.get(self.url + "robots.txt", headers={"User-Agent":self.agent})
 		if "200" in str(r) and not "404" in r.text :
@@ -174,7 +175,7 @@ class Wordpress:
 	"""
 	name        : full_path_disclosure()
 	description : detect a full path disclosure
-	""" 
+	"""
 	def full_path_disclosure(self):
 		r = requests.get(self.url + "wp-includes/rss-functions.php", headers={"User-Agent":self.agent}).text
 		regex = re.compile("Fatal error:.*? in (.*?) on", re.S)
@@ -196,12 +197,13 @@ class Wordpress:
 			users = json.loads(r.text)
 			for user in users:
 				print info("\tIdentified the following user : %s, %s, %s" % (user['id'], user['name'], user['slug']) )
+			self.users = users
 
 
 	"""
 	name        : to_string()
 	description : display a debug view of the object
-	"""  
+	"""
 	def to_string(self):
 		print "--------WORDPRESS----------"
 		print "URL     : %s" % self.url
@@ -209,4 +211,5 @@ class Wordpress:
 		print "Plugins : %s" % self.plugins
 		print "Themes  : %s" % self.themes
 		print "Agent   : %s" % self.agent
+		print "Users   : %s" % self.users
 		print "---------------------------"

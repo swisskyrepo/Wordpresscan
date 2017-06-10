@@ -10,7 +10,7 @@ from wordpress import *
 from lxml import etree
 from multiprocessing import Process, Pool
 
-
+# aggressive = fuzz
 class Scan_Engine:
 	def __init__(self, wordpress, aggressive):
 		self.fingerprint_wp_version(wordpress)
@@ -65,7 +65,7 @@ class Scan_Engine:
 			# Download file
 			ddl_url  = (wordpress.url + root[i].get('src') ).replace('$','')
 			ddl_name = "/tmp/" + (root[i].get('src').replace('/','-'))
-			download_file( ddl_url , ddl_name , True ) 
+			download_file( ddl_url , ddl_name , True )
 
 			# Get hash of the file
 			ddl_hash = md5_hash(ddl_name)
@@ -78,7 +78,7 @@ class Scan_Engine:
 				if "Element" in str(root[i][j]):
 
 					# Detect the version
-					if ddl_hash == root[i][j].get('md5'): 
+					if ddl_hash == root[i][j].get('md5'):
 						wordpress.version =  root[i][j][0].text
 						print critical("WordPress version %s identified from advanced fingerprinting" % wordpress.version)
 						return
@@ -95,7 +95,7 @@ class Scan_Engine:
 			if self.fingerprint_wp_version_feed_based(wordpress) != True:
 				# Hash based
 				self.fingerprint_wp_version_hash_based(wordpress)
-			
+
 
 	"""
 	name        : list_wp_version_vulnerabilities(self, wordpress, file)
@@ -105,7 +105,7 @@ class Scan_Engine:
 		# Load json file
 		with open('database/'+file+'.json') as data_file:
 			data = json.load(data_file)
-		
+
 		# Try to get a close result if the version is not in the list
 		version = wordpress.version
 		if data[wordpress.version]["vulnerabilities"] == []:
@@ -116,17 +116,17 @@ class Scan_Engine:
 
 
 		# Best accurate result
-		for vuln in data[version]["vulnerabilities"]: 
-				
+		for vuln in data[version]["vulnerabilities"]:
+
 			# Basic infos
 			print warning("\t%s : %s - ID:%s" % (vuln['vuln_type'], vuln['title'] , vuln['id']) )
-			print info("\tFixed in %s"% vuln['fixed_in']) 
+			print info("\tFixed in %s"% vuln['fixed_in'])
 
 			# Display references
 			print info("\tReferences:")
 			for refkey in vuln['references'].keys():
 				for ref in vuln['references'][refkey]:
-							
+
 					if refkey != 'url':
 						print "\t\t - %s %s" % (refkey.capitalize(), ref)
 					else:
@@ -141,7 +141,7 @@ class Scan_Engine:
 	"""
 	def enumerating_themes_passive(self, wordpress):
 		print notice("Enumerating themes from passive detection ...")
-	
+
 		# Theme name (css file)
 		regex = re.compile('wp-content/themes/(.*?)/.*?[css|js].*?ver=([0-9\.]*)')
 		match = regex.findall(wordpress.index.text)
@@ -149,7 +149,7 @@ class Scan_Engine:
 
 		# Unique theme
 		for m in match:
-			
+
 			# Remove minified and github version
 			theme_name = m[0]
 			theme_name = theme_name.replace('-master','')
@@ -162,7 +162,7 @@ class Scan_Engine:
 
 		wordpress.themes = theme
 
-		
+
 	"""
 	name        : enumerating_plugins_passive(self, wordpress)
 	description : enumerate every plugins used by the wordpress
@@ -171,7 +171,7 @@ class Scan_Engine:
 		print notice("Enumerating plugins from passive detection ...")
 
 		# Plugin name (js file)
-		regex = re.compile('wp-content/plugins/(.*?)/.*?[css|js].*?ver=([0-9\.]*)') 
+		regex = re.compile('wp-content/plugins/(.*?)/.*?[css|js].*?ver=([0-9\.]*)')
 		match = regex.findall(wordpress.index.text)
 		plugin = {}
 
@@ -197,7 +197,7 @@ class Scan_Engine:
 	"""
 	def enumerating_themes_aggressive(self, wordpress):
 		print notice("Enumerating themes from aggressive detection ...")
-		
+
 		# Load json file
 		with open('database/plugins.json') as data_file:
 			data = json.load(data_file)
@@ -209,7 +209,7 @@ class Scan_Engine:
 			for plugin in data.keys():
 				iter_aggressive += 1
 				http_client.fetch('http://localhost/wordpress/wp-content/themes/' + plugin, aggressive_request_plugins, method='HEAD') == True
-			ioloop.IOLoop.instance().start()	
+			ioloop.IOLoop.instance().start()
 
 
 	"""
@@ -218,7 +218,7 @@ class Scan_Engine:
 	"""
 	def enumerating_plugins_aggressive(self, wordpress):
 		print notice("Enumerating plugins from aggressive detection ...")
-		
+
 		# Load json file
 		with open('database/plugins.json') as data_file:
 			data = json.load(data_file)
@@ -236,7 +236,7 @@ class Scan_Engine:
 def aggressive_request_plugins(response):
 	if (response.code) == 200:
 		display_vulnerable_component(response.effective_url.split('/')[-2], "Unknown", "plugins")
-	
+
 	global iter_aggressive
 	iter_aggressive-= 1
 	if iter_aggressive == 0:
@@ -245,7 +245,7 @@ def aggressive_request_plugins(response):
 def aggressive_request_themes(response):
 	if (response.code) == 200:
 		display_vulnerable_component(response.effective_url.split('/')[-2], "Unknown", "themes")
-	
+
 	global iter_aggressive
 	iter_aggressive-= 1
 	if iter_aggressive == 0:

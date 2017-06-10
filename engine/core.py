@@ -43,7 +43,7 @@ def database_update():
   update_url = "https://data.wpscan.org/"
   update_files = [ 'local_vulnerable_files.xml', 'local_vulnerable_files.xsd', 
   'timthumbs.txt', 'user-agents.txt', 'wp_versions.xml', 'wp_versions.xsd', 
-  'wordpresses.json', 'plugins.json', 'themes.json', 'LICENSE'] 
+  'wordpresses.json', 'plugins.json', 'themes.json'] 
 
   for f in update_files:
     print "\t\033[93mDownloading \033[0m"+ f +" \033[92mFile updated !\033[0m"

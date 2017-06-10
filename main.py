@@ -6,6 +6,7 @@ from engine.core import *
 from engine.load_plugins import *
 from engine.wordpress import *
 from engine.scan import *
+from engine.fuzz import *
 
 if __name__ == "__main__":
 
@@ -25,19 +26,27 @@ if __name__ == "__main__":
 	parser.add_argument('-u', action ='store', dest='url', help="Wordpress URL")
 	parser.add_argument('--update', action ='store_const', const='update', dest='update', help="Update the database")
 	parser.add_argument('--aggressive', action ='store_const', const='aggressive', dest='aggressive', default=False, help="Update the database")
+	parser.add_argument('--fuzz', action ='store_const', const='fuzz', dest='fuzz', default=False, help="Fuzz the files")
 	parser.add_argument('--random-agent', action ='store_const', const='random_agent', dest='random_agent', default=False, help="Random User-Agent")
 	results = parser.parse_args()
 
 	# Check wordpress url
 	if results.url != None:
 
-		# Update scripts	
-		if results.update != None:		
+		# Update scripts
+		if results.update != None:
 			database_update()
 
 		# Build a new wordpress object
 		wp = Wordpress(results.url, results.random_agent)
+
+		# Launch fuzzing
+		Fuzz_Engine(wp, results.fuzz)
+
+		# Launch scans
 		Scan_Engine(wp, results.aggressive)
+
+		# Load plugins for more functions
 		Load_Plugins(wp)
 
 	else:

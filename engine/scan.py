@@ -10,7 +10,6 @@ from wordpress import *
 from lxml import etree
 from multiprocessing import Process, Pool
 
-# aggressive = fuzz
 class Scan_Engine:
 	def __init__(self, wordpress, aggressive):
 		self.fingerprint_wp_version(wordpress)
@@ -199,7 +198,7 @@ class Scan_Engine:
 		print notice("Enumerating themes from aggressive detection ...")
 
 		# Load json file
-		with open('database/plugins.json') as data_file:
+		with open('database/themes.json') as data_file:
 			data = json.load(data_file)
 
 			# Run through every themes
@@ -208,7 +207,7 @@ class Scan_Engine:
 			http_client = httpclient.AsyncHTTPClient()
 			for plugin in data.keys():
 				iter_aggressive += 1
-				http_client.fetch('http://localhost/wordpress/wp-content/themes/' + plugin, aggressive_request_plugins, method='HEAD') == True
+				http_client.fetch(wordpress.url+'/wp-content/themes/' + plugin, aggressive_request_themes, method='HEAD') == True
 			ioloop.IOLoop.instance().start()
 
 
@@ -229,7 +228,7 @@ class Scan_Engine:
 			http_client = httpclient.AsyncHTTPClient()
 			for plugin in data.keys():
 				iter_aggressive += 1
-				http_client.fetch('http://localhost/wordpress/wp-content/plugins/' + plugin, aggressive_request_plugins, method='HEAD') == True
+				http_client.fetch(wordpress.url+'/wp-content/plugins/' + plugin, aggressive_request_plugins, method='HEAD') == True
 			ioloop.IOLoop.instance().start()
 
 

@@ -29,6 +29,7 @@ if __name__ == "__main__":
 	parser.add_argument('--aggressive', action ='store_const', const='aggressive', dest='aggressive', default=False, help="Update the database")
 	parser.add_argument('--fuzz', action ='store_const', const='fuzz', dest='fuzz', default=False, help="Fuzz the files")
 	parser.add_argument('--brute', action ='store', dest='brute', default=None, help="Bruteforce users and passwords")
+	parser.add_argument('--nocheck', action ='store_const', const='nocheck',dest='nocheck', default=False, help="Check for a Wordpress instance")
 	parser.add_argument('--random-agent', action ='store_const', const='random_agent', dest='random_agent', default=False, help="Random User-Agent")
 	results = parser.parse_args()
 
@@ -40,7 +41,7 @@ if __name__ == "__main__":
 			database_update()
 
 		# Build a new wordpress object
-		wp = Wordpress(results.url, results.random_agent)
+		wp = Wordpress(results.url, results.random_agent, results.nocheck)
 
 		# Launch bruteforce
 		Brute_Engine(wp, results.brute)

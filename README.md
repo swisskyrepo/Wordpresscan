@@ -31,7 +31,7 @@ python main.py -u "http://localhost/wordpress" --update --random-agent
 --random-agent : Use a random user-agent for this session
 ```
 
-Example 2 : Basic bruteforce
+Example 2 : Basic bruteforce (option --brute, option --nocheck)
 ```
 python main.py -u "http://127.0.0.1/wordpress/" --brute fuzz/wordlist.lst
 python main.py -u "http://127.0.0.1/wordpress/" --brute admin
@@ -39,6 +39,32 @@ python main.py -u "http://127.0.0.1/wordpress/" --brute admin
 --brute file.lst : Will bruteforce every username and their password
 --brute username : Will bruteforce the password for the given username
 it will also try to bruteforce the password for the detected users.
+
+
+
+╭─ 👻 swissky@crashlab: ~/Github/Wordpresscan  ‹master*›
+╰─$ python main.py -u "http://127.0.0.1/wordpress/" --brute fuzz/wordlist.lst --nocheck       
+_______________________________________________________________
+ _    _               _                                         
+| |  | |             | |                                        
+| |  | | ___  _ __ __| |_ __  _ __ ___  ___ ___  ___ __ _ _ __  
+| |/\| |/ _ \| '__/ _` | '_ \| '__/ _ \/ __/ __|/ __/ _` | '_ \
+\  /\  / (_) | | | (_| | |_) | | |  __/\__ \__ \ (_| (_| | | | |
+ \/  \/ \___/|_|  \__,_| .__/|_|  \___||___/___/\___\__,_|_| |_|
+                       | |                                      
+                       |_|                                      
+ WordPress scanner based on wpscan work - @pentest_swissky      
+_______________________________________________________________
+[+] URL: http://127.0.0.1/wordpress/
+
+[!] The Wordpress 'http://127.0.0.1/wordpress/readme.html' file exposing a version number: 4.4.7
+[i] Uploads directory has directory listing enabled : http://127.0.0.1/wordpress/wp-content/uploads/
+[i] Includes directory has directory listing enabled : http://127.0.0.1/wordpress/wp-includes/
+
+[i] Bruteforcing all users
+[+] User found admin
+[+] Starting passwords bruteforce for admin
+Bruteforcing - ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 ```
 
 Example 3 : Thinking is overrated, this is aggressive, mostly not advised!

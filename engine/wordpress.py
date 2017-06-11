@@ -14,15 +14,15 @@ class Wordpress:
 	agent   = False
 	users   = {}
 
-	def __init__(self, url, user_agent):
+	def __init__(self, url, user_agent, nocheck):
 		print info("URL: %s" % url)
 		self.url   = url
 		self.agent = user_agent
 		self.random_agent()
 		self.clean_url()
 		self.is_up_and_installed()
-		#self.is_wordpress()
-		#self.is_readme()
+		self.is_wordpress(nocheck)
+		self.is_readme()
 		self.is_debug_log()
 		self.is_backup_file()
 		self.is_xml_rpc()
@@ -56,11 +56,12 @@ class Wordpress:
 	name        : is_wordpress()
 	description : detect a WordPress instance
 	"""
-	def is_wordpress(self):
-		self.index = requests.get(self.url, headers={"User-Agent":self.agent})
-		if not "wp-" in self.index.text:
-			print critical("Not a WordPress !")
-			exit()
+	def is_wordpress(self, nocheck):
+		if nocheck == False:
+			self.index = requests.get(self.url, headers={"User-Agent":self.agent})
+			if not "wp-" in self.index.text:
+				print critical("Not a WordPress !")
+				exit()
 
 	"""
 	name        : is_up_and_installed()

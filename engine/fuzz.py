@@ -36,7 +36,7 @@ class Fuzz_Engine:
 			for component in data:
 				component = component.strip()
 				iter_aggressive += 1
-				http_client.fetch(wordpress.url + component, aggressive_request_component, method='HEAD') == True
+				http_client.fetch(wordpress.url + component, aggressive_request_component, method='HEAD', validate_cert=False) == True
 			ioloop.IOLoop.instance().start()
 
 
@@ -59,7 +59,7 @@ class Fuzz_Engine:
 			for theme in data:
 				theme = theme.strip()
 				iter_aggressive += 1
-				http_client.fetch(wordpress.url + theme + "style.css", aggressive_request_plugins, method='HEAD') == True
+				http_client.fetch(wordpress.url + theme + "style.css", aggressive_request_plugins, method='HEAD', validate_cert=False) == True
 			ioloop.IOLoop.instance().start()
 
 
@@ -81,7 +81,7 @@ class Fuzz_Engine:
 			for plugin in data:
 				plugin = plugin.strip()
 				iter_aggressive += 1
-				http_client.fetch(wordpress.url + plugin, aggressive_request_plugins, method='HEAD') == True
+				http_client.fetch(wordpress.url + plugin, aggressive_request_plugins, method='HEAD', validate_cert=False) == True
 			ioloop.IOLoop.instance().start()
 
 

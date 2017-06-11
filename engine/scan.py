@@ -40,7 +40,7 @@ class Scan_Engine:
 	description : detect the version of WordPress based on the generator tag in index.php/feed/
 	"""
 	def fingerprint_wp_version_feed_based(self, wordpress):
-		r = requests.get(wordpress.url + "index.php/feed", headers={"User-Agent":wordpress.agent}).text
+		r = requests.get(wordpress.url + "index.php/feed", headers={"User-Agent":wordpress.agent}, verify=False).text
 		regex = re.compile('generator>https://wordpress.org/\?v=(.*?)<\/generator')
 		match = regex.findall(r)
 		if match != []:
@@ -207,7 +207,7 @@ class Scan_Engine:
 			http_client = httpclient.AsyncHTTPClient()
 			for plugin in data.keys():
 				iter_aggressive += 1
-				http_client.fetch(wordpress.url+'/wp-content/themes/' + plugin, aggressive_request_themes, method='HEAD') == True
+				http_client.fetch(wordpress.url+'/wp-content/themes/' + plugin, aggressive_request_themes, method='HEAD', validate_cert=False) == True
 			ioloop.IOLoop.instance().start()
 
 
@@ -228,7 +228,7 @@ class Scan_Engine:
 			http_client = httpclient.AsyncHTTPClient()
 			for plugin in data.keys():
 				iter_aggressive += 1
-				http_client.fetch(wordpress.url+'/wp-content/plugins/' + plugin, aggressive_request_plugins, method='HEAD') == True
+				http_client.fetch(wordpress.url+'/wp-content/plugins/' + plugin, aggressive_request_plugins, method='HEAD', validate_cert=False) == True
 			ioloop.IOLoop.instance().start()
 
 

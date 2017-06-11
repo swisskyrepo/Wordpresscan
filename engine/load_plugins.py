@@ -13,7 +13,6 @@ class Load_Plugins:
 
 	def __init__(self, wordpress):
 		available_plugins = os.listdir(self.plugin_folder)
-
 		for plugins in available_plugins:
 			if not ".pyc" in plugins and not "__init__" in plugins:
 
@@ -21,11 +20,11 @@ class Load_Plugins:
 				name = plugins.replace('.py','')
 				f, file, desc = imp.find_module('plugins', ['.'])
 				pkg = imp.load_module('plugins', f, file, desc)
-				
+
 				# Find and load the plugin
 				f, file, desc = imp.find_module(name, pkg.__path__)
 				loaded = imp.load_module('plugins.' + name, f, file, desc)
-				
+
 				# Run the __init__
 				print notice('Plugin %s loaded.' % loaded.name)
 				loaded.__init__(wordpress)

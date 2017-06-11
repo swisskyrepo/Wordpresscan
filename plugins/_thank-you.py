@@ -2,12 +2,12 @@
 # -*- coding: utf-8 -*-
 
 # name        : Example Title
-# description : Example description 
+# description : Example description
 # author      : Wordpresscan Team
 
 import requests
 
-name = "Example-Plugin"
+name = "Thank You"
 
 def __init__(wordpress):
 	# INSERT CODE HERE!

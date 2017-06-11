@@ -8,7 +8,6 @@ import urllib
 
 from core import *
 from wordpress import *
-from lxml import etree
 from multiprocessing import Process, Pool
 
 class Brute_Engine:
@@ -30,7 +29,7 @@ class Brute_Engine:
 					print notice("Bruteforcing " + brute)
 					print info("User found "+ brute)
 					self.bruteforcing_pass(wordpress, brute)
-					
+
 			# Exit the bruteforce
 			exit()
 

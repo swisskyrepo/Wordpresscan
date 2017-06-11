@@ -57,8 +57,8 @@ class Wordpress:
 	description : detect a WordPress instance
 	"""
 	def is_wordpress(self, nocheck):
+		self.index = requests.get(self.url, headers={"User-Agent":self.agent}, verify=False)
 		if nocheck == False:
-			self.index = requests.get(self.url, headers={"User-Agent":self.agent})
 			if not "wp-" in self.index.text:
 				print critical("Not a WordPress !")
 				exit()
@@ -69,7 +69,7 @@ class Wordpress:
 	"""
 	def is_up_and_installed(self):
 		try:
-			r = requests.get(self.url, allow_redirects=False, headers={"User-Agent":self.agent} )
+			r = requests.get(self.url, allow_redirects=False, headers={"User-Agent":self.agent} , verify=False)
 
 	  		if 'location' in r.headers:
 
@@ -100,7 +100,7 @@ class Wordpress:
 	description : get the readme file and extract the version is there is any
 	"""
 	def is_readme(self):
-		r = requests.get(self.url + 'readme.html', headers={"User-Agent":self.agent})
+		r = requests.get(self.url + 'readme.html', headers={"User-Agent":self.agent}, verify=False)
 
 		if "200" in str(r):
 
@@ -118,7 +118,7 @@ class Wordpress:
 	description : determine if there is a debug.log file
 	"""
 	def is_debug_log(self):
-		r = requests.get(self.url + 'debug.log', headers={"User-Agent":self.agent})
+		r = requests.get(self.url + 'debug.log', headers={"User-Agent":self.agent}, verify=False)
 		if "200" in str(r) and not "404" in r.text :
 			print critical( "Debug log file found: %s" % (self.url + 'debug.log') )
 
@@ -130,7 +130,7 @@ class Wordpress:
 	def is_backup_file(self):
 		backup = ['wp-config.php~', 'wp-config.php.save', '.wp-config.php.swp', 'wp-config.php.swp', '.wp-config.php.swp', 'wp-config.php.swp', 'wp-config.php.swo', 'wp-config.php_bak', 'wp-config.bak', 'wp-config.php.bak', 'wp-config.save', 'wp-config.old', 'wp-config.php.old', 'wp-config.php.orig', 'wp-config.orig', 'wp-config.php.original', 'wp-config.original', 'wp-config.txt']
 		for b in backup:
-			r = requests.get(self.url + b, headers={"User-Agent":self.agent})
+			r = requests.get(self.url + b, headers={"User-Agent":self.agent}, verify=False)
 			if "200" in str(r) and not "404" in r.text :
 				print critical("A wp-config.php backup file has been found in: %s" % (self.url + b) )
 
@@ -140,7 +140,7 @@ class Wordpress:
 	description : determine if there is an xml rpc interface
 	"""
 	def is_xml_rpc(self):
-		r = requests.get(self.url + "xmlrpc.php", headers={"User-Agent":self.agent})
+		r = requests.get(self.url + "xmlrpc.php", headers={"User-Agent":self.agent}, verify=False)
 		if "200" in str(r) and "404" in r.text :
 			print info("XML-RPC Interface available under: %s " % (self.url+"xmlrpc.php") )
 
@@ -154,7 +154,7 @@ class Wordpress:
 		dir_name    = ["Uploads", "Includes"]
 
 		for directory, name in zip(directories,dir_name):
-			r = requests.get(self.url + directory, headers={"User-Agent":self.agent})
+			r = requests.get(self.url + directory, headers={"User-Agent":self.agent}, verify=False)
 			if "Index of" in r.text:
 				print warning("%s directory has directory listing enabled : %s" % (name, self.url + directory))
 
@@ -164,7 +164,7 @@ class Wordpress:
 	description : detect if a robots.txt file
 	"""
 	def is_robots_text(self):
-		r = requests.get(self.url + "robots.txt", headers={"User-Agent":self.agent})
+		r = requests.get(self.url + "robots.txt", headers={"User-Agent":self.agent}, verify=False)
 		if "200" in str(r) and not "404" in r.text :
 			print info("robots.txt available under: %s " % (self.url+"robots.txt") )
 			lines = r.text.split('\n')
@@ -178,7 +178,7 @@ class Wordpress:
 	description : detect a full path disclosure
 	"""
 	def full_path_disclosure(self):
-		r = requests.get(self.url + "wp-includes/rss-functions.php", headers={"User-Agent":self.agent}).text
+		r = requests.get(self.url + "wp-includes/rss-functions.php", headers={"User-Agent":self.agent}, verify=False).text
 		regex = re.compile("Fatal error:.*? in (.*?) on", re.S)
 		matches = regex.findall(r)
 
@@ -191,7 +191,7 @@ class Wordpress:
 	description : enumerate every users of the wordpress
 	"""
 	def enum_wordpress_users(self):
-		r = requests.get(self.url + "wp-json/wp/v2/users", headers={"User-Agent":self.agent} )
+		r = requests.get(self.url + "wp-json/wp/v2/users", headers={"User-Agent":self.agent} , verify=False)
 
 		if "200" in str(r):
 			print notice("Enumerating Wordpress users")

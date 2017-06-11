@@ -8,6 +8,7 @@ from engine.wordpress import *
 from engine.scan import *
 from engine.fuzz import *
 from engine.brute import *
+from requests.packages.urllib3.exceptions import InsecureRequestWarning
 
 if __name__ == "__main__":
 
@@ -35,6 +36,8 @@ if __name__ == "__main__":
 
 	# Check wordpress url
 	if results.url != None:
+		# Disable warning for ssl verify=False
+		requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
 		# Update scripts
 		if results.update != None:

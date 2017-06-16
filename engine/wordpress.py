@@ -109,7 +109,7 @@ class Wordpress:
 			regex = re.compile(regex)
 			matches = regex.findall(r.text)
 
-			if matches[0] != None and matches[0] != "":
+			if len(matches) > 0 and matches[0] != None and matches[0] != "":
 				self.version = matches[0]
 				print critical("The Wordpress '%s' file exposing a version number: %s" % (self.url+'readme.html', matches[0]))
 

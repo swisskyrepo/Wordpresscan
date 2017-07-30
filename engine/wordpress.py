@@ -28,6 +28,7 @@ class Wordpress:
 		self.is_xml_rpc()
 		self.is_directory_listing()
 		self.is_robots_text()
+		self.is_common_file()
 		self.full_path_disclosure()
 		self.enum_wordpress_users()
 
@@ -128,7 +129,7 @@ class Wordpress:
 	description : determine if there is any unsafe wp-config backup
 	"""
 	def is_backup_file(self):
-		backup = ['wp-config.php~', 'wp-config.php.save', '.wp-config.php.swp', 'wp-config.php.swp', '.wp-config.php.swp', 'wp-config.php.swp', 'wp-config.php.swo', 'wp-config.php_bak', 'wp-config.bak', 'wp-config.php.bak', 'wp-config.save', 'wp-config.old', 'wp-config.php.old', 'wp-config.php.orig', 'wp-config.orig', 'wp-config.php.original', 'wp-config.original', 'wp-config.txt']
+		backup = ['wp-config.php~', 'wp-config.php.save', '.wp-config.php.bck', 'wp-config.php.bck', '.wp-config.php.swp', 'wp-config.php.swp', 'wp-config.php.swo', 'wp-config.php_bak', 'wp-config.bak', 'wp-config.php.bak', 'wp-config.save', 'wp-config.old', 'wp-config.php.old', 'wp-config.php.orig', 'wp-config.orig', 'wp-config.php.original', 'wp-config.original', 'wp-config.txt', 'wp-config.php.txt', 'wp-config.backup', 'wp-config.php.backup', 'wp-config.copy', 'wp-config.php.copy', 'wp-config.tmp', 'wp-config.php.tmp', 'wp-config.zip', 'wp-config.php.zip', 'wp-config.db', 'wp-config.php.db', 'wp-config.dat','wp-config.php.dat', 'wp-config.tar.gz', 'wp-config.php.tar.gz', 'wp-config.back', 'wp-config.php.back', 'wp-config.test', 'wp-config.php.test']
 		for b in backup:
 			r = requests.get(self.url + b, headers={"User-Agent":self.agent}, verify=False)
 			if "200" in str(r) and not "404" in r.text :
@@ -136,7 +137,7 @@ class Wordpress:
 
 
 	"""
-	name        : is_backup_file()
+	name        : is_xml_rpc()
 	description : determine if there is an xml rpc interface
 	"""
 	def is_xml_rpc(self):
@@ -150,8 +151,8 @@ class Wordpress:
 	description : detect if a directory is misconfigured
 	"""
 	def is_directory_listing(self):
-		directories = ["wp-content/uploads/","wp-includes/"]
-		dir_name    = ["Uploads", "Includes"]
+		directories = ["wp-content/uploads/", "wp-content/plugins/", "wp-content/themes/","wp-includes/", "wp-admin/"]
+		dir_name    = ["Uploads", "Plugins", "Themes", "Includes", "Admin"]
 
 		for directory, name in zip(directories,dir_name):
 			r = requests.get(self.url + directory, headers={"User-Agent":self.agent}, verify=False)
@@ -172,6 +173,16 @@ class Wordpress:
 				if "Disallow:" in l:
 					print info("\tInteresting entry from robots.txt: %s" % (l))
 
+	"""
+	name        : is_common_file()
+	description : detect if a common file such as license.txt is present
+	"""
+	def is_common_file(self):
+		files = ["sitemap.xml","license.txt"]
+		for f in files:
+			r = requests.get(self.url + f, headers={"User-Agent":self.agent}, verify=False)
+			if "200" in str(r) and not "404" in r.text :
+				print info("%s available under: %s " % (f, self.url+f) )
 
 	"""
 	name        : full_path_disclosure()

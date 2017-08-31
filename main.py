@@ -27,7 +27,7 @@ if __name__ == "__main__":
 	parser = argparse.ArgumentParser()
 	parser.add_argument('-u', action ='store', dest='url', help="Wordpress URL")
 	parser.add_argument('--update', action ='store_const', const='update', dest='update', help="Update the database")
-	parser.add_argument('--aggressive', action ='store_const', const='aggressive', dest='aggressive', default=False, help="Update the database")
+	parser.add_argument('--aggressive', action ='store_const', const='aggressive', dest='aggressive', default=False, help="Aggressive scan for plugins/themes")
 	parser.add_argument('--fuzz', action ='store_const', const='fuzz', dest='fuzz', default=False, help="Fuzz the files")
 	parser.add_argument('--brute', action ='store', dest='brute', default=None, help="Bruteforce users and passwords")
 	parser.add_argument('--nocheck', action ='store_const', const='nocheck',dest='nocheck', default=False, help="Check for a Wordpress instance")

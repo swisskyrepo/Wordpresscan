@@ -85,6 +85,6 @@ python main.py -u "http://127.0.0.1/wordpress/" --fuzz
 ![alt tag](https://github.com/swisskyrepo/Wordpresscan/blob/master/screens/Version%204.4.7.png?raw=true)
 
 
-## Credits and Contributorm
+## Credits and Contributors
 * Original idea and script from [WPScan Team](https://wpscan.org/)
 * Many PR and bugfixes from [bl4de](https://github.com/bl4de)

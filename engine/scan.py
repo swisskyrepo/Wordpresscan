@@ -107,6 +107,12 @@ class Scan_Engine:
 
 		# Try to get a close result if the version is not in the list
 		version = wordpress.version
+
+		# This version doesn't  exist
+		if wordpress.version not in data:
+			print warning("The version %s isn't in the database - Please try the option --update" % (wordpress.version))
+			return
+
 		if data[wordpress.version]["vulnerabilities"] == []:
 			versions = data.keys()
 			for v in versions:

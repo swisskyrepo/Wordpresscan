@@ -41,20 +41,20 @@ warning     : user-agents.txt and timthumbs.txt are zip files
 def database_update():
   print "\033[93mUpdating database\033[92m - Last update: \033[0m" + database_last_date('database/local_vulnerable_files.xml')
   update_url = "https://data.wpscan.org/"
-  update_files = [ 'local_vulnerable_files.xml', 'local_vulnerable_files.xsd', 
-  'timthumbs.txt', 'user-agents.txt', 'wp_versions.xml', 'wp_versions.xsd', 
-  'wordpresses.json', 'plugins.json', 'themes.json'] 
+  update_files = [ 'local_vulnerable_files.xml', 'local_vulnerable_files.xsd',
+  'timthumbs.txt', 'user-agents.txt', 'wp_versions.xml', 'wp_versions.xsd',
+  'wordpresses.json', 'plugins.json', 'themes.json']
 
   for f in update_files:
     print "\t\033[93mDownloading \033[0m"+ f +" \033[92mFile updated !\033[0m"
     download_raw_file(update_url+f, "database/"+f, True)
-    
+
 
 """
 name        : database_last_date()
 description : get the date of the last update through file modification date
 return      : string
-"""        
+"""
 def database_last_date(filename):
   if not os.path.isfile(filename):
     return "Never"
@@ -65,7 +65,7 @@ def database_last_date(filename):
 """
 name        : download_raw_file(url, filename)
 description : will download a raw file from url into filename
-""" 
+"""
 def download_raw_file(url, filename, verbosity):
   try:
 
@@ -82,18 +82,18 @@ def download_raw_file(url, filename, verbosity):
               break
           ddl_file.write(buf)
           progress += len(buf)
-          
+
           if verbosity == True:
             print('\tDownloaded : %.2f Mo\r' % (float(progress)/(1024*1024))),
-        
+
   except Exception as e:
     raise e
- 
- 
+
+
 """
 name        : download_file(url, filename)
 description : will download a file from url into filename
-""" 
+"""
 def download_file(url, filename, verbosity):
   try:
 
@@ -103,7 +103,7 @@ def download_file(url, filename, verbosity):
     # Write the file
     with open( filename, 'wb' ) as ddl_file:
       ddl_file.write(source.encode('utf8'))
-        
+
   except Exception as e:
     raise e
 
@@ -111,20 +111,20 @@ def download_file(url, filename, verbosity):
 """
 name        : remove_file(filename)
 description : will remove a file from the computer
-""" 
+"""
 def remove_file(filename):
   try:
     os.remove(filename)
   except Exception as e:
     raise e
-  
+
 
 
 """
 name        : md5_hash(filename)
 description : will compute the md5 hash of the file
 return      : string
-""" 
+"""
 def md5_hash(filename):
   return hashlib.md5(open(filename, 'rb').read()).hexdigest()
 
@@ -133,10 +133,23 @@ def md5_hash(filename):
 name        : is_lower(str_one, str_two)
 description : will compare two string version
 return      : boolean
-""" 
+"""
 def is_lower(str_one, str_two, equal):
   sum_one = 0
   sum_two = 0
+
+  # Handle the NoneType
+  if str_one == None:
+      if str_two == None:
+          return False
+      else:
+          return True
+
+  if str_two == None:
+      if str_one == None:
+          return False
+      else:
+          return True
 
   # Fix for X.X <= X.X.X and X.X.X <= X.X
   if len(str_one) < 5:
@@ -153,7 +166,7 @@ def is_lower(str_one, str_two, equal):
       sum_two += ((i+1) ** 10) * (int(str_two[i]))
     except Exception as e:
       return True
-  
+
   # For inferior
   if sum_one < sum_two:
     return True
@@ -174,26 +187,26 @@ def display_vulnerable_component(name, version, file):
     # Load json file
     with open('database/' + file + '.json') as data_file:
       data = json.load(data_file)
-    
+
     print warning("Name: %s - v%s" % (name, version))
     if name in data.keys():
 
       # Display the out of date info if the version is lower of the latest version
-      if is_lower(version, data[name]['latest_version'], False):  
-        print info("The version is out of date, the latest version is %s" % data[name]['latest_version'])     
-      
+      if is_lower(version, data[name]['latest_version'], False):
+        print info("The version is out of date, the latest version is %s" % data[name]['latest_version'])
+
       # Display the vulnerability if it's not patched version
       for vuln in data[name]['vulnerabilities']:
         if 'fixed_in' in vuln.keys() and (vuln['fixed_in'] == None or is_lower(version, vuln['fixed_in'], True)):
 
           # Main informations
           print "\t",vulnerable("%s : %s - ID:%s" % (vuln['vuln_type'], vuln['title'] , vuln['id']) )
-          print "\t",display("Fixed in %s"% vuln['fixed_in']) 
+          print "\t",display("Fixed in %s"% vuln['fixed_in'])
 
           # Display references
           print "\t",display("References:")
           for refkey in vuln['references'].keys():
-            for ref in vuln['references'][refkey]:              
+            for ref in vuln['references'][refkey]:
               if refkey != 'url':
                 print "\t\t - %s %s" % (refkey.capitalize(), ref)
               else:

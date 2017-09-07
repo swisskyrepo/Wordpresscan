@@ -8,7 +8,6 @@ from engine.wordpress import *
 from engine.scan import *
 from engine.fuzz import *
 from engine.brute import *
-from requests.packages.urllib3.exceptions import InsecureRequestWarning
 
 if __name__ == "__main__":
 

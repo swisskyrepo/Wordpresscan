@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 import requests
 import argparse
+from requests.packages.urllib3.exceptions import InsecureRequestWarning # Required for bad https website
 from engine.core import *
 from engine.load_plugins import *
 from engine.wordpress import *
@@ -36,6 +37,7 @@ if __name__ == "__main__":
 	# Check wordpress url
 	if results.url != None:
 		# Disable warning for ssl verify=False
+		# NOTE: This should not be removed until a correct solution is found
 		requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
 		# Update scripts
@@ -43,7 +45,7 @@ if __name__ == "__main__":
 			database_update()
 
 		# Build a new wordpress object
-		wp = Wordpress(results.url, results.random_agent, results.nocheck)
+		wp = Wordpress(format_url(results.url), results.random_agent, results.nocheck)
 
 		# Launch bruteforce
 		Brute_Engine(wp, results.brute)

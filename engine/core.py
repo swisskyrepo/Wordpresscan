@@ -33,6 +33,16 @@ def display(msg):
   return "\033[0m | " + msg + "\033[0m"
 
 
+
+"""
+name        : format_url()
+description : will format the URL to provide an http
+"""
+def format_url(url):
+    if not "http" in url:
+        return "http://"+url
+    return url
+
 """
 name        : database_update()
 description : download and update the database from wpscan website

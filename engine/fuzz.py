@@ -1,12 +1,14 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
+from __future__ import print_function
+from __future__ import absolute_import
 import requests
 import re
 import json
 
 from tornado import ioloop, httpclient
-from core import *
-from wordpress import *
+from .core import *
+from .wordpress import *
 from lxml import etree
 from multiprocessing import Process, Pool
 
@@ -22,7 +24,7 @@ class Fuzz_Engine:
 	description : fuzz every component used by the wordpress
 	"""
 	def fuzzing_component_aggressive(self, wordpress):
-		print notice("Enumerating components from aggressive fuzzing ...")
+		print(notice("Enumerating components from aggressive fuzzing ..."))
 
 		# Load json file
 		with open('fuzz/wordpress.fuzz') as data_file:
@@ -45,7 +47,7 @@ class Fuzz_Engine:
 	description : fuzz every themes used by the wordpress
 	"""
 	def fuzzing_themes_aggressive(self, wordpress):
-		print notice("Enumerating themes from aggressive fuzzing ...")
+		print(notice("Enumerating themes from aggressive fuzzing ..."))
 
 		# Load json file
 		with open('fuzz/wp_themes.fuzz') as data_file:
@@ -68,7 +70,7 @@ class Fuzz_Engine:
 	description : fuzz every plugins used by the wordpress
 	"""
 	def fuzzing_plugins_aggressive(self, wordpress):
-		print notice("Enumerating plugins from aggressive fuzzing ...")
+		print(notice("Enumerating plugins from aggressive fuzzing ..."))
 
 		# Load json file
 		with open('fuzz/wp_plugins.fuzz') as data_file:
@@ -106,9 +108,9 @@ def aggressive_request_themes(response):
 def aggressive_request_component(response):
 	if (response.code) == 200:
 		if "reauth" in response.effective_url:
-			print "[i] Authentication Needed: " + response.effective_url+ " - found"
+			print("[i] Authentication Needed: " + response.effective_url+ " - found")
 		else:
-			print "[i] File: " + response.effective_url+ " - found"
+			print("[i] File: " + response.effective_url+ " - found")
 
 	global iter_aggressive
 	iter_aggressive-= 1

@@ -5,6 +5,7 @@
 # description : Check for the file http://blog.domain.com/.git/logs/HEAD
 # author      : Wordpresscan Team
 
+from __future__ import print_function
 import requests
 
 name = "GIT configuration files"
@@ -14,5 +15,5 @@ def __init__(wordpress):
 	r = requests.get(wordpress.url + payload, headers={"User-Agent":wordpress.agent}, verify=False)
 
 	if "200" in str(r):
-		print "[+] Wordpress configuration found from GIT !"
-		print "[!] {}".format(wordpress.url + payload)
+		print("[+] Wordpress configuration found from GIT !")
+		print("[!] {}".format(wordpress.url + payload))

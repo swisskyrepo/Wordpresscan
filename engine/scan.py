@@ -1,12 +1,14 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
+from __future__ import print_function
+from __future__ import absolute_import
 import requests
 import re
 import json
 
 from tornado import ioloop, httpclient
-from core import *
-from wordpress import *
+from .core import *
+from .wordpress import *
 from lxml import etree
 from multiprocessing import Process, Pool
 
@@ -30,7 +32,7 @@ class Scan_Engine:
 		match = regex.findall(wordpress.index.text)
 		if match != []:
 			wordpress.version = match[0]
-			print critical("WordPress version %s identified from advanced fingerprinting" % wordpress.version)
+			print(critical("WordPress version %s identified from advanced fingerprinting" % wordpress.version))
 			return True
 		return False
 
@@ -45,7 +47,7 @@ class Scan_Engine:
 		match = regex.findall(r)
 		if match != []:
 			wordpress.version = match[0]
-			print critical("WordPress version %s identified from advanced fingerprinting" % wordpress.version)
+			print(critical("WordPress version %s identified from advanced fingerprinting" % wordpress.version))
 			return True
 		return False
 
@@ -79,7 +81,7 @@ class Scan_Engine:
 					# Detect the version
 					if ddl_hash == root[i][j].get('md5'):
 						wordpress.version =  root[i][j][0].text
-						print critical("WordPress version %s identified from advanced fingerprinting" % wordpress.version)
+						print(critical("WordPress version %s identified from advanced fingerprinting" % wordpress.version))
 						return
 
 
@@ -110,7 +112,7 @@ class Scan_Engine:
 
 		# This version doesn't  exist
 		if wordpress.version not in data:
-			print warning("The version %s isn't in the database - Please try the option --update" % (wordpress.version))
+			print(warning("The version %s isn't in the database - Please try the option --update" % (wordpress.version)))
 			return
 
 		if data[wordpress.version]["vulnerabilities"] == []:
@@ -124,20 +126,20 @@ class Scan_Engine:
 		for vuln in data[version]["vulnerabilities"]:
 
 			# Basic infos
-			print warning("\t%s : %s - ID:%s" % (vuln['vuln_type'], vuln['title'] , vuln['id']) )
-			print info("\tFixed in %s"% vuln['fixed_in'])
+			print(warning("\t%s : %s - ID:%s" % (vuln['vuln_type'], vuln['title'] , vuln['id']) ))
+			print(info("\tFixed in %s"% vuln['fixed_in']))
 
 			# Display references
-			print info("\tReferences:")
+			print(info("\tReferences:"))
 			for refkey in vuln['references'].keys():
 				for ref in vuln['references'][refkey]:
 
 					if refkey != 'url':
-						print "\t\t - %s %s" % (refkey.capitalize(), ref)
+						print("\t\t - %s %s" % (refkey.capitalize(), ref))
 					else:
-						print "\t\t - %s" %ref
+						print("\t\t - %s" %ref)
 
-			print ""
+			print("")
 
 
 	"""
@@ -145,7 +147,7 @@ class Scan_Engine:
 	description : enumerate every theme used by the wordpress
 	"""
 	def enumerating_themes_passive(self, wordpress):
-		print notice("Enumerating themes from passive detection ...")
+		print(notice("Enumerating themes from passive detection ..."))
 
 		# Theme name (css file)
 		regex = re.compile('wp-content/themes/(.*?)/.*?[css|js].*?ver=([0-9\.]*)')
@@ -173,7 +175,7 @@ class Scan_Engine:
 	description : enumerate every plugins used by the wordpress
 	"""
 	def enumerating_plugins_passive(self, wordpress):
-		print notice("Enumerating plugins from passive detection ...")
+		print(notice("Enumerating plugins from passive detection ..."))
 
 		# Plugin name (js file)
 		regex = re.compile('wp-content/plugins/(.*?)/.*?[css|js].*?ver=([0-9\.]*)')
@@ -201,7 +203,7 @@ class Scan_Engine:
 	description : enumerate every themes used by the wordpress
 	"""
 	def enumerating_themes_aggressive(self, wordpress):
-		print notice("Enumerating themes from aggressive detection ...")
+		print(notice("Enumerating themes from aggressive detection ..."))
 
 		# Load json file
 		with open('database/themes.json') as data_file:
@@ -222,7 +224,7 @@ class Scan_Engine:
 	description : enumerate every plugins used by the wordpress
 	"""
 	def enumerating_plugins_aggressive(self, wordpress):
-		print notice("Enumerating plugins from aggressive detection ...")
+		print(notice("Enumerating plugins from aggressive detection ..."))
 
 		# Load json file
 		with open('database/plugins.json') as data_file:

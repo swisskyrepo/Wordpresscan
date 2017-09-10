@@ -1,5 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
+from __future__ import print_function
 import requests
 import argparse
 from requests.packages.urllib3.exceptions import InsecureRequestWarning # Required for bad https website
@@ -12,17 +13,17 @@ from engine.brute import *
 
 if __name__ == "__main__":
 
-	print "_______________________________________________________________ "
-	print " _    _               _                                         "
-	print "| |  | |             | |                                        "
-	print "| |  | | ___  _ __ __| |_ __  _ __ ___  ___ ___  ___ __ _ _ __  "
-	print "| |/\| |/ _ \| '__/ _` | '_ \| '__/ _ \/ __/ __|/ __/ _` | '_ \ "
-	print "\  /\  / (_) | | | (_| | |_) | | |  __/\__ \__ \ (_| (_| | | | |"
-	print " \/  \/ \___/|_|  \__,_| .__/|_|  \___||___/___/\___\__,_|_| |_|"
-	print "                       | |                                      "
-	print "                       |_|                                      "
-	print " WordPress scanner based on wpscan work - @pentest_swissky      "
-	print "_______________________________________________________________ "
+	print("_______________________________________________________________ ")
+	print(" _    _               _                                         ")
+	print("| |  | |             | |                                        ")
+	print("| |  | | ___  _ __ __| |_ __  _ __ ___  ___ ___  ___ __ _ _ __  ")
+	print("| |/\| |/ _ \| '__/ _` | '_ \| '__/ _ \/ __/ __|/ __/ _` | '_ \ ")
+	print("\  /\  / (_) | | | (_| | |_) | | |  __/\__ \__ \ (_| (_| | | | |")
+	print(" \/  \/ \___/|_|  \__,_| .__/|_|  \___||___/___/\___\__,_|_| |_|")
+	print("                       | |                                      ")
+	print("                       |_|                                      ")
+	print(" WordPress scanner based on wpscan work - @pentest_swissky      ")
+	print("_______________________________________________________________ ")
 
 	parser = argparse.ArgumentParser()
 	parser.add_argument('-u', action ='store', dest='url', help="Wordpress URL")

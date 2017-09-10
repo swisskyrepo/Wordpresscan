@@ -1,12 +1,14 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
+from __future__ import print_function
+from __future__ import absolute_import
 import requests
 import re
 import json
 import os
 import imp
 
-from wordpress import *
+from .wordpress import *
 
 class Load_Plugins:
 	plugin_folder = "./plugins"
@@ -26,5 +28,5 @@ class Load_Plugins:
 				loaded = imp.load_module('plugins.' + name, f, file, desc)
 
 				# Run the __init__
-				print notice('Plugin %s loaded.' % loaded.name)
+				print(notice('Plugin %s loaded.' % loaded.name))
 				loaded.__init__(wordpress)

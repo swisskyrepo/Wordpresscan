@@ -11,9 +11,7 @@ You agree that you use this software at your own risk.
 ## Install & Launch
 Dependencies
 ```
-pip install requests
-pip install tornado
-pip install lxml
+pip install -r requirements.txt  # installs lxml, requests, and tornado
 ```
 
 Install

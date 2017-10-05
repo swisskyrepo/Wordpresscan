@@ -3,6 +3,7 @@
 import requests
 import re
 import json
+from random import randint
 from core import *
 
 class Wordpress:
@@ -44,14 +45,21 @@ class Wordpress:
 	"""
 	name        : random_agent()
 	description : give a random user agent
-	todo : user-agent.txt -> unzip -> random line
 	"""
 	def random_agent(self):
 		if self.agent != "random_agent":
 			self.agent = "Wordpresscan - For educational purpose only !"
 		else:
-			self.agent = "Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.94 Safari/537.36"
+			with open('database/user-agents.txt','r') as f:
+				uas = f.read()
 
+				# remove '#SOMETHING' and '\n\n'
+				uas = re.sub("#.*","", uas)
+				uas = uas.replace("\n\n","")
+				uas = uas.split('\n')
+
+			random = randint(0, len(uas))
+			self.agent = uas[random]
 
 	"""
 	name        : is_wordpress()

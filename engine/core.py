@@ -44,6 +44,15 @@ def format_url(url):
     return url
 
 """
+name        : unzip_file()
+description : unzip a file, used for user-agents.txt and timthumbs.txt
+"""
+# TODO improve this , os.system is a dirty method
+def unzip_file(filename):
+    os.system('mv '+ filename + ' ' + filename + ".gz")
+    os.system('gzip -d '+ filename+".gz")
+
+"""
 name        : database_update()
 description : download and update the database from wpscan website
 warning     : user-agents.txt and timthumbs.txt are zip files
@@ -58,6 +67,9 @@ def database_update():
   for f in update_files:
     print "\t\033[93mDownloading \033[0m"+ f +" \033[92mFile updated !\033[0m"
     download_raw_file(update_url+f, "database/"+f, True)
+
+  unzip_file("database/user-agents.txt")
+  unzip_file("database/timthumbs.txt")
 
 
 """

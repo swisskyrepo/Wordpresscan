@@ -40,7 +40,7 @@ class Brute_Engine:
 						print critical("Can't found %s file" % passwords_list)
 						exit()
 
-					print notice("Bruteforcing detected users: {}".format(wordpress.users))
+					print notice("Bruteforcing detected users: ")
 					for user in wordpress.users:
 						print info("User found "+ user['slug'])
 						self.bruteforcing_pass(wordpress, user['slug'], passwords_list)

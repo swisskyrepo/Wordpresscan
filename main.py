@@ -32,6 +32,7 @@ if __name__ == "__main__":
 	parser.add_argument('--brute', action ='store', dest='brute', default=None, help="Bruteforce users and passwords")
 	parser.add_argument('--nocheck', action ='store_const', const='nocheck',dest='nocheck', default=False, help="Check for a Wordpress instance")
 	parser.add_argument('--random-agent', action ='store_const', const='random_agent', dest='random_agent', default=False, help="Random User-Agent")
+	parser.add_argument('--threads', action ='store', dest='max_threads', default=1, help="Number of threads to use")
 	results = parser.parse_args()
 
 	# Check wordpress url
@@ -45,7 +46,7 @@ if __name__ == "__main__":
 			database_update()
 
 		# Build a new wordpress object
-		wp = Wordpress(format_url(results.url), results.random_agent, results.nocheck)
+		wp = Wordpress(format_url(results.url), results.random_agent, results.nocheck, results.max_threads)
 
 		# Launch bruteforce
 		Brute_Engine(wp, results.brute)

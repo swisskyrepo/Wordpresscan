@@ -29,9 +29,13 @@ if __name__ == "__main__":
 	parser.add_argument('--update', action ='store_const', const='update', dest='update', help="Update the database")
 	parser.add_argument('--aggressive', action ='store_const', const='aggressive', dest='aggressive', default=False, help="Aggressive scan for plugins/themes")
 	parser.add_argument('--fuzz', action ='store_const', const='fuzz', dest='fuzz', default=False, help="Fuzz the files")
-	parser.add_argument('--brute', action ='store', dest='brute', default=None, help="Bruteforce users and passwords")
+	parser.add_argument('--brute', action ='store_const', const='brute', dest='brute', default=False, help="Bruteforce users and passwords")
 	parser.add_argument('--nocheck', action ='store_const', const='nocheck',dest='nocheck', default=False, help="Check for a Wordpress instance")
 	parser.add_argument('--random-agent', action ='store_const', const='random_agent', dest='random_agent', default=False, help="Random User-Agent")
+	parser.add_argument('--threads', action ='store', dest='max_threads', default=1, help="Number of threads to use")
+	parser.add_argument('--usernames', action ='store', dest='usernames', default='', help="Usernames to bruteforce")
+	parser.add_argument('--users-list', action ='store', dest='users_list', default=None, help="Users list for bruteforce")
+	parser.add_argument('--passwords-list', action ='store', dest='passwords_list', default=None, help="Passwords list for bruteforce")
 	results = parser.parse_args()
 
 	# Check wordpress url
@@ -45,10 +49,10 @@ if __name__ == "__main__":
 			database_update()
 
 		# Build a new wordpress object
-		wp = Wordpress(format_url(results.url), results.random_agent, results.nocheck)
+		wp = Wordpress(format_url(results.url), results.random_agent, results.nocheck, results.max_threads)
 
 		# Launch bruteforce
-		Brute_Engine(wp, results.brute)
+		Brute_Engine(wp, results.brute, results.usernames, results.users_list, results.passwords_list)
 
 		# Launch fuzzing
 		Fuzz_Engine(wp, results.fuzz)

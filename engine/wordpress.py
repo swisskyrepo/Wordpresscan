@@ -15,10 +15,11 @@ class Wordpress:
 	agent   = False
 	users   = {}
 
-	def __init__(self, url, user_agent, nocheck):
+	def __init__(self, url, user_agent, nocheck, max_threads):
 		print info("URL: %s" % url)
 		self.url   = url
 		self.agent = user_agent
+		self.max_threads = int(max_threads)
 		self.random_agent()
 		self.clean_url()
 		self.is_up_and_installed()

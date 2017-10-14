@@ -9,17 +9,18 @@ You agree that you use this software at your own risk.
 
 
 ## Install & Launch
-Dependencies
-```
-pip install requests
-pip install tornado
-pip install lxml
-```
 
 Install
 ```bash
 git clone https://github.com/swisskyrepo/Wordpresscan.git
 cd Wordpresscan
+```
+
+Virtualenv
+```
+virtualenv .venv -p /usr/bin/python2.7
+source .venv/bin/activate
+pip install -r requirements.txt
 ```
 
 Example 1 : Basic update and scan of a wordpress

@@ -38,7 +38,6 @@ if __name__ == "__main__":
 	parser.add_argument('--passwords-list', action ='store', dest='passwords_list', default=None, help="Passwords list for bruteforce")
 	results = parser.parse_args()
 
-	print results
 	# Check wordpress url
 	if results.url != None:
 		# Disable warning for ssl verify=False

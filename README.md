@@ -47,9 +47,9 @@ python main.py -u "http://127.0.0.1/wordpress/" --brute --passwords-list fuzz/wo
 ```
 
 
-
+```
 ╭─ 👻 swissky@crashlab: ~/Github/Wordpresscan  ‹master*›
-╰─$ python main.py -u "http://127.0.0.1/wordpress/" --brute fuzz/wordlist.lst --nocheck       
+╰─$ python main.py -u "http://127.0.0.1/wordpress/" --brute --users-list fuzz/wordlist.lst --passwords-list fuzz/wordlist.lst --nocheck       
 _______________________________________________________________
  _    _               _                                         
 | |  | |             | |                                        

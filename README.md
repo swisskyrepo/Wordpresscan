@@ -33,13 +33,18 @@ python main.py -u "http://localhost/wordpress" --update --random-agent
 ```
 
 Example 2 : Basic bruteforce (option --brute, option --nocheck)
+* bruteforce customs usernames
 ```
-python main.py -u "http://127.0.0.1/wordpress/" --brute fuzz/wordlist.lst
-python main.py -u "http://127.0.0.1/wordpress/" --brute admin
-
---brute file.lst : Will bruteforce every username and their password
---brute username : Will bruteforce the password for the given username
-it will also try to bruteforce the password for the detected users.
+python main.py -u "http://127.0.0.1/wordpress/" --brute --usernames "admin,guest" --passwords-list fuzz/wordlist.lst
+```
+* bruteforce with usernames list
+```
+python main.py -u "http://127.0.0.1/wordpress/" --brute --users-list fuzz/wordlist.lst --passwords-list fuzz/wordlist.lst
+```
+* bruteforce detected users
+```
+python main.py -u "http://127.0.0.1/wordpress/" --brute --passwords-list fuzz/wordlist.lst
+```
 
 
 

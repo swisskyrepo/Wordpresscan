@@ -12,36 +12,48 @@ from wordpress import *
 from thread_engine import ThreadEngine
 
 class Brute_Engine:
-	def __init__(self, wordpress, brute):
-		if brute != None:
+	def __init__(self, wordpress, brute, usernames, users_list, passwords_list):
+		# bruteforce customs users passed in --brute
+		# ex: --brute admin,guest,foo
+		if brute:
+			if usernames:
+				users_to_brute = usernames.split(',')
+				for user in users_to_brute:
+					user = user.replace(' ', '')
+					print notice("Bruteforcing " + user)
+					self.bruteforcing_pass(wordpress, user, passwords_list)
 
-			# Bruteforce username
-			if os.path.isfile(brute):
-				self.bruteforcing_user(wordpress)
+			# Bruteforce with usernames list
+			elif users_list:
+				for file_list in [users_list, passwords_list]:
+					if not os.path.isfile(file_list):
+						print critical("Can't found %s file" % file_list)
+						exit()
+				# launch users & passwords bruteforce
+				self.bruteforcing_user(wordpress, users_list, passwords_list)
 
+
+			# if users detected, bruteforce them
 			else:
 				if len(wordpress.users) != 0:
-					print notice("Bruteforcing detected users")
+					if not os.path.isfile(passwords_list):
+						print critical("Can't found %s file" % passwords_list)
+						exit()
+
+					print notice("Bruteforcing detected users: {}".format(wordpress.users))
 					for user in wordpress.users:
 						print info("User found "+ user['slug'])
-						self.bruteforcing_pass(wordpress, user['slug'])
+						self.bruteforcing_pass(wordpress, user['slug'], passwords_list)
 
-				else:
-					print notice("Bruteforcing " + brute)
-					print info("User found "+ brute)
-					self.bruteforcing_pass(wordpress, brute)
-
-			# Exit the bruteforce
-			exit()
 
 	"""
 	name        : bruteforcing_user(self, wordpress)
 	description :
 	"""
-	def bruteforcing_user(self, wordpress):
+	def bruteforcing_user(self, wordpress, users_list, passwords_list):
 		print notice("Bruteforcing all users")
 
-		with open('fuzz/wordlist.lst') as data_file:
+		with open(users_list) as data_file:
 			data   = data_file.readlines()
 			thread_engine = ThreadEngine(wordpress.max_threads)
 			users_found = []
@@ -52,7 +64,7 @@ class Brute_Engine:
 			thread_engine.wait()
 
 			for user in users_found:
-				self.bruteforcing_pass(wordpress, user)
+				self.bruteforcing_pass(wordpress, user, passwords_list)
 
 
 	def check_user(self, user, users_found, wordpress):
@@ -68,10 +80,10 @@ class Brute_Engine:
 	name        : bruteforcing_pass(self, wordpress)
 	description :
 	"""
-	def bruteforcing_pass(self, wordpress, user):
+	def bruteforcing_pass(self, wordpress, user, passwords_list):
 		print info("Starting passwords bruteforce for " + user)
 
-		with open('fuzz/wordlist.lst') as data_file:
+		with open(passwords_list) as data_file:
 			data  = data_file.readlines()
 			size  = len(data)
 			thread_engine = ThreadEngine(wordpress.max_threads)

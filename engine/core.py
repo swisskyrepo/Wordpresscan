@@ -18,7 +18,7 @@ def notice(msg):
   return "\n\033[1m[i] " + msg + "\033[0m"
 
 def critical(msg):
-  return "\n\033[91m[!] " + msg + "\033[0m"
+  return "\033[91m[!] " + msg + "\033[0m"
 
 def warning(msg):
   return "\033[93m[i] " + msg + "\033[0m"

@@ -1,9 +1,9 @@
 # Wordpresscan
-A simple Wordpress scanner written in python based on the work of WPScan (Ruby version)
+A simple Wordpress scanner written in python based on the work of WPScan (Ruby version), some features are inspired by WPSeku.
 
 ## Disclaimer
 ```
-The author of this github is not responsible for misuse or for any damage that you may cause!
+The authors of this github are not responsible for misuse or for any damage that you may cause!
 You agree that you use this software at your own risk.
 ```
 
@@ -17,14 +17,15 @@ cd Wordpresscan
 ```
 
 Virtualenv
-```
+```bash
 virtualenv .venv -p /usr/bin/python2.7
 source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-Example 1 : Basic update and scan of a wordpress
-```
+## Examples
+### Example 1 : Basic update and scan of a wordpress
+```python
 python main.py -u "http://localhost/wordpress" --update --random-agent
 
 -u : Url of the WordPress
@@ -33,13 +34,13 @@ python main.py -u "http://localhost/wordpress" --update --random-agent
 --random-agent : Use a random user-agent for this session
 ```
 
-Example 2 : Basic bruteforce (option --brute, option --nocheck)
+### Example 2 : Basic bruteforce (option --brute, option --nocheck)
 * bruteforce customs usernames
-```
+```python
 python main.py -u "http://127.0.0.1/wordpress/" --brute --usernames "admin,guest" --passwords-list fuzz/wordlist.lst
 ```
 * bruteforce with usernames list
-```
+```python
 python main.py -u "http://127.0.0.1/wordpress/" --brute --users-list fuzz/wordlist.lst --passwords-list fuzz/wordlist.lst
 ```
 * bruteforce detected users
@@ -48,7 +49,7 @@ python main.py -u "http://127.0.0.1/wordpress/" --brute --passwords-list fuzz/wo
 ```
 
 
-```
+```python
 ╭─ 👻 swissky@crashlab: ~/Github/Wordpresscan  ‹master*›
 ╰─$ python main.py -u "http://127.0.0.1/wordpress/" --brute --users-list fuzz/wordlist.lst --passwords-list fuzz/wordlist.lst --nocheck       
 _______________________________________________________________
@@ -74,8 +75,8 @@ _______________________________________________________________
 Bruteforcing - ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 ```
 
-Example 3 : Thinking is overrated, this is aggressive, mostly not advised!
-```
+### Example 3 : Thinking is overrated, this is aggressive, mostly not advised!
+```python
 python main.py -u "http://127.0.0.1/wordpress/" --fuzz
 
 [i] Enumerating components from aggressive fuzzing ...
@@ -91,6 +92,11 @@ python main.py -u "http://127.0.0.1/wordpress/" --fuzz
 ## Output example from a test environment
 ![alt tag](https://github.com/swisskyrepo/Wordpresscan/blob/master/screens/Version%204.4.7.png?raw=true)
 
+## Deploy a test environment
+```bash
+docker-compose -f wordpress_compose.yml up -d
+```
+To enable `wp-json` api you need to change "Permalink" to anything but "simple" in the settings.
 
 ## Credits and Contributors
 * Original idea and script from [WPScan Team](https://wpscan.org/)

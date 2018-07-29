@@ -1,720 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <wp-versions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="wp_versions.xsd">
-  <file src="wp-admin/js/widgets/text-widgets.min.js">
-    <hash md5="28f9be51cafa06930392acb005b8c824">
-      <version>4.8.2</version>
-    </hash>
-    <hash md5="3651b41fcb718e55e0de3a29212d71ea">
-      <version>4.8.1</version>
-    </hash>
-    <hash md5="ccbae9a28443a1ad1b5bbee115dc045b">
-      <version>4.8</version>
-    </hash>
-  </file>
-  <file src="wp-admin/js/widgets/text-widgets.js">
-    <hash md5="c1fd80a457b96b2fe7aecf56afe62fd3">
-      <version>4.8.2</version>
-    </hash>
-    <hash md5="2eda0fba7c33c68b92a25d71e49f24f7">
-      <version>4.8.1</version>
-    </hash>
-    <hash md5="bff1d54a16cd5b99c51bb68b6d9cde1b">
-      <version>4.8</version>
-    </hash>
-  </file>
-  <file src="wp-includes/js/wplink.min.js">
-    <hash md5="5c8ce7c9fc66234e60742bf8d3cf2ffb">
-      <version>4.8.2</version>
-    </hash>
-    <hash md5="cff6fcc5b70652ee476588bc20884511">
-      <version>4.7.6</version>
-    </hash>
-    <hash md5="18f38030b7acd35250c60fe80ab73699">
-      <version>4.7</version>
-    </hash>
-    <hash md5="a3119f33e453860200fbacb09474f51e">
-      <version>4.6.7</version>
-    </hash>
-    <hash md5="ae3b50794ddcc3df84812d0cbc2855d4">
-      <version>4.5.10</version>
-    </hash>
-    <hash md5="7d0ceb00ca46b627c036f834c7edd58a">
-      <version>4.4.11</version>
-    </hash>
-    <hash md5="e0e239a4e8242880ed2d964e7a299579">
-      <version>4.3.12</version>
-    </hash>
-    <hash md5="474111b726b62007e9b5601b8d2f81bf">
-      <version>4.2.16</version>
-    </hash>
-    <hash md5="3d2de6e6f70baf2d755cdc9c153474f0">
-      <version>4.1.19</version>
-    </hash>
-    <hash md5="a41d935025d74367609f773af6e31702">
-      <version>4.0.19</version>
-    </hash>
-    <hash md5="67e7be5e708bcfc2f2d3cd31ed6f4c9c">
-      <version>3.9.20</version>
-    </hash>
-    <hash md5="a80a3c351b5307e73a9efa09e35f378f">
-      <version>3.8.22</version>
-    </hash>
-    <hash md5="d9e99f88c210e4e9b1ef2a508305705a">
-      <version>3.7.22</version>
-    </hash>
-  </file>
-  <file src="wp-includes/js/wp-emoji-loader.js">
-    <hash md5="3c631f3faee929b38f97cf728a400838">
-      <version>4.8.2</version>
-    </hash>
-    <hash md5="4cac17278a207c14a58648c92b24e146">
-      <version>4.5</version>
-    </hash>
-    <hash md5="59250ea877230734339b12588fb56929">
-      <version>4.4.2</version>
-    </hash>
-    <hash md5="248977111a79cdb3aed53f8262e3c7da">
-      <version>4.4.1</version>
-    </hash>
-    <hash md5="355049f99f0565be72e7a2b4dcfd5e5e">
-      <version>4.4</version>
-    </hash>
-  </file>
-  <file src="wp-includes/js/wp-emoji-loader.min.js">
-    <hash md5="c324a0faeae39356972d91b004b706d4">
-      <version>4.8.2</version>
-    </hash>
-    <hash md5="4499553cf177cb964b0df8c445ebc798">
-      <version>4.5</version>
-    </hash>
-    <hash md5="2a684c8e10b5294903e28dcd9cac377b">
-      <version>4.4.2</version>
-    </hash>
-    <hash md5="8569719eaedca791a2136e7bad07de29">
-      <version>4.4.1</version>
-    </hash>
-    <hash md5="05fa167592d86e9c03dc30b4f868c00d">
-      <version>4.4</version>
-    </hash>
-  </file>
-  <file src="wp-includes/js/tinymce/wp-tinymce.js.gz">
-    <hash md5="c022b3c86a98fd5fca9c08a194dcff76">
-      <version>4.8.2</version>
-    </hash>
-    <hash md5="a7fb7552f7da68361ffa673546bb1efe">
-      <version>4.8.1</version>
-    </hash>
-    <hash md5="3bf7827cf5e51f105ac3c462be109a3d">
-      <version>4.8</version>
-    </hash>
-    <hash md5="1ae89b4f452465b662619b182f6f1c4e">
-      <version>4.7.6</version>
-    </hash>
-    <hash md5="15c2b9ef65635dfc0ae35db3407f5c34">
-      <version>4.7.3</version>
-    </hash>
-    <hash md5="f98ca0bdf5184d89e4efbe2451c9f3f2">
-      <version>4.6.7</version>
-    </hash>
-    <hash md5="89d7aecba16c8e5e06f54b47ff382783">
-      <version>4.5.10</version>
-    </hash>
-    <hash md5="40de3da265b56fb06463a946ccc6aa40">
-      <version>4.5</version>
-    </hash>
-    <hash md5="39ef25c8879a357bf0580f50fac0c688">
-      <version>4.4.11</version>
-    </hash>
-    <hash md5="2c1802232e52dcc43e6ea3624ae25302">
-      <version>4.3.12</version>
-    </hash>
-    <hash md5="b8177e0d45cb3b1f1f369148b64e9cdb">
-      <version>4.3</version>
-    </hash>
-    <hash md5="937d1ec0bf894d9686332fc3f71e6d22">
-      <version>4.2.2</version>
-    </hash>
-    <hash md5="66ff6b408c58c3207ff4b20e75ec5e68">
-      <version>4.1</version>
-    </hash>
-    <hash md5="21f15ceb6c245e6dc0edc510761049ba">
-      <version>4.0</version>
-    </hash>
-    <hash md5="1d52314b1767c557b7232ae192c80318">
-      <version>3.9</version>
-    </hash>
-    <hash md5="b0bcf8091516db358ee9c833afd73175">
-      <version>3.7</version>
-    </hash>
-    <hash md5="cf4bbd562430a9bcbe735062be851be1">
-      <version>3.6.1</version>
-    </hash>
-    <hash md5="42ce18e88f1c21d4e991fcd431bcb606">
-      <version>3.6</version>
-    </hash>
-    <hash md5="a58dd12608659503cf087e879e720354">
-      <version>3.5.2</version>
-    </hash>
-    <hash md5="55c80a4794624ce9b94aa3631ad46c0b">
-      <version>3.5.1</version>
-    </hash>
-    <hash md5="8e529a971610d7ebe7851339c5cb3d67">
-      <version>3.5</version>
-    </hash>
-    <hash md5="ff19e44be975f89b647274d85b70f821">
-      <version>3.4.2</version>
-    </hash>
-    <hash md5="b412f1a6785cc7ef118bf2a9f473b318">
-      <version>3.1</version>
-    </hash>
-  </file>
-  <file src="wp-includes/js/tinymce/plugins/wplink/plugin.js">
-    <hash md5="09a85c3689413e0ae8c2c36c71cb18b8">
-      <version>4.8.2</version>
-    </hash>
-    <hash md5="006614e9b8bc45c0c876a438ba68924b">
-      <version>4.7.6</version>
-    </hash>
-    <hash md5="da6af7852e021c05095cfba81d84c3df">
-      <version>4.6.7</version>
-    </hash>
-    <hash md5="ea8c761e49d51c34f97a568827466f50">
-      <version>4.5.10</version>
-    </hash>
-    <hash md5="809bc21a5b35c1e60d107c830bff9474">
-      <version>4.5</version>
-    </hash>
-    <hash md5="b2caced58fa8561c815adf6ec2de1093">
-      <version>4.4.11</version>
-    </hash>
-    <hash md5="03d191b53b73ee6f989291dfa7a97050">
-      <version>4.3.12</version>
-    </hash>
-    <hash md5="4e3f972530a74ecdd1cb522418db3cb3">
-      <version>4.3</version>
-    </hash>
-    <hash md5="60cff85a34f1cf5ad273abe018e82252">
-      <version>3.9</version>
-    </hash>
-  </file>
-  <file src="wp-includes/js/tinymce/plugins/wplink/plugin.min.js">
-    <hash md5="61b5d1b6099e3e36cc2f73e400cf349c">
-      <version>4.8.2</version>
-    </hash>
-    <hash md5="4afced1f9ab8700e47f31367be6fe7f5">
-      <version>4.7.6</version>
-    </hash>
-    <hash md5="8d578828e03173241c2f2981a78e8d76">
-      <version>4.6.7</version>
-    </hash>
-    <hash md5="0d7894abf7d8addd7139fd53e7d51899">
-      <version>4.5.10</version>
-    </hash>
-    <hash md5="5039db87abba4481d89e74ec591a761d">
-      <version>4.5</version>
-    </hash>
-    <hash md5="b0b7e2fa90ea37cd9de0489d978d56e2">
-      <version>4.4.11</version>
-    </hash>
-    <hash md5="dcb6abd9b5957b73706088680f9151d9">
-      <version>4.3.12</version>
-    </hash>
-    <hash md5="6f2e2cba06ccf7e1106d1de79b66ae8b">
-      <version>4.3</version>
-    </hash>
-    <hash md5="573ccd13990bffbf99e2273deb5b50dd">
-      <version>3.9</version>
-    </hash>
-  </file>
-  <file src="wp-includes/js/twemoji.min.js">
-    <hash md5="116aad1318ef7f049d2f2429faf670b4">
-      <version>4.8.2</version>
-    </hash>
-    <hash md5="446ab329d408aa69da0e448298a039f4">
-      <version>4.4</version>
-    </hash>
-  </file>
-  <file src="wp-includes/js/wp-emoji-release.min.js">
-    <hash md5="af2f44df3198cfda9fd515873696ad00">
-      <version>4.8.2</version>
-    </hash>
-    <hash md5="1601e8da361dc8f86caa5afe88e37f5c">
-      <version>4.4</version>
-    </hash>
-    <hash md5="c2e58e292752044c979a4efe494e1299">
-      <version>4.2.2</version>
-    </hash>
-  </file>
-  <file src="wp-includes/js/wplink.js">
-    <hash md5="6563181820c6b50a36ab7249198bdfea">
-      <version>4.8.2</version>
-    </hash>
-    <hash md5="fd437907913d9ff37c7b68191f011363">
-      <version>4.7.6</version>
-    </hash>
-    <hash md5="d1ca5593704c028cafa1e8bbd15f1b99">
-      <version>4.7</version>
-    </hash>
-    <hash md5="57ea74a73e7645136c0a9cc5abbd540a">
-      <version>4.6.7</version>
-    </hash>
-    <hash md5="9914791ca8d1c20816f66b3ee6a3c575">
-      <version>4.5.10</version>
-    </hash>
-    <hash md5="8c308b4742cb277f10492615392c7c7a">
-      <version>4.4.11</version>
-    </hash>
-    <hash md5="72f75b21018ea87dde7985ac76412713">
-      <version>4.3.12</version>
-    </hash>
-    <hash md5="624e27eeb0275c0d0856e22e23456e13">
-      <version>4.2.16</version>
-    </hash>
-    <hash md5="134e15484be933063a7b5e72c201fd88">
-      <version>4.1.19</version>
-    </hash>
-    <hash md5="26500607f021bfaa5b1462e48c0ee7e5">
-      <version>4.0.19</version>
-    </hash>
-    <hash md5="7d8dcae6fc67866464349fe714829901">
-      <version>3.9.20</version>
-    </hash>
-    <hash md5="ffc517a6eb9a057222e152f58a9bf098">
-      <version>3.8.22</version>
-    </hash>
-    <hash md5="f8a7e3f7491e199375f554e43e90f3e1">
-      <version>3.7.22</version>
-    </hash>
-  </file>
-  <file src="wp-includes/js/mce-view.js">
-    <hash md5="a02d8e96c2f2ca0fc149b7c4c1385c9c">
-      <version>4.8.2</version>
-    </hash>
-    <hash md5="121281e52f8f9965f747ca5e8ab92abe">
-      <version>4.7.6</version>
-    </hash>
-    <hash md5="6be4f47b111998d7c3f88336950240fd">
-      <version>4.6.7</version>
-    </hash>
-    <hash md5="3993177e8de05866db54370ef2cc1a16">
-      <version>4.3.12</version>
-    </hash>
-    <hash md5="8621171808a24ad81795d1804c1bc43c">
-      <version>4.2.16</version>
-    </hash>
-    <hash md5="099b86bb322333cbe7687cf8f8fe4a09">
-      <version>4.1.19</version>
-    </hash>
-    <hash md5="95b8b4588c3cfe067139835d87ff7c0d">
-      <version>4.0.19</version>
-    </hash>
-    <hash md5="3ab7c5e518658b152c35ee8ff512fdc4">
-      <version>3.9</version>
-    </hash>
-  </file>
-  <file src="wp-includes/js/mce-view.min.js">
-    <hash md5="33ee9226013e0103d805385f03ebd1eb">
-      <version>4.8.2</version>
-    </hash>
-    <hash md5="602fc8936631c7079b786cbbac621dd8">
-      <version>4.7.6</version>
-    </hash>
-    <hash md5="fae23eefe8da67b53ebae7fe69c5a3d8">
-      <version>4.6.7</version>
-    </hash>
-    <hash md5="ed623af79c9fa06e85b845ee9421a111">
-      <version>4.3.12</version>
-    </hash>
-    <hash md5="81adc1a2adc7b15f6b5d5f151c880af3">
-      <version>4.2.16</version>
-    </hash>
-    <hash md5="399743416c751e4d8b55d0398b69a675">
-      <version>4.1.19</version>
-    </hash>
-    <hash md5="294d02cbc00b2310c0d5cf11c55a2ba0">
-      <version>4.0.19</version>
-    </hash>
-    <hash md5="140e4a74c6be70800fcef20fce9ae444">
-      <version>3.9</version>
-    </hash>
-  </file>
-  <file src="wp-includes/js/twemoji.js">
-    <hash md5="c0390599690d05b4c11e1a8b9b0fab25">
-      <version>4.8.2</version>
-    </hash>
-    <hash md5="3ee6d376cd81409dd12d29b5dfcbf385">
-      <version>4.4</version>
-    </hash>
-  </file>
-  <file src="wp-admin/js/customize-controls.min.js">
-    <hash md5="32d18988e048936443961fa91f3ae990">
-      <version>4.8</version>
-    </hash>
-    <hash md5="c58c70935cb1028d58e6f3fd87c209b0">
-      <version>4.7.4</version>
-    </hash>
-    <hash md5="55c9454a7813e7bdf75fe74efa3f5916">
-      <version>4.7.3</version>
-    </hash>
-    <hash md5="13ec0e9534db67402cd8e3de6e2ebaeb">
-      <version>4.7</version>
-    </hash>
-    <hash md5="eeffa28eb1d02c9852c4629192a2ad08">
-      <version>4.3</version>
-    </hash>
-    <hash md5="0284b64cbc37e3ded9b11133d7bc5fa9">
-      <version>4.1</version>
-    </hash>
-    <hash md5="d735782274ded5e119173b45cbe274f8">
-      <version>3.9</version>
-    </hash>
-  </file>
-  <file src="wp-admin/js/widgets/media-widgets.min.js">
-    <hash md5="030addbc8364e837fde9d573fa433329">
-      <version>4.8</version>
-    </hash>
-  </file>
-  <file src="wp-admin/js/widgets/media-widgets.js">
-    <hash md5="b8300b64a85bea2d8bb7ba4c8ac810be">
-      <version>4.8</version>
-    </hash>
-  </file>
-  <file src="wp-admin/js/customize-controls.js">
-    <hash md5="0683a5bd4a316d854985a3549ec60418">
-      <version>4.8</version>
-    </hash>
-    <hash md5="e48c8805a07665ba778e5d63c9fcd0a1">
-      <version>4.7.4</version>
-    </hash>
-    <hash md5="d8598fe25595153923bf25bfb57eb4d7">
-      <version>4.7.3</version>
-    </hash>
-    <hash md5="d89eff32867dbead906999d2d33df9dc">
-      <version>4.7</version>
-    </hash>
-    <hash md5="c48eef3773572618f27809300fae0cde">
-      <version>4.3</version>
-    </hash>
-    <hash md5="edc5f50d0fd73a32d5b06790ffcab513">
-      <version>4.1</version>
-    </hash>
-    <hash md5="119ce8b94732f6eb170f8215aa65d47e">
-      <version>3.9</version>
-    </hash>
-    <hash md5="c637cfded694d52045eb3235a7bf7303">
-      <version>3.4.2</version>
-    </hash>
-    <hash md5="aa0d38bd6f590ad8c3126074145b1bf1">
-      <version>3.4.1</version>
-    </hash>
-    <hash md5="b421960bde1ab1e1adfc822336103735">
-      <version>3.4</version>
-    </hash>
-  </file>
-  <file src="wp-admin/js/customize-nav-menus.js">
-    <hash md5="62c76211a81251e495b11d23314da878">
-      <version>4.8</version>
-    </hash>
-    <hash md5="f09d815335cd77c8c7777b2824254c07">
-      <version>4.7.3</version>
-    </hash>
-    <hash md5="444b2358c6ad5e0be84b367b2e080a0f">
-      <version>4.7</version>
-    </hash>
-    <hash md5="12a53b2080fee745c366799d75f36e49">
-      <version>4.3.1</version>
-    </hash>
-    <hash md5="eb8b822276e2dbfbc687a78ad65253dc">
-      <version>4.3</version>
-    </hash>
-  </file>
-  <file src="wp-admin/js/customize-nav-menus.min.js">
-    <hash md5="2ab2b22000b57942c42134efe73db683">
-      <version>4.8</version>
-    </hash>
-    <hash md5="ecb1fddddee46cdebda2a0421aadeb63">
-      <version>4.7.3</version>
-    </hash>
-    <hash md5="bc754d8cb65e8b7cb92f6ec38f5b3632">
-      <version>4.7</version>
-    </hash>
-    <hash md5="b19dec30505b46afbc06a72e9fc175e6">
-      <version>4.3.1</version>
-    </hash>
-    <hash md5="0495076f6aad785775658ecdfd5e939e">
-      <version>4.3</version>
-    </hash>
-  </file>
-  <file src="wp-admin/css/widgets.min.css">
-    <hash md5="c2c8b0acd264abd814f40dab2563f3cf">
-      <version>4.8</version>
-    </hash>
-  </file>
-  <file src="wp-admin/css/themes-rtl.css">
-    <hash md5="8f0a90ccd54ad9f8b584a77ad5fc4df4">
-      <version>4.8</version>
-    </hash>
-    <hash md5="9244c8ce5e9d98581459de46b8b1bcd1">
-      <version>4.5</version>
-    </hash>
-  </file>
-  <file src="wp-admin/css/themes-rtl.min.css">
-    <hash md5="f5a99b541f512e2c0395d7d2b40adb34">
-      <version>4.8</version>
-    </hash>
-    <hash md5="2b3dd6296037fabf5838dbb7abaf097a">
-      <version>4.5</version>
-    </hash>
-  </file>
-  <file src="wp-admin/css/themes.css">
-    <hash md5="44bafdf96fbd98c93ca4a6564cbe7e93">
-      <version>4.8</version>
-    </hash>
-    <hash md5="a67484679e8fd85db53b9619a2ac8f85">
-      <version>4.5</version>
-    </hash>
-  </file>
-  <file src="wp-admin/css/widgets.css">
-    <hash md5="d5aa95eb9b8a99353bb0bcd23e585035">
-      <version>4.8</version>
-    </hash>
-    <hash md5="d45da61a2c6ceb19f07c71aa48dae40a">
-      <version>2.5.1</version>
-    </hash>
-    <hash md5="74412c2868056ef2971bee2c271962a8">
-      <version>2.5</version>
-    </hash>
-  </file>
-  <file src="wp-admin/css/widgets-rtl.min.css">
-    <hash md5="28048bd84191c288acbb362dea9da056">
-      <version>4.8</version>
-    </hash>
-  </file>
-  <file src="wp-admin/css/themes.min.css">
-    <hash md5="ed740c0a3115880e47cba29134ed6bf8">
-      <version>4.8</version>
-    </hash>
-    <hash md5="12ea589ec56cee96417b3af756d724b4">
-      <version>4.5</version>
-    </hash>
-  </file>
-  <file src="wp-admin/css/widgets-rtl.css">
-    <hash md5="11eb0df301b82d5775206d07575f08f9">
-      <version>4.8</version>
-    </hash>
-    <hash md5="a1a32a9b498dfa02859b1d03600b6668">
-      <version>2.6</version>
-    </hash>
-    <hash md5="5fd9135577a36d561dea45d8845fd9dd">
-      <version>2.5.1</version>
-    </hash>
-    <hash md5="cd137a3d74d868ba4bd25fe64b33892d">
-      <version>2.5</version>
-    </hash>
-  </file>
-  <file src="wp-includes/js/tinymce/plugins/wordpress/plugin.js">
-    <hash md5="049a123027cc7ed6f5cb6e567b631746">
-      <version>4.8</version>
-    </hash>
-    <hash md5="4a542ce8fe045da7e3048411e421ba28">
-      <version>3.9</version>
-    </hash>
-  </file>
-  <file src="wp-includes/js/tinymce/plugins/wordpress/plugin.min.js">
-    <hash md5="13b554d6a123f78c5cb3b601c24c0e09">
-      <version>4.8</version>
-    </hash>
-    <hash md5="6319d1ae71068739dc713d26fd7da312">
-      <version>3.9</version>
-    </hash>
-  </file>
-  <file src="wp-includes/js/tinymce/skins/wordpress/wp-content.css">
-    <hash md5="dd1d6bb4548f4ee2ab740d8ba89b1b35">
-      <version>4.8</version>
-    </hash>
-    <hash md5="07743f0d829a3e47573f7bdf68760ff9">
-      <version>4.6</version>
-    </hash>
-  </file>
-  <file src="wp-includes/js/media-views.min.js">
-    <hash md5="72005ffa5742a50f41246d5917e6e295">
-      <version>4.8</version>
-    </hash>
-    <hash md5="611a20dba38b0421dc1af45eeaac4acd">
-      <version>4.4</version>
-    </hash>
-    <hash md5="bc83b1b178eb990c3eb122abe42f2674">
-      <version>4.0</version>
-    </hash>
-    <hash md5="4ac9627f33575a6afaf4144704daecc2">
-      <version>3.9</version>
-    </hash>
-    <hash md5="38ff988c7537bbaaefdc12d1f55f26f7">
-      <version>3.5</version>
-    </hash>
-  </file>
-  <file src="wp-includes/js/media-views.js">
-    <hash md5="9bbd1fa91e81ac80c6e1cd12783681a5">
-      <version>4.8</version>
-    </hash>
-    <hash md5="999ad3a86de87c0c592571f5cee59fa9">
-      <version>4.4</version>
-    </hash>
-    <hash md5="a632e610f46df19fcefa26e4e6e0eab3">
-      <version>4.0</version>
-    </hash>
-    <hash md5="6a0e09e778c9d60192c03f0d862ad6ca">
-      <version>3.9</version>
-    </hash>
-    <hash md5="03c002070b42e7b16c032fb666774c66">
-      <version>3.5</version>
-    </hash>
-  </file>
-  <file src="wp-includes/js/customize-preview.js">
-    <hash md5="d40869ecf7e2a8f99bf2ec2d69f6e0b5">
-      <version>4.7.3</version>
-    </hash>
-    <hash md5="34a3ec49d6414125c613e87f9a51cf20">
-      <version>4.7</version>
-    </hash>
-    <hash md5="da36bc2dfcb13350c799b62de68dfa4b">
-      <version>3.4</version>
-    </hash>
-  </file>
-  <file src="wp-includes/js/customize-preview.min.js">
-    <hash md5="c2f8e7dbb3732123437acde95db6cfb8">
-      <version>4.7.3</version>
-    </hash>
-    <hash md5="8eb16dc701cf206c22ab40082d814cb5">
-      <version>4.7</version>
-    </hash>
-  </file>
-  <file src="wp-admin/js/updates.js">
-    <hash md5="7b77a3b55888f6e3c119b109b126c2c6">
-      <version>4.7</version>
-    </hash>
-  </file>
-  <file src="wp-admin/js/updates.min.js">
-    <hash md5="c0f5ff6dd746ec2a6581fefcb2463381">
-      <version>4.7</version>
-    </hash>
-  </file>
-  <file src="wp-admin/js/theme.js">
-    <hash md5="5387070f8f034c0bcfcc1355eb42e767">
-      <version>4.7</version>
-    </hash>
-    <hash md5="e3a25a3cb6290e46ba89b17a32c62f6c">
-      <version>3.8</version>
-    </hash>
-  </file>
-  <file src="wp-admin/js/theme.min.js">
-    <hash md5="e21167e2200cac86643cae38c67ace04">
-      <version>4.7</version>
-    </hash>
-    <hash md5="10e74c33a682b849626d06d7c826e8e6">
-      <version>3.8</version>
-    </hash>
-  </file>
-  <file src="wp-admin/css/edit.min.css">
-    <hash md5="8c4b91d038300235db9877d6a4196674">
-      <version>4.7</version>
-    </hash>
-  </file>
-  <file src="wp-admin/css/customize-nav-menus-rtl.css">
-    <hash md5="f47ee453000230a6e509e5eb09d21b53">
-      <version>4.7</version>
-    </hash>
-  </file>
-  <file src="wp-admin/css/customize-nav-menus-rtl.min.css">
-    <hash md5="c859a7494e93d515ea023e845b862de0">
-      <version>4.7</version>
-    </hash>
-  </file>
-  <file src="wp-admin/css/edit.css">
-    <hash md5="38a79bf55e7a3b6ccba3b242e9b2de00">
-      <version>4.7</version>
-    </hash>
-    <hash md5="8ac09095ebcc8c9ffcf6593c6f4118f7">
-      <version>3.9</version>
-    </hash>
-  </file>
-  <file src="wp-admin/css/customize-nav-menus.min.css">
-    <hash md5="080248c963bb67242f323af5cab56734">
-      <version>4.7</version>
-    </hash>
-  </file>
-  <file src="wp-admin/css/edit-rtl.css">
-    <hash md5="66ea900f920a0f7b94920ef018724264">
-      <version>4.7</version>
-    </hash>
-    <hash md5="d96ee1aa49292d90a5d085764b1d33db">
-      <version>3.9</version>
-    </hash>
-  </file>
-  <file src="wp-admin/css/edit-rtl.min.css">
-    <hash md5="500f084226ee39c6b11b9974a65a32f2">
-      <version>4.7</version>
-    </hash>
-  </file>
-  <file src="wp-admin/css/customize-nav-menus.css">
-    <hash md5="2e38f00fdfff5ee896dd3f15f06cf5d3">
-      <version>4.7</version>
-    </hash>
-  </file>
-  <file src="wp-includes/js/customize-preview-nav-menus.min.js">
-    <hash md5="4f1fc16aa63323570bfde1539ec30245">
-      <version>4.7</version>
-    </hash>
-  </file>
-  <file src="wp-includes/js/wp-api.min.js">
-    <hash md5="632a0df5fc4f02477aa93f838530c4e0">
-      <version>4.7</version>
-    </hash>
-  </file>
-  <file src="wp-includes/js/customize-selective-refresh.js">
-    <hash md5="68c83cd50c29e7924959c18b4ee5cc84">
-      <version>4.7</version>
-    </hash>
-  </file>
-  <file src="wp-includes/js/customize-preview-nav-menus.js">
-    <hash md5="191408780b5578f0b022dece40792719">
-      <version>4.7</version>
-    </hash>
-  </file>
-  <file src="wp-includes/js/wp-api.js">
-    <hash md5="2933e0915238937a85a3a6730a6959da">
-      <version>4.7</version>
-    </hash>
-  </file>
-  <file src="wp-includes/js/customize-selective-refresh.min.js">
-    <hash md5="1969be970d4928a749df77e59b27c788">
-      <version>4.7</version>
-    </hash>
-  </file>
-  <file src="wp-includes/css/customize-preview-rtl.css">
-    <hash md5="aa094951adcb751c299c0bd6b88468a8">
-      <version>4.7</version>
-    </hash>
-  </file>
-  <file src="wp-includes/css/customize-preview-rtl.min.css">
-    <hash md5="c48fdf5861c04e2024cfdd46da5955ee">
-      <version>4.7</version>
-    </hash>
-  </file>
-  <file src="wp-includes/css/customize-preview.min.css">
-    <hash md5="f97c81542e5a01d1d1fafc83d3e919e4">
-      <version>4.7</version>
-    </hash>
-  </file>
-  <file src="wp-includes/css/customize-preview.css">
-    <hash md5="f77ee2e90b397bdc85b94fef4ec3c339">
-      <version>4.7</version>
-    </hash>
-  </file>
   <file src="readme.html">
-    <hash md5="21b68e053d312980ee29e34e2d2a5946">
-      <version>4.6.7</version>
-    </hash>
     <hash md5="8e9f725564294e07c64765188bf9a3fe">
       <version>4.6.6</version>
     </hash>
@@ -760,9 +46,6 @@
     <hash md5="51ddc54e156a2eb1178dde690701afe3">
       <version>4.5.2</version>
     </hash>
-    <hash md5="edc1c98719dffa3cddfac22dc100f605">
-      <version>4.5.10</version>
-    </hash>
     <hash md5="5a06021dcac8af1d9790c5a3927d5235">
       <version>4.5.1</version>
     </hash>
@@ -792,9 +75,6 @@
     </hash>
     <hash md5="c17664e85bfe1b94a71597f49af06f77">
       <version>4.4.2</version>
-    </hash>
-    <hash md5="41239be0065fa9d0afb246efcc9f782c">
-      <version>4.4.11</version>
     </hash>
     <hash md5="109d8930d992a36f805ac0a342c5b2e1">
       <version>4.4.10</version>
@@ -828,9 +108,6 @@
     </hash>
     <hash md5="80e2027d2ae1394172820adc117d51af">
       <version>4.3.2</version>
-    </hash>
-    <hash md5="730ab685dd9a1742275818cdb3e44643">
-      <version>4.3.12</version>
     </hash>
     <hash md5="2489eed974e0d786eb3ca1798bf1c20a">
       <version>4.3.11</version>
@@ -867,9 +144,6 @@
     </hash>
     <hash md5="8592124f91d6da8273fc42b419f384b0">
       <version>4.2.2</version>
-    </hash>
-    <hash md5="b78ccf8b524dcd2f9706d919d036e61a">
-      <version>4.2.16</version>
     </hash>
     <hash md5="622cdb329b1b5b5a6f5d76988df4272c">
       <version>4.2.15</version>
@@ -918,9 +192,6 @@
     </hash>
     <hash md5="58c2fe4eb8b7866abb8912dc7fc2f616">
       <version>4.1.2</version>
-    </hash>
-    <hash md5="f66b292419a257a80d989a878fae8f8e">
-      <version>4.1.19</version>
     </hash>
     <hash md5="2822d4dc7ca874e3d1e76fd7c514efcc">
       <version>4.1.18</version>
@@ -979,9 +250,6 @@
     <hash md5="ed8777afffc86285afc57984da43fdbd">
       <version>4.0.2</version>
     </hash>
-    <hash md5="4445478174fb84e1d0a1b2e14a7327c7">
-      <version>4.0.19</version>
-    </hash>
     <hash md5="17b05be902fc20a3d2428d41e01edf43">
       <version>4.0.18</version>
     </hash>
@@ -1035,9 +303,6 @@
     </hash>
     <hash md5="62a78170a740a4460a8d25e00c1839f5">
       <version>3.9.3</version>
-    </hash>
-    <hash md5="50321fc2a768254650e69e0b4562473e">
-      <version>3.9.20</version>
     </hash>
     <hash md5="dfb2d2be1648ee220bf9bd3c03694ed8">
       <version>3.9.2</version>
@@ -1098,9 +363,6 @@
     </hash>
     <hash md5="c6de8fc70a18be7e5c36198cd0f99a64">
       <version>3.8.3</version>
-    </hash>
-    <hash md5="9ef246991d6fb8db9688e941fc09fff9">
-      <version>3.8.22</version>
     </hash>
     <hash md5="306425f612332d620df886472c5eb1df">
       <version>3.8.21</version>
@@ -1167,9 +429,6 @@
     </hash>
     <hash md5="813e06052daa0692036e60d76d7141d3">
       <version>3.7.3</version>
-    </hash>
-    <hash md5="07f33efaba18b0292d26e7319b8f40f7">
-      <version>3.7.22</version>
     </hash>
     <hash md5="d0b935c4bd9daa500ee76b6a911abb07">
       <version>3.7.21</version>
@@ -1337,1049 +596,60 @@
       <version>0.71-gold</version>
     </hash>
   </file>
-  <file src="wp-admin/js/editor-expand.min.js">
-    <hash md5="2003869bb96b00cd78b008bd667dd57d">
-      <version>4.6</version>
+  <file src="wp-includes/js/tinymce/wp-tinymce.js.gz">
+    <hash md5="a7fb7552f7da68361ffa673546bb1efe">
+      <version>4.8.1</version>
     </hash>
-    <hash md5="32c49e20a3451da0f1b76d1d218c684c">
-      <version>4.0</version>
+    <hash md5="3bf7827cf5e51f105ac3c462be109a3d">
+      <version>4.8</version>
     </hash>
-  </file>
-  <file src="wp-admin/js/editor-expand.js">
-    <hash md5="bc3aaa870920e8272d795377983284e6">
-      <version>4.6</version>
+    <hash md5="15c2b9ef65635dfc0ae35db3407f5c34">
+      <version>4.7.3</version>
     </hash>
-    <hash md5="404895c4518505935866c5eb11047c30">
-      <version>4.0</version>
-    </hash>
-  </file>
-  <file src="wp-includes/css/editor.min.css">
-    <hash md5="7f1d9aa97951aa4ef795807cacd48ed8">
-      <version>4.6</version>
-    </hash>
-    <hash md5="1c060d191ff63e841d8f72eacaf4a6bf">
-      <version>3.9</version>
-    </hash>
-    <hash md5="26c698cf4308f7411829719c0092e3ba">
-      <version>3.5</version>
-    </hash>
-  </file>
-  <file src="wp-includes/css/editor-rtl.css">
-    <hash md5="325a6c7b04fbd7cf907f383aa5f4de38">
-      <version>4.6</version>
-    </hash>
-    <hash md5="ebc9181357a52cab8fab57d71c425834">
-      <version>3.9</version>
-    </hash>
-  </file>
-  <file src="wp-includes/css/editor-rtl.min.css">
-    <hash md5="097f71ecb19edf4fe945a8afee00c908">
-      <version>4.6</version>
-    </hash>
-    <hash md5="73c479e8517d6f74175bc745fdbb6d35">
-      <version>3.9</version>
-    </hash>
-  </file>
-  <file src="wp-includes/css/editor.css">
-    <hash md5="4016c604bcec8a6544c2c966cb8e6925">
-      <version>4.6</version>
-    </hash>
-    <hash md5="9ed346f17ea5f8a7d4f30d96003de9b1">
-      <version>3.9</version>
-    </hash>
-    <hash md5="aa297505c208b2b6860af82106d985ca">
-      <version>3.5</version>
-    </hash>
-    <hash md5="84a599e6afa0ba8b5a00af97787ac52d">
-      <version>3.4.2</version>
-    </hash>
-  </file>
-  <file src="wp-includes/js/tinymce/tinymce.min.js">
-    <hash md5="bae0e7d1036a75aeaed6461677f39adc">
+    <hash md5="40de3da265b56fb06463a946ccc6aa40">
       <version>4.5</version>
     </hash>
-    <hash md5="7fd549b2340d5da4b05e27f16655ce3c">
+    <hash md5="b8177e0d45cb3b1f1f369148b64e9cdb">
       <version>4.3</version>
     </hash>
-  </file>
-  <file src="wp-includes/js/tinymce/plugins/media/plugin.js">
-    <hash md5="e54ed18bea6c2c6ae2fd1909987d2416">
-      <version>4.5</version>
-    </hash>
-    <hash md5="1b56d9b064a6f1768301a2a33affd140">
-      <version>4.3</version>
-    </hash>
-  </file>
-  <file src="wp-includes/js/tinymce/plugins/media/plugin.min.js">
-    <hash md5="e729f9f1201575a9589363bcf7438cb0">
-      <version>4.5</version>
-    </hash>
-    <hash md5="d88ec9908ef4412275ccff68861a41c7">
-      <version>4.3</version>
-    </hash>
-  </file>
-  <file src="wp-includes/js/tinymce/plugins/fullscreen/plugin.js">
-    <hash md5="38740af5358c42ca3770804aca9b1e2d">
-      <version>4.5</version>
-    </hash>
-  </file>
-  <file src="wp-includes/js/tinymce/plugins/fullscreen/plugin.min.js">
-    <hash md5="7399d7a8a9a716303de9628083a61070">
-      <version>4.5</version>
-    </hash>
-  </file>
-  <file src="wp-includes/js/tinymce/plugins/paste/plugin.js">
-    <hash md5="e5554fe0fe4861016f210fcb3ba9de9c">
-      <version>4.5</version>
-    </hash>
-    <hash md5="ba5c8a35df3adc61f0c8abccd371c3fd">
-      <version>4.3</version>
-    </hash>
-  </file>
-  <file src="wp-includes/js/tinymce/plugins/paste/plugin.min.js">
-    <hash md5="1d72974d4431f1558f0be213ecf4b3f6">
-      <version>4.5</version>
-    </hash>
-    <hash md5="4bcf636bad04e64f10be7003828c210e">
-      <version>4.3</version>
-    </hash>
-  </file>
-  <file src="wp-includes/js/tinymce/themes/modern/theme.js">
-    <hash md5="48e1bb77c2ec2cdbb321e12a95fdf425">
-      <version>4.5</version>
-    </hash>
-    <hash md5="76569bb2afef83f696d146f1515d7308">
-      <version>4.3</version>
-    </hash>
-  </file>
-  <file src="wp-includes/js/tinymce/themes/modern/theme.min.js">
-    <hash md5="506dd1713e3fc6ed3de0c00867c4dfaa">
-      <version>4.5</version>
-    </hash>
-    <hash md5="d0d8223ac24917740b2f0f2423bf3410">
-      <version>4.3</version>
-    </hash>
-  </file>
-  <file src="wp-includes/js/tinymce/skins/lightgray/skin.ie7.min.css">
-    <hash md5="58490013777e57ebaab84893713280c1">
-      <version>4.5</version>
-    </hash>
-    <hash md5="f85aec87569380b36901c67b3c2fad81">
-      <version>4.3</version>
-    </hash>
-  </file>
-  <file src="wp-includes/js/tinymce/skins/lightgray/skin.min.css">
-    <hash md5="54ae8d249d7e018ff9f44e8de2ff7a73">
-      <version>4.5</version>
-    </hash>
-    <hash md5="14dc424b662c53b5f48fecdc03772c88">
-      <version>4.3</version>
-    </hash>
-  </file>
-  <file src="wp-admin/js/postbox.js">
-    <hash md5="626e31e5abab7aae41a74691d1185e69">
-      <version>4.4</version>
-    </hash>
-    <hash md5="5834e331f60318d3f00b919ccf515e3a">
-      <version>2.8</version>
-    </hash>
-  </file>
-  <file src="wp-admin/js/common.min.js">
-    <hash md5="f83bef152421e22d8f14f2fb344f3410">
-      <version>4.4</version>
-    </hash>
-    <hash md5="a915138d60305201313066d43c61a2f6">
-      <version>4.1</version>
-    </hash>
-    <hash md5="58f2b7e3399f78ca0ab6aaa0a826bafc">
-      <version>3.8</version>
-    </hash>
-    <hash md5="b45d244b6669aef59434fc30265f01f9">
-      <version>3.6.1</version>
-    </hash>
-    <hash md5="bfe3d59f6e7d5045d07f9835827d1324">
-      <version>3.6</version>
-    </hash>
-  </file>
-  <file src="wp-admin/js/common.js">
-    <hash md5="6cff03191d6f406ced50cfa51737f4b6">
-      <version>4.4</version>
-    </hash>
-    <hash md5="32fb4510695e27473897cb5251348395">
-      <version>4.1</version>
-    </hash>
-    <hash md5="1735dc0877bf1b36a76289168dd93b41">
-      <version>3.8</version>
-    </hash>
-    <hash md5="03eaffeef39119f0523a49c7f9767f3b">
-      <version>3.6.1</version>
-    </hash>
-    <hash md5="2637ea6c99869af4bd6e4a49519601a7">
-      <version>3.6</version>
-    </hash>
-    <hash md5="18b6dcc3aec207acd021ff01f04f9e6c">
-      <version>3.4</version>
-    </hash>
-    <hash md5="4516252d47a73630280869994d510180">
-      <version>3.3</version>
-    </hash>
-    <hash md5="4f0f9bdbe437f850430fae694ca046ba">
-      <version>2.7.1</version>
-    </hash>
-    <hash md5="3e3e8da7ed4e97776c76ca0c792d1a85">
-      <version>2.7</version>
-    </hash>
-  </file>
-  <file src="wp-admin/js/postbox.min.js">
-    <hash md5="f07216a42e8487aea5738f6d71b5c7d3">
-      <version>4.4</version>
-    </hash>
-  </file>
-  <file src="wp-includes/js/wp-emoji.js">
-    <hash md5="a57538e3c37236da55c1f1da474e015e">
-      <version>4.4</version>
-    </hash>
-    <hash md5="a1ee27ad90d9bd862c162080115b1890">
+    <hash md5="937d1ec0bf894d9686332fc3f71e6d22">
       <version>4.2.2</version>
     </hash>
-  </file>
-  <file src="wp-includes/js/wp-emoji.min.js">
-    <hash md5="137858b0d72b5f4637d414461f445008">
-      <version>4.4</version>
-    </hash>
-    <hash md5="3a083b99f4d138b72547e42f77027320">
-      <version>4.2.2</version>
-    </hash>
-  </file>
-  <file src="wp-includes/js/autosave.min.js">
-    <hash md5="5e1ea0845232846c1907d9fe70864d23">
-      <version>4.4</version>
-    </hash>
-  </file>
-  <file src="wp-includes/js/autosave.js">
-    <hash md5="413b428336916273e3853a581f5ab851">
-      <version>4.4</version>
-    </hash>
-    <hash md5="1f09b6343caf9dc71b30d0ff0d90c69b">
-      <version>2.7.1</version>
-    </hash>
-    <hash md5="aebe2414d81a87d6c2c9273654035fcd">
-      <version>2.7</version>
-    </hash>
-    <hash md5="a436fd5bc5fe11fed6acbd8371e09102">
-      <version>2.5.1</version>
-    </hash>
-    <hash md5="4d76da5b913eec43f31a10b6c367f43e">
-      <version>2.5</version>
-    </hash>
-  </file>
-  <file src="wp-includes/certificates/ca-bundle.crt">
-    <hash md5="b6ea3b5f9b5cc919157579ecdefd7901">
-      <version>4.4</version>
-    </hash>
-  </file>
-  <file src="wp-admin/js/user-profile.js">
-    <hash md5="e97fed4b3c06493ab6d1a3d15408ab15">
-      <version>4.3</version>
-    </hash>
-  </file>
-  <file src="wp-admin/js/user-profile.min.js">
-    <hash md5="d990a5a8ca17c099a994cce6fc99a63e">
-      <version>4.3</version>
-    </hash>
-  </file>
-  <file src="wp-admin/js/edit-comments.js">
-    <hash md5="e7e22b2197cc81ee0c5cf30460ede00f">
-      <version>4.3</version>
-    </hash>
-    <hash md5="cea7fcad6f59dceb354ea33628d67926">
-      <version>2.8</version>
-    </hash>
-  </file>
-  <file src="wp-admin/js/edit-comments.min.js">
-    <hash md5="f56147d75a8ff4d0a9a62f88a5203d9a">
-      <version>4.3</version>
-    </hash>
-  </file>
-  <file src="wp-admin/css/login-rtl.min.css">
-    <hash md5="c25af084f22564159483a93fa3b1bd76">
-      <version>4.3</version>
-    </hash>
-    <hash md5="5f54285e40c9b21d507d2260a2420f47">
-      <version>3.9</version>
-    </hash>
-  </file>
-  <file src="wp-admin/css/forms-rtl.css">
-    <hash md5="5d83454881d2a694d0593ae6c209778c">
-      <version>4.3</version>
-    </hash>
-    <hash md5="4719697b45dc80a4b21ac12c129ad378">
-      <version>3.9</version>
-    </hash>
-  </file>
-  <file src="wp-admin/css/login.min.css">
-    <hash md5="42a6a3be4f2f11208a281be9be203427">
-      <version>4.3</version>
-    </hash>
-    <hash md5="eb6244e98261b7eca06d8d11cc9f28bf">
-      <version>3.9</version>
-    </hash>
-  </file>
-  <file src="wp-admin/css/wp-admin-rtl.min.css">
-    <hash md5="a6d4e8c9cf807f9aa705a886020d93f6">
-      <version>4.3</version>
-    </hash>
-    <hash md5="4fcf0cc06914368854e8d3956d67701d">
-      <version>3.9</version>
-    </hash>
-    <hash md5="dc555dec7552e1b6da150c8ffeba9d72">
-      <version>3.8</version>
-    </hash>
-  </file>
-  <file src="wp-admin/css/wp-admin.min.css">
-    <hash md5="19084332c355439f6d42ebc0f0e78ebd">
-      <version>4.3</version>
-    </hash>
-    <hash md5="3dd46c8d228ad29a841338280647936d">
-      <version>3.9</version>
-    </hash>
-    <hash md5="b129c7f3e3924ed5333b63876f42ff4b">
-      <version>3.8</version>
-    </hash>
-    <hash md5="7b21a55b15494b9d4d9e80f7904e11e0">
-      <version>3.5</version>
-    </hash>
-  </file>
-  <file src="wp-admin/css/list-tables-rtl.css">
-    <hash md5="8450e3801667a4d5f4d5119cf76d23ac">
-      <version>4.3</version>
-    </hash>
-  </file>
-  <file src="wp-admin/css/forms.css">
-    <hash md5="82a7baa833cfa3cacffe1567f417388e">
-      <version>4.3</version>
-    </hash>
-    <hash md5="fd519c207095336bb57294926a09461e">
-      <version>3.9</version>
-    </hash>
-  </file>
-  <file src="wp-admin/css/list-tables.css">
-    <hash md5="e5a6313e0366749912b54fc9e6040369">
-      <version>4.3</version>
-    </hash>
-  </file>
-  <file src="wp-includes/js/tinymce/plugins/charmap/plugin.js">
-    <hash md5="b4f29c072885c987beb19599798babb3">
-      <version>4.3</version>
-    </hash>
-  </file>
-  <file src="wp-includes/js/tinymce/plugins/wpview/plugin.js">
-    <hash md5="e406fa32c549ac964de8735631008aeb">
-      <version>4.3</version>
-    </hash>
-    <hash md5="f42ee6c5e96683c1aabf77c479a07457">
-      <version>4.0</version>
-    </hash>
-    <hash md5="d71af8e409639e4fe29a82b2583e97ee">
-      <version>3.9</version>
-    </hash>
-  </file>
-  <file src="wp-includes/js/tinymce/plugins/wpview/plugin.min.js">
-    <hash md5="8bdcfc3e4a5a6d512e326df5947cf442">
-      <version>4.3</version>
-    </hash>
-    <hash md5="5b3e602359d9f830634371082916a862">
-      <version>4.0</version>
-    </hash>
-    <hash md5="b8d0d2f9218cfb35658d15d11715ca6c">
-      <version>3.9</version>
-    </hash>
-  </file>
-  <file src="wp-includes/js/tinymce/plugins/wpeditimage/plugin.js">
-    <hash md5="7fa4ce4504456ad54bc13673d3266608">
-      <version>4.3</version>
-    </hash>
-    <hash md5="9ce0cd57c664c6b6c72c85b64ea72ea1">
+    <hash md5="66ff6b408c58c3207ff4b20e75ec5e68">
       <version>4.1</version>
     </hash>
-    <hash md5="e79814b0b564f9a8b5e06b98ce80b5e9">
+    <hash md5="21f15ceb6c245e6dc0edc510761049ba">
       <version>4.0</version>
     </hash>
-    <hash md5="ed47e3d063b256c3edef89d85d0b516b">
+    <hash md5="1d52314b1767c557b7232ae192c80318">
       <version>3.9</version>
     </hash>
-  </file>
-  <file src="wp-includes/js/tinymce/plugins/wpeditimage/plugin.min.js">
-    <hash md5="94bb3edac4f1fa30c3f25a79251b53d4">
-      <version>4.3</version>
-    </hash>
-    <hash md5="97ed56381413cfaf6d52dd5cb79b3e94">
-      <version>4.1</version>
-    </hash>
-    <hash md5="fd13d574bf148d9410d3a3d5554e8d1c">
-      <version>4.0</version>
-    </hash>
-    <hash md5="9404e45d965fd7625704430c3cee6e51">
-      <version>3.9</version>
-    </hash>
-  </file>
-  <file src="wp-includes/js/tinymce/plugins/lists/plugin.js">
-    <hash md5="9007b591cde52e133de6a54490a4ea59">
-      <version>4.3</version>
-    </hash>
-  </file>
-  <file src="wp-includes/js/media-grid.js">
-    <hash md5="8d2e9573969040d7c24f7d46776962c5">
-      <version>4.1</version>
-    </hash>
-    <hash md5="b04ed37dbd60bc3663ada890d5af18e6">
-      <version>4.0</version>
-    </hash>
-  </file>
-  <file src="wp-includes/js/media-grid.min.js">
-    <hash md5="9a70c60a2cf8bdf9508df9bb94706065">
-      <version>4.1</version>
-    </hash>
-    <hash md5="d863d1e6f0e999c2080b1190d31cdccc">
-      <version>4.0</version>
-    </hash>
-  </file>
-  <file src="wp-includes/css/media-views-rtl.min.css">
-    <hash md5="a119e12e638192f47f133c28c9c259c4">
-      <version>4.0.1</version>
-    </hash>
-    <hash md5="d1703dff57c8a79d200a3cd8671be1a3">
-      <version>4.0</version>
-    </hash>
-    <hash md5="ecf3c4b2f07fdae92ad2b7610afabe7f">
-      <version>3.9</version>
-    </hash>
-    <hash md5="748955e10d038a00280de9ffe656f09d">
-      <version>3.8</version>
-    </hash>
-  </file>
-  <file src="wp-includes/css/media-views.min.css">
-    <hash md5="de3d0b7763542b94e4c86cf8c423013f">
-      <version>4.0.1</version>
-    </hash>
-    <hash md5="260dcaf7e6e2827dbca061b824b13dd0">
-      <version>4.0</version>
-    </hash>
-    <hash md5="3e32684f6b23d052378e1199045e920b">
-      <version>3.9</version>
-    </hash>
-    <hash md5="da980f717b09961e77acea1f0832d779">
-      <version>3.8</version>
-    </hash>
-  </file>
-  <file src="wp-admin/js/media.js">
-    <hash md5="8b7746f89178fcba2f84b7f4dd295571">
-      <version>4.0</version>
-    </hash>
-  </file>
-  <file src="wp-admin/js/media.min.js">
-    <hash md5="1c1a6cef0123a419a9fb9595c199fe78">
-      <version>4.0</version>
-    </hash>
-  </file>
-  <file src="wp-includes/js/mediaelement/mediaelement-and-player.min.js">
-    <hash md5="0015bf4818e9adf776ef6a35e791b855">
-      <version>4.0</version>
-    </hash>
-  </file>
-  <file src="wp-includes/js/mediaelement/flashmediaelement.swf">
-    <hash md5="582ba00d7a38795bba1306b30c31a6f1">
-      <version>4.0</version>
-    </hash>
-  </file>
-  <file src="wp-includes/css/media-views.css">
-    <hash md5="a1ed9196e49fd033bff15737cbd393ef">
-      <version>4.0</version>
-    </hash>
-    <hash md5="d88c98cdb5bf2fe29417d2b92f5288c7">
-      <version>3.9</version>
-    </hash>
-    <hash md5="0642e47790eb3ebff77ad8451b11bf7d">
-      <version>3.8</version>
-    </hash>
-  </file>
-  <file src="wp-includes/css/media-views-rtl.css">
-    <hash md5="d290d20fcf52a06c1576ce599294b0ec">
-      <version>4.0</version>
-    </hash>
-    <hash md5="0896c8e772550ccc25dbf41ad56828f6">
-      <version>3.9</version>
-    </hash>
-    <hash md5="340776735208b7aa98106a0ac81ebeba">
-      <version>3.8</version>
-    </hash>
-  </file>
-  <file src="wp-admin/js/post.min.js">
-    <hash md5="96e5a6b4448a8817566d3575925a9660">
-      <version>3.9</version>
-    </hash>
-    <hash md5="1e251e3ba10b2a9d7f3f496cec3ba3df">
-      <version>3.5</version>
-    </hash>
-  </file>
-  <file src="wp-admin/js/post.js">
-    <hash md5="6578ae8741421df2c6b352f92684140d">
-      <version>3.9</version>
-    </hash>
-    <hash md5="455d1a15d2c2112242449ce6edb5ac14">
-      <version>3.5</version>
-    </hash>
-    <hash md5="8cb6604046ddf6f3ef9d6e1fcddd31c1">
-      <version>3.4.2</version>
-    </hash>
-    <hash md5="e4f0fc3a74331d7d2060914068300ec0">
-      <version>2.8</version>
-    </hash>
-    <hash md5="a34f1474e3a5ade6b4483bc307bfde84">
-      <version>2.5.1</version>
-    </hash>
-    <hash md5="020069f33ed66ea68f9067c596d137cb">
-      <version>2.5</version>
-    </hash>
-  </file>
-  <file src="wp-admin/css/admin-menu-rtl.css">
-    <hash md5="617bad9e838b5d8ff1a6694a2c2cf79a">
-      <version>3.9</version>
-    </hash>
-  </file>
-  <file src="wp-admin/css/admin-menu.css">
-    <hash md5="734bf76b45a2a690043446ededf94b7d">
-      <version>3.9</version>
-    </hash>
-  </file>
-  <file src="wp-includes/js/media-audiovideo.js">
-    <hash md5="b6e377d5177058bc872fd72c625df119">
-      <version>3.9</version>
-    </hash>
-  </file>
-  <file src="wp-includes/js/customize-models.js">
-    <hash md5="edb4c59aa080eeaa22439faba31f8558">
-      <version>3.9</version>
-    </hash>
-  </file>
-  <file src="wp-includes/js/customize-models.min.js">
-    <hash md5="aa94f4d4ff1df18548142ad13d427ca5">
-      <version>3.9</version>
-    </hash>
-  </file>
-  <file src="wp-includes/js/mediaelement/wp-playlist.js">
-    <hash md5="bbb0981d3bb6131a999a42a42dcce185">
-      <version>3.9</version>
-    </hash>
-  </file>
-  <file src="wp-includes/js/mediaelement/wp-mediaelement.css">
-    <hash md5="fa1ab1ee7f929d54403190cb29e496fe">
-      <version>3.9</version>
-    </hash>
-  </file>
-  <file src="wp-includes/js/customize-views.min.js">
-    <hash md5="83c37717273f92513d2f93ca28931fe4">
-      <version>3.9</version>
-    </hash>
-  </file>
-  <file src="wp-includes/js/customize-views.js">
-    <hash md5="0aeeca504e00db4a8bef755c7a85a4fa">
-      <version>3.9</version>
-    </hash>
-  </file>
-  <file src="wp-includes/js/media-audiovideo.min.js">
-    <hash md5="6c9436bcb7fab07b86de4e469279eb22">
-      <version>3.9</version>
-    </hash>
-  </file>
-  <file src="wp-admin/js/dashboard.min.js">
-    <hash md5="b7f0a17a87fc20fe83d0a7b3d97b97b0">
-      <version>3.8</version>
-    </hash>
-  </file>
-  <file src="wp-admin/js/dashboard.js">
-    <hash md5="e0e87cf173989432bb55a610b0482fa7">
-      <version>3.8</version>
-    </hash>
-    <hash md5="581b9ca830642beef916bcd39d089e4b">
-      <version>2.8</version>
-    </hash>
-  </file>
-  <file src="wp-admin/css/install.min.css">
-    <hash md5="de9a85a063de74e38a9fd4cb41c2b0ce">
-      <version>3.8</version>
-    </hash>
-  </file>
-  <file src="wp-admin/css/install-rtl.css">
-    <hash md5="04328c1f971f271dc3618a71a0eee27d">
-      <version>3.8</version>
-    </hash>
-    <hash md5="ab9e254c14787712db65e61d2be6bef7">
-      <version>2.6</version>
-    </hash>
-  </file>
-  <file src="wp-admin/css/install-rtl.min.css">
-    <hash md5="35593db173c2dfce8b63f1a39f2eb3b7">
-      <version>3.8</version>
-    </hash>
-  </file>
-  <file src="wp-admin/css/wp-admin.css">
-    <hash md5="25554fc81989c307119b7d4818dc3963">
-      <version>3.8</version>
-    </hash>
-    <hash md5="c8c02c7d0318ddeb985e324f126a19e8">
-      <version>3.5</version>
-    </hash>
-    <hash md5="d8471b68d45739f07aac407c06fb8903">
-      <version>3.4</version>
-    </hash>
-    <hash md5="a8a5bdf7cb06970dcd1de76dd2f59622">
-      <version>3.2.1</version>
-    </hash>
-    <hash md5="0beaaab72e767baed9fabade0b758090">
-      <version>3.2</version>
-    </hash>
-  </file>
-  <file src="wp-admin/css/wp-admin-rtl.css">
-    <hash md5="0e672b35b6bfab72babe50424503466b">
-      <version>3.8</version>
-    </hash>
-    <hash md5="07ed58a67ed2becdbbe3657fb4da3e8e">
-      <version>3.2.1</version>
-    </hash>
-    <hash md5="2551f4595882e172dc1e6b68e8c64806">
-      <version>3.2</version>
-    </hash>
-  </file>
-  <file src="wp-admin/css/install.css">
-    <hash md5="ef980e36248c52fdf84395bb16fed6c1">
-      <version>3.8</version>
-    </hash>
-    <hash md5="e4b5f221205f4075192a67ba25b1dd47">
-      <version>3.2.1</version>
-    </hash>
-    <hash md5="eb5a90b48f19ecb9a88c0a9254b7af32">
-      <version>3.2</version>
-    </hash>
-  </file>
-  <file src="wp-includes/css/dashicons.css">
-    <hash md5="7764b220df0d9356ec51b6946533c7ac">
-      <version>3.8</version>
-    </hash>
-  </file>
-  <file src="wp-includes/css/buttons-rtl.css">
-    <hash md5="71c13ab1693b45fb3d7712e540c4dfe0">
-      <version>3.8</version>
-    </hash>
-  </file>
-  <file src="wp-includes/css/buttons.min.css">
-    <hash md5="47b1080fc3e5f6630771c5844dc342ec">
-      <version>3.8</version>
-    </hash>
-  </file>
-  <file src="wp-includes/css/admin-bar.min.css">
-    <hash md5="ea21d81ce5d4c547a1c13476f1274ffb">
-      <version>3.8</version>
-    </hash>
-  </file>
-  <file src="wp-includes/css/wp-pointer.min.css">
-    <hash md5="2db0af168008dd4ba838cda3e111ebe4">
-      <version>3.8</version>
-    </hash>
-  </file>
-  <file src="wp-includes/css/wp-pointer-rtl.min.css">
-    <hash md5="264b969d3c1ba2cc8eb3df7fe4feaaaf">
-      <version>3.8</version>
-    </hash>
-  </file>
-  <file src="wp-includes/css/buttons-rtl.min.css">
-    <hash md5="2f4716ac8571b8887ab6ce14764075d9">
-      <version>3.8</version>
-    </hash>
-  </file>
-  <file src="wp-includes/css/admin-bar-rtl.css">
-    <hash md5="20b09b48f38414802780b0e76ce0bd23">
-      <version>3.8</version>
-    </hash>
-  </file>
-  <file src="wp-includes/css/wp-pointer.css">
-    <hash md5="7e45d0e701aead8de6f0e9ab63b15741">
-      <version>3.8</version>
-    </hash>
-  </file>
-  <file src="wp-includes/css/wp-pointer-rtl.css">
-    <hash md5="4711e5e8702a25a94284a833dd04cebf">
-      <version>3.8</version>
-    </hash>
-  </file>
-  <file src="wp-includes/css/admin-bar-rtl.min.css">
-    <hash md5="8917960dfdd03a01d3c003f403eea83f">
-      <version>3.8</version>
-    </hash>
-  </file>
-  <file src="wp-includes/css/buttons.css">
-    <hash md5="a1bde984a0c1ddd244220da833cabeb1">
-      <version>3.8</version>
-    </hash>
-  </file>
-  <file src="wp-includes/css/dashicons.min.css">
-    <hash md5="c2566febd39864bf4abe0ebebd0f147d">
-      <version>3.8</version>
-    </hash>
-  </file>
-  <file src="wp-includes/css/admin-bar.css">
-    <hash md5="4077bbaddd5b0afec30d0465dfee9a1f">
-      <version>3.8</version>
-    </hash>
-    <hash md5="181250fab3a7e2549a7e7fa21c2e6079">
-      <version>3.1</version>
-    </hash>
-  </file>
-  <file src="wp-includes/fonts/dashicons.svg">
-    <hash md5="1c7e93cbb4adc19d2d93774853614642">
-      <version>3.8</version>
-    </hash>
-  </file>
-  <file src="wp-includes/fonts/dashicons.woff">
-    <hash md5="088ab6f8565d3a0bcc6bee7a64fee658">
-      <version>3.8</version>
-    </hash>
-  </file>
-  <file src="wp-includes/fonts/dashicons.eot">
-    <hash md5="2702a00aa0b250258802454163f55d22">
-      <version>3.8</version>
-    </hash>
-  </file>
-  <file src="wp-includes/fonts/dashicons.ttf">
-    <hash md5="ece97919ac9f753c2ed3578d70c6e64c">
-      <version>3.8</version>
-    </hash>
-  </file>
-  <file src="wp-includes/js/tinymce/plugins/wpeditimage/editor_plugin.js">
-    <hash md5="4eb9923fe07a29b24bac1e21aaa7e6eb">
+    <hash md5="b0bcf8091516db358ee9c833afd73175">
       <version>3.7</version>
     </hash>
-    <hash md5="8b4d90c058f4f224c9c8f304d67e2dd5">
+    <hash md5="cf4bbd562430a9bcbe735062be851be1">
+      <version>3.6.1</version>
+    </hash>
+    <hash md5="42ce18e88f1c21d4e991fcd431bcb606">
+      <version>3.6</version>
+    </hash>
+    <hash md5="a58dd12608659503cf087e879e720354">
+      <version>3.5.2</version>
+    </hash>
+    <hash md5="55c80a4794624ce9b94aa3631ad46c0b">
+      <version>3.5.1</version>
+    </hash>
+    <hash md5="8e529a971610d7ebe7851339c5cb3d67">
+      <version>3.5</version>
+    </hash>
+    <hash md5="ff19e44be975f89b647274d85b70f821">
       <version>3.4.2</version>
     </hash>
-    <hash md5="5b140ddf0f08034402ae78b31d8a1a28">
-      <version>2.6</version>
-    </hash>
-  </file>
-  <file src="wp-includes/js/tinymce/plugins/wordpress/editor_plugin_src.js">
-    <hash md5="065e5a8b0d8875768f0b75fc1bf7b6f0">
-      <version>3.6</version>
-    </hash>
-  </file>
-  <file src="wp-includes/js/tinymce/plugins/wordpress/editor_plugin.js">
-    <hash md5="d3565905a56a8dc9268f4e2d225d8e0e">
-      <version>3.6</version>
-    </hash>
-    <hash md5="14dc2e370b485d43d4c0d28ba8883b92">
-      <version>2.5.1</version>
-    </hash>
-    <hash md5="87ade361a474d9b789bd894a25b7f085">
-      <version>2.5</version>
-    </hash>
-  </file>
-  <file src="wp-includes/js/jquery/jquery.js">
-    <hash md5="9dcde2d5e8aeda556a0c52239fa2f44c">
-      <version>3.6</version>
-    </hash>
-  </file>
-  <file src="wp-includes/js/media-editor.min.js">
-    <hash md5="6399f3e251f5dd1604e7936c1634e199">
-      <version>3.5.2</version>
-    </hash>
-    <hash md5="960a0adb54a1ffa9bf62719e7896de57">
-      <version>3.5.1</version>
-    </hash>
-    <hash md5="74d81f993bcb756db962338aa45a7f37">
-      <version>3.5</version>
-    </hash>
-  </file>
-  <file src="wp-includes/js/swfupload/swfupload.swf">
-    <hash md5="3dc9c7e7c13b2d4edc3ebb7d0e9cdb94">
-      <version>3.5.2</version>
-    </hash>
-  </file>
-  <file src="wp-includes/js/media-editor.js">
-    <hash md5="1cde26c3ff2b26db1728fa937ca3cf2c">
-      <version>3.5.2</version>
-    </hash>
-    <hash md5="e4097e9dea685c3e613e0fc015ba2832">
-      <version>3.5.1</version>
-    </hash>
-    <hash md5="2609026f9412e8040a9b968ac127a1aa">
-      <version>3.5</version>
-    </hash>
-  </file>
-  <file src="wp-includes/js/tinymce/tiny_mce.js">
-    <hash md5="6e79ab6d786c5c95920064add33ee599">
-      <version>3.5.1</version>
-    </hash>
-    <hash md5="55cd8e5ceca9c1763b1401164d70df50">
-      <version>3.5</version>
-    </hash>
-    <hash md5="82ac611e3da57fa3e9973c37491486ee">
+    <hash md5="b412f1a6785cc7ef118bf2a9f473b318">
       <version>3.1</version>
     </hash>
-    <hash md5="a3d05665b236944c590493e20860bcdb">
-      <version>2.5.1</version>
-    </hash>
-    <hash md5="7293453cf0ff5a9a4cfe8cebd5b5a71a">
-      <version>2.5</version>
-    </hash>
-  </file>
-  <file src="wp-admin/images/sort-2x.gif">
-    <hash md5="45592749900dae6565848a310a0c0fbd">
-      <version>3.5</version>
-    </hash>
-  </file>
-  <file src="wp-includes/js/tinymce/wp-tinymce-schema.js">
-    <hash md5="cb88e8f50b53365fb94422e9a269226a">
-      <version>3.5</version>
-    </hash>
-  </file>
-  <file src="wp-admin/js/customize-controls.dev.js">
-    <hash md5="4be2481e0d8960e317486394c2e5186f">
-      <version>3.4.2</version>
-    </hash>
-    <hash md5="f518a6c4b341dcad34ca7f5145485923">
-      <version>3.4.1</version>
-    </hash>
-    <hash md5="170885b4ee7eb66ed4220332d4b3e370">
-      <version>3.4</version>
-    </hash>
-  </file>
-  <file src="wp-admin/js/post.dev.js">
-    <hash md5="b7f14147f98e067f4c2df1cba298fd1a">
-      <version>3.4.2</version>
-    </hash>
-    <hash md5="392cf5bd0d18d352cf7e8178d5870be0">
-      <version>2.8</version>
-    </hash>
-  </file>
-  <file src="wp-includes/js/tinymce/plugins/wpeditimage/editor_plugin_src.js">
-    <hash md5="23acb7d19b52e8fafaa84c3a342cfe7c">
-      <version>3.4.2</version>
-    </hash>
-  </file>
-  <file src="wp-includes/js/wp-lists.js">
-    <hash md5="46e1341cd4ea49f31046f7d7962adc7f">
-      <version>3.4.2</version>
-    </hash>
-    <hash md5="3f3d922461418335261f26c4f97931c1">
-      <version>2.5</version>
-    </hash>
-  </file>
-  <file src="wp-includes/js/wp-lists.dev.js">
-    <hash md5="bb69091155683715d2902019693ceeac">
-      <version>3.4.2</version>
-    </hash>
-  </file>
-  <file src="wp-includes/js/plupload/wp-plupload.js">
-    <hash md5="839d6017ae96d4f4bfd3a8a88b5bd131">
-      <version>3.4.2</version>
-    </hash>
-  </file>
-  <file src="wp-includes/js/plupload/wp-plupload.dev.js">
-    <hash md5="75bd0d965758c849bd27173d7aec1923">
-      <version>3.4.2</version>
-    </hash>
-  </file>
-  <file src="wp-includes/css/editor.dev.css">
-    <hash md5="8f375efc2f2a3f703d6ba284f99830d4">
-      <version>3.4.2</version>
-    </hash>
-  </file>
-  <file src="wp-admin/js/common.dev.js">
-    <hash md5="d50cb86c0c59bddf298adc39d6a41f60">
-      <version>3.4</version>
-    </hash>
-    <hash md5="15668f1c67a3fdb80cf021e231c085d8">
-      <version>3.3</version>
-    </hash>
-  </file>
-  <file src="wp-admin/css/wp-admin.dev.css">
-    <hash md5="5c6176761fc0ee644e210b33ba20357f">
-      <version>3.4</version>
-    </hash>
-    <hash md5="c8b8a4d72181369d2714002093e91c48">
-      <version>3.2.1</version>
-    </hash>
-    <hash md5="e55e5834423d22b753bc5f27fd90ba4a">
-      <version>3.2</version>
-    </hash>
-  </file>
-  <file src="wp-includes/js/customize-preview.dev.js">
-    <hash md5="7ea457381aefb6d20836d3af804af618">
-      <version>3.4</version>
-    </hash>
-  </file>
-  <file src="wp-admin/js/wp-fullscreen.js">
-    <hash md5="5675f7793f171b6424bf72f9d7bf4d9a">
-      <version>3.2.1</version>
-    </hash>
-    <hash md5="7b423e0b7c9221092737ad5271d09863">
-      <version>3.2</version>
-    </hash>
-  </file>
-  <file src="wp-admin/js/wp-fullscreen.dev.js">
-    <hash md5="70d51eecfd8d02a5f538c3be731fdedd">
-      <version>3.2.1</version>
-    </hash>
-    <hash md5="ff1fafac6a69b8ebced1965e18e39b4a">
-      <version>3.2</version>
-    </hash>
-  </file>
-  <file src="wp-admin/css/media.css">
-    <hash md5="cc05fe38ba18674e7c6ab01c4dff6e4f">
-      <version>3.2.1</version>
-    </hash>
-    <hash md5="eedf339656fe12ca835e797320445e34">
-      <version>3.2</version>
-    </hash>
-    <hash md5="3bc7a38b3a83079b9abd2245709f7b2b">
-      <version>2.5.1</version>
-    </hash>
-    <hash md5="73fe3708cb1c253dd50d5be65f8777dd">
-      <version>2.5</version>
-    </hash>
-  </file>
-  <file src="wp-admin/css/media.dev.css">
-    <hash md5="f9755a2abfe8ebdf14ae665d4e64f25b">
-      <version>3.2.1</version>
-    </hash>
-    <hash md5="7b2de212dde19888dc191e7ba40c967e">
-      <version>3.2</version>
-    </hash>
-  </file>
-  <file src="wp-admin/css/global-rtl.css">
-    <hash md5="e62b1a3cc3693dfb1dbc9f3c99ee3ee2">
-      <version>3.2.1</version>
-    </hash>
-    <hash md5="615061f4d085863ef4eaf0b89eccb59c">
-      <version>3.2</version>
-    </hash>
-    <hash md5="9dcfffe3f2b12122ab451bc0c48df2ae">
-      <version>2.6</version>
-    </hash>
-  </file>
-  <file src="wp-admin/css/login.dev.css">
-    <hash md5="1d28a5b5ee8474f5f07e9bf15a4cc49a">
-      <version>3.2.1</version>
-    </hash>
-    <hash md5="2b2e425ed02d774f5fc008f71b141d08">
-      <version>3.2</version>
-    </hash>
-  </file>
-  <file src="wp-admin/css/global.dev.css">
-    <hash md5="72e8801cc89a0b98141fc2dee9b873c6">
-      <version>3.2.1</version>
-    </hash>
-    <hash md5="d3cc587676f09f7e6ae73e6c8e7137b7">
-      <version>3.2</version>
-    </hash>
-    <hash md5="636fbecad6d5bd4bb3e4311c3a272877">
-      <version>2.9</version>
-    </hash>
-  </file>
-  <file src="wp-admin/css/press-this.css">
-    <hash md5="3edd89cf250ff41992e4aba77c41c195">
-      <version>3.2.1</version>
-    </hash>
-    <hash md5="8c7fbc1f9ffd7a9a292b6ae288f1b002">
-      <version>3.2</version>
-    </hash>
-    <hash md5="75f1c7eb78821ece2fcf5b7805854488">
-      <version>2.7.1</version>
-    </hash>
-    <hash md5="64bab9b4abfb8c4ec53c66d5d2e2df2c">
-      <version>2.7</version>
-    </hash>
-    <hash md5="ed438902b0622173a5f39650a19c6060">
-      <version>2.6</version>
-    </hash>
-  </file>
-  <file src="wp-admin/css/install.dev.css">
-    <hash md5="c0e587488b912245dbc1fe87fd58375d">
-      <version>3.2.1</version>
-    </hash>
-    <hash md5="eed157f75067e0523c72267c8a1718a9">
-      <version>3.2</version>
-    </hash>
-  </file>
-  <file src="wp-admin/css/dashboard.css">
-    <hash md5="319ae2dfe4ba7ad0b5c1da8c5035205d">
-      <version>3.2.1</version>
-    </hash>
-    <hash md5="1e3ac8152f5ff972260ce1bd50bde322">
-      <version>3.2</version>
-    </hash>
-  </file>
-  <file src="wp-admin/css/press-this.dev.css">
-    <hash md5="61db67d7f5c655ce5176dc6204415e5d">
-      <version>3.2.1</version>
-    </hash>
-    <hash md5="ffdc847cfa0a6dc1ee2df38a53c28bd2">
-      <version>3.2</version>
-    </hash>
-  </file>
-  <file src="wp-admin/css/global.css">
-    <hash md5="6cd0d6c4c32fc3f379668f3754180ff5">
-      <version>3.2.1</version>
-    </hash>
-    <hash md5="d056ab8b13e3c4221ed4db6fae71dd9b">
-      <version>3.2</version>
-    </hash>
-    <hash md5="bc834ff6c4039a8ffa7d623e63406d0c">
-      <version>2.9</version>
-    </hash>
-    <hash md5="ccafab6b8bc45a0add424be63085ccbc">
-      <version>2.8</version>
-    </hash>
-  </file>
-  <file src="wp-admin/css/login.css">
-    <hash md5="af561b86efcd3c53a91ab4070b2c5bc4">
-      <version>3.2.1</version>
-    </hash>
-    <hash md5="02d549e3f066d130a5c6346d00529df5">
-      <version>3.2</version>
-    </hash>
-  </file>
-  <file src="wp-admin/css/global-rtl.dev.css">
-    <hash md5="e8cafb493fccd3a14877aecbabea22bb">
-      <version>3.2.1</version>
-    </hash>
-    <hash md5="a2741e62a5cc2bd28d8346c004eba7bd">
-      <version>3.2</version>
-    </hash>
-  </file>
-  <file src="wp-admin/css/dashboard.dev.css">
-    <hash md5="fd95127ba19547f5e4bd54307ea401e5">
-      <version>3.2.1</version>
-    </hash>
-    <hash md5="a8b2505542267a8315fb283bd5073dcc">
-      <version>3.2</version>
-    </hash>
-  </file>
-  <file src="wp-admin/css/wp-admin-rtl.dev.css">
-    <hash md5="9a959ab5f438970e3ff6b81b14e2351e">
-      <version>3.2.1</version>
-    </hash>
-    <hash md5="c5403fa2bb45c8eb102e4e958c5ab1fd">
-      <version>3.2</version>
-    </hash>
-  </file>
-  <file src="wp-admin/js/user-profile.dev.js">
-    <hash md5="b2385b31e10f0e05868dc9963f6b5492">
-      <version>3.1.4</version>
-    </hash>
-  </file>
-  <file src="wp-includes/css/admin-bar.dev.css">
-    <hash md5="afebbd5ba8b14fdd0397021244066daa">
-      <version>3.1</version>
+    <hash md5="3c27a95feefe245fc5c8c46427521f09">
+      <version>4.9.2</version>
     </hash>
   </file>
   <file src="wp-admin/wp-admin.css">
@@ -2429,46 +699,222 @@
       <version>1.2-delta</version>
     </hash>
   </file>
-  <file src="wp-admin/wp-admin.dev.css">
-    <hash md5="59bd3e53cbab943706702e18622f517d">
-      <version>2.9</version>
+  <file src="wp-admin/js/customize-controls.js">
+    <hash md5="0683a5bd4a316d854985a3549ec60418">
+      <version>4.8</version>
+    </hash>
+    <hash md5="e48c8805a07665ba778e5d63c9fcd0a1">
+      <version>4.7.4</version>
+    </hash>
+    <hash md5="d8598fe25595153923bf25bfb57eb4d7">
+      <version>4.7.3</version>
+    </hash>
+    <hash md5="d89eff32867dbead906999d2d33df9dc">
+      <version>4.7</version>
+    </hash>
+    <hash md5="c48eef3773572618f27809300fae0cde">
+      <version>4.3</version>
+    </hash>
+    <hash md5="edc5f50d0fd73a32d5b06790ffcab513">
+      <version>4.1</version>
+    </hash>
+    <hash md5="119ce8b94732f6eb170f8215aa65d47e">
+      <version>3.9</version>
+    </hash>
+    <hash md5="c637cfded694d52045eb3235a7bf7303">
+      <version>3.4.2</version>
+    </hash>
+    <hash md5="aa0d38bd6f590ad8c3126074145b1bf1">
+      <version>3.4.1</version>
+    </hash>
+    <hash md5="b421960bde1ab1e1adfc822336103735">
+      <version>3.4</version>
+    </hash>
+    <hash md5="6ac6b067db2d518fac0045c7195cddd7">
+      <version>4.9.5</version>
     </hash>
   </file>
-  <file src="wp-admin/js/dashboard.dev.js">
-    <hash md5="9abcfc44be1c15b96453f8b62a5ababf">
-      <version>2.8</version>
+  <file src="wp-admin/js/common.js">
+    <hash md5="6cff03191d6f406ced50cfa51737f4b6">
+      <version>4.4</version>
+    </hash>
+    <hash md5="32fb4510695e27473897cb5251348395">
+      <version>4.1</version>
+    </hash>
+    <hash md5="1735dc0877bf1b36a76289168dd93b41">
+      <version>3.8</version>
+    </hash>
+    <hash md5="03eaffeef39119f0523a49c7f9767f3b">
+      <version>3.6.1</version>
+    </hash>
+    <hash md5="2637ea6c99869af4bd6e4a49519601a7">
+      <version>3.6</version>
+    </hash>
+    <hash md5="18b6dcc3aec207acd021ff01f04f9e6c">
+      <version>3.4</version>
+    </hash>
+    <hash md5="4516252d47a73630280869994d510180">
+      <version>3.3</version>
+    </hash>
+    <hash md5="4f0f9bdbe437f850430fae694ca046ba">
+      <version>2.7.1</version>
+    </hash>
+    <hash md5="3e3e8da7ed4e97776c76ca0c792d1a85">
+      <version>2.7</version>
     </hash>
   </file>
-  <file src="wp-admin/js/edit-comments.dev.js">
-    <hash md5="9b02ddd09ea4d920bcb98e6736fa26ba">
-      <version>2.8</version>
+  <file src="wp-admin/js/customize-controls.min.js">
+    <hash md5="32d18988e048936443961fa91f3ae990">
+      <version>4.8</version>
+    </hash>
+    <hash md5="c58c70935cb1028d58e6f3fd87c209b0">
+      <version>4.7.4</version>
+    </hash>
+    <hash md5="55c9454a7813e7bdf75fe74efa3f5916">
+      <version>4.7.3</version>
+    </hash>
+    <hash md5="13ec0e9534db67402cd8e3de6e2ebaeb">
+      <version>4.7</version>
+    </hash>
+    <hash md5="eeffa28eb1d02c9852c4629192a2ad08">
+      <version>4.3</version>
+    </hash>
+    <hash md5="0284b64cbc37e3ded9b11133d7bc5fa9">
+      <version>4.1</version>
+    </hash>
+    <hash md5="d735782274ded5e119173b45cbe274f8">
+      <version>3.9</version>
+    </hash>
+    <hash md5="b865445e9cb37247e8067d3c321e4ad1">
+      <version>4.9.5</version>
     </hash>
   </file>
-  <file src="wp-admin/js/postbox.dev.js">
-    <hash md5="19bf9fa83624020a518d7bcc8b60c1bd">
+  <file src="wp-admin/js/post.js">
+    <hash md5="6578ae8741421df2c6b352f92684140d">
+      <version>3.9</version>
+    </hash>
+    <hash md5="455d1a15d2c2112242449ce6edb5ac14">
+      <version>3.5</version>
+    </hash>
+    <hash md5="8cb6604046ddf6f3ef9d6e1fcddd31c1">
+      <version>3.4.2</version>
+    </hash>
+    <hash md5="e4f0fc3a74331d7d2060914068300ec0">
       <version>2.8</version>
     </hash>
-  </file>
-  <file src="wp-admin/rtl.css">
-    <hash md5="545758c52dbfa268fbebcf30daff4b4e">
-      <version>2.8</version>
-    </hash>
-    <hash md5="ec098e76667af2ccd9a02f31f02fe270">
-      <version>2.6</version>
-    </hash>
-    <hash md5="a805b001e7833d4e798ce5e53de34695">
+    <hash md5="a34f1474e3a5ade6b4483bc307bfde84">
       <version>2.5.1</version>
     </hash>
-    <hash md5="c3316d03e21caf854e9a27df34025d0a">
+    <hash md5="020069f33ed66ea68f9067c596d137cb">
       <version>2.5</version>
     </hash>
-    <hash md5="26fb3af4670b564efdefbf845d84266b">
-      <version>2.2.3</version>
+  </file>
+  <file src="wp-includes/js/media-views.js">
+    <hash md5="9bbd1fa91e81ac80c6e1cd12783681a5">
+      <version>4.8</version>
+    </hash>
+    <hash md5="999ad3a86de87c0c592571f5cee59fa9">
+      <version>4.4</version>
+    </hash>
+    <hash md5="a632e610f46df19fcefa26e4e6e0eab3">
+      <version>4.0</version>
+    </hash>
+    <hash md5="6a0e09e778c9d60192c03f0d862ad6ca">
+      <version>3.9</version>
+    </hash>
+    <hash md5="03c002070b42e7b16c032fb666774c66">
+      <version>3.5</version>
+    </hash>
+    <hash md5="bd3abdf24209a6355e09603b811c866a">
+      <version>4.9.5</version>
     </hash>
   </file>
-  <file src="wp-admin/css/theme-editor.css">
-    <hash md5="049a5595657f110b9cbbb31cad73b094">
-      <version>2.8</version>
+  <file src="wp-includes/js/media-views.min.js">
+    <hash md5="72005ffa5742a50f41246d5917e6e295">
+      <version>4.8</version>
+    </hash>
+    <hash md5="611a20dba38b0421dc1af45eeaac4acd">
+      <version>4.4</version>
+    </hash>
+    <hash md5="bc83b1b178eb990c3eb122abe42f2674">
+      <version>4.0</version>
+    </hash>
+    <hash md5="4ac9627f33575a6afaf4144704daecc2">
+      <version>3.9</version>
+    </hash>
+    <hash md5="38ff988c7537bbaaefdc12d1f55f26f7">
+      <version>3.5</version>
+    </hash>
+    <hash md5="81d53dec5df1b4d291cacaff561a54c9">
+      <version>4.9.5</version>
+    </hash>
+  </file>
+  <file src="wp-admin/css/press-this.css">
+    <hash md5="3edd89cf250ff41992e4aba77c41c195">
+      <version>3.2.1</version>
+    </hash>
+    <hash md5="8c7fbc1f9ffd7a9a292b6ae288f1b002">
+      <version>3.2</version>
+    </hash>
+    <hash md5="75f1c7eb78821ece2fcf5b7805854488">
+      <version>2.7.1</version>
+    </hash>
+    <hash md5="64bab9b4abfb8c4ec53c66d5d2e2df2c">
+      <version>2.7</version>
+    </hash>
+    <hash md5="ed438902b0622173a5f39650a19c6060">
+      <version>2.6</version>
+    </hash>
+  </file>
+  <file src="wp-admin/js/common.min.js">
+    <hash md5="f83bef152421e22d8f14f2fb344f3410">
+      <version>4.4</version>
+    </hash>
+    <hash md5="a915138d60305201313066d43c61a2f6">
+      <version>4.1</version>
+    </hash>
+    <hash md5="58f2b7e3399f78ca0ab6aaa0a826bafc">
+      <version>3.8</version>
+    </hash>
+    <hash md5="b45d244b6669aef59434fc30265f01f9">
+      <version>3.6.1</version>
+    </hash>
+    <hash md5="bfe3d59f6e7d5045d07f9835827d1324">
+      <version>3.6</version>
+    </hash>
+  </file>
+  <file src="wp-admin/js/customize-nav-menus.js">
+    <hash md5="62c76211a81251e495b11d23314da878">
+      <version>4.8</version>
+    </hash>
+    <hash md5="f09d815335cd77c8c7777b2824254c07">
+      <version>4.7.3</version>
+    </hash>
+    <hash md5="444b2358c6ad5e0be84b367b2e080a0f">
+      <version>4.7</version>
+    </hash>
+    <hash md5="12a53b2080fee745c366799d75f36e49">
+      <version>4.3.1</version>
+    </hash>
+    <hash md5="eb8b822276e2dbfbc687a78ad65253dc">
+      <version>4.3</version>
+    </hash>
+  </file>
+  <file src="wp-admin/js/customize-nav-menus.min.js">
+    <hash md5="2ab2b22000b57942c42134efe73db683">
+      <version>4.8</version>
+    </hash>
+    <hash md5="ecb1fddddee46cdebda2a0421aadeb63">
+      <version>4.7.3</version>
+    </hash>
+    <hash md5="bc754d8cb65e8b7cb92f6ec38f5b3632">
+      <version>4.7</version>
+    </hash>
+    <hash md5="b19dec30505b46afbc06a72e9fc175e6">
+      <version>4.3.1</version>
+    </hash>
+    <hash md5="0495076f6aad785775658ecdfd5e939e">
+      <version>4.3</version>
     </hash>
   </file>
   <file src="wp-admin/css/colors-classic.css">
@@ -2488,15 +934,55 @@
       <version>2.5</version>
     </hash>
   </file>
-  <file src="wp-admin/css/ie.css">
-    <hash md5="b4c57417333b659979469a7c496d5da2">
+  <file src="wp-includes/js/tinymce/tiny_mce.js">
+    <hash md5="6e79ab6d786c5c95920064add33ee599">
+      <version>3.5.1</version>
+    </hash>
+    <hash md5="55cd8e5ceca9c1763b1401164d70df50">
+      <version>3.5</version>
+    </hash>
+    <hash md5="82ac611e3da57fa3e9973c37491486ee">
+      <version>3.1</version>
+    </hash>
+    <hash md5="a3d05665b236944c590493e20860bcdb">
+      <version>2.5.1</version>
+    </hash>
+    <hash md5="7293453cf0ff5a9a4cfe8cebd5b5a71a">
+      <version>2.5</version>
+    </hash>
+  </file>
+  <file src="wp-admin/rtl.css">
+    <hash md5="545758c52dbfa268fbebcf30daff4b4e">
       <version>2.8</version>
     </hash>
-    <hash md5="1c73f84ad8fd0062cc75aab6c925d8c2">
-      <version>2.7.1</version>
+    <hash md5="ec098e76667af2ccd9a02f31f02fe270">
+      <version>2.6</version>
     </hash>
-    <hash md5="73b84824902a6efc5d892277c4dba147">
-      <version>2.7</version>
+    <hash md5="a805b001e7833d4e798ce5e53de34695">
+      <version>2.5.1</version>
+    </hash>
+    <hash md5="c3316d03e21caf854e9a27df34025d0a">
+      <version>2.5</version>
+    </hash>
+    <hash md5="26fb3af4670b564efdefbf845d84266b">
+      <version>2.2.3</version>
+    </hash>
+  </file>
+  <file src="wp-admin/css/wp-admin.css">
+    <hash md5="25554fc81989c307119b7d4818dc3963">
+      <version>3.8</version>
+    </hash>
+    <hash md5="c8c02c7d0318ddeb985e324f126a19e8">
+      <version>3.5</version>
+    </hash>
+    <hash md5="d8471b68d45739f07aac407c06fb8903">
+      <version>3.4</version>
+    </hash>
+    <hash md5="a8a5bdf7cb06970dcd1de76dd2f59622">
+      <version>3.2.1</version>
+    </hash>
+    <hash md5="0beaaab72e767baed9fabade0b758090">
+      <version>3.2</version>
     </hash>
   </file>
   <file src="wp-admin/css/colors-fresh.css">
@@ -2516,20 +1002,21 @@
       <version>2.5</version>
     </hash>
   </file>
-  <file src="wp-admin/js/link.js">
-    <hash md5="c6f9330320b00237858bc6422a49aaf8">
+  <file src="wp-includes/js/autosave.js">
+    <hash md5="413b428336916273e3853a581f5ab851">
+      <version>4.4</version>
+    </hash>
+    <hash md5="1f09b6343caf9dc71b30d0ff0d90c69b">
       <version>2.7.1</version>
     </hash>
-    <hash md5="3c05b86e8eff05cd86141aeab299d69f">
+    <hash md5="aebe2414d81a87d6c2c9273654035fcd">
       <version>2.7</version>
     </hash>
-  </file>
-  <file src="wp-admin/js/plugin-install.js">
-    <hash md5="6d35bcfe2573200a1349a95b8234c411">
-      <version>2.7.1</version>
+    <hash md5="a436fd5bc5fe11fed6acbd8371e09102">
+      <version>2.5.1</version>
     </hash>
-    <hash md5="ba82272c84110566e42d32c99897b48f">
-      <version>2.7</version>
+    <hash md5="4d76da5b913eec43f31a10b6c367f43e">
+      <version>2.5</version>
     </hash>
   </file>
   <file src="wp-admin/js/editor.js">
@@ -2545,55 +1032,462 @@
     <hash md5="4ec7288450a487a7c228d7e09a25dba6">
       <version>2.5</version>
     </hash>
-  </file>
-  <file src="wp-includes/js/wp-ajax-response.js">
-    <hash md5="0289d1c13821599764774d55516ab81a">
-      <version>2.7.1</version>
+    <hash md5="ed089860adc11ffbace721ab647297d1">
+      <version>4.9.2</version>
     </hash>
   </file>
-  <file src="wp-includes/js/thickbox/thickbox.js">
-    <hash md5="bf6afa6da821fca17b1d36692adb88d6">
-      <version>2.7.1</version>
+  <file src="wp-admin/css/media.css">
+    <hash md5="cc05fe38ba18674e7c6ab01c4dff6e4f">
+      <version>3.2.1</version>
+    </hash>
+    <hash md5="eedf339656fe12ca835e797320445e34">
+      <version>3.2</version>
+    </hash>
+    <hash md5="3bc7a38b3a83079b9abd2245709f7b2b">
+      <version>2.5.1</version>
+    </hash>
+    <hash md5="73fe3708cb1c253dd50d5be65f8777dd">
+      <version>2.5</version>
     </hash>
   </file>
-  <file src="wp-includes/js/thickbox/thickbox.css">
-    <hash md5="9c2bd2be0893adbe02a0f864526734c2">
+  <file src="wp-includes/css/media-views-rtl.min.css">
+    <hash md5="a119e12e638192f47f133c28c9c259c4">
+      <version>4.0.1</version>
+    </hash>
+    <hash md5="d1703dff57c8a79d200a3cd8671be1a3">
+      <version>4.0</version>
+    </hash>
+    <hash md5="ecf3c4b2f07fdae92ad2b7610afabe7f">
+      <version>3.9</version>
+    </hash>
+    <hash md5="748955e10d038a00280de9ffe656f09d">
+      <version>3.8</version>
+    </hash>
+  </file>
+  <file src="wp-admin/css/global.css">
+    <hash md5="6cd0d6c4c32fc3f379668f3754180ff5">
+      <version>3.2.1</version>
+    </hash>
+    <hash md5="d056ab8b13e3c4221ed4db6fae71dd9b">
+      <version>3.2</version>
+    </hash>
+    <hash md5="bc834ff6c4039a8ffa7d623e63406d0c">
+      <version>2.9</version>
+    </hash>
+    <hash md5="ccafab6b8bc45a0add424be63085ccbc">
+      <version>2.8</version>
+    </hash>
+  </file>
+  <file src="wp-admin/css/wp-admin.min.css">
+    <hash md5="19084332c355439f6d42ebc0f0e78ebd">
+      <version>4.3</version>
+    </hash>
+    <hash md5="3dd46c8d228ad29a841338280647936d">
+      <version>3.9</version>
+    </hash>
+    <hash md5="b129c7f3e3924ed5333b63876f42ff4b">
+      <version>3.8</version>
+    </hash>
+    <hash md5="7b21a55b15494b9d4d9e80f7904e11e0">
+      <version>3.5</version>
+    </hash>
+  </file>
+  <file src="wp-includes/js/tinymce/plugins/wpeditimage/plugin.js">
+    <hash md5="7fa4ce4504456ad54bc13673d3266608">
+      <version>4.3</version>
+    </hash>
+    <hash md5="9ce0cd57c664c6b6c72c85b64ea72ea1">
+      <version>4.1</version>
+    </hash>
+    <hash md5="e79814b0b564f9a8b5e06b98ce80b5e9">
+      <version>4.0</version>
+    </hash>
+    <hash md5="ed47e3d063b256c3edef89d85d0b516b">
+      <version>3.9</version>
+    </hash>
+  </file>
+  <file src="wp-admin/quicktags.js">
+    <hash md5="3081c635f5f5aa2394d8329cbf0a9346">
+      <version>1.5.1</version>
+    </hash>
+    <hash md5="e9cfc5831a5db27731be236ede39c9b5">
+      <version>1.5-strayhorn</version>
+    </hash>
+    <hash md5="b60c22b11fb52febf809b1aea7fc463b">
+      <version>1.2.1</version>
+    </hash>
+    <hash md5="dd3f50ec1b6f1c60d0c8cf487584ac80">
+      <version>1.2-delta</version>
+    </hash>
+  </file>
+  <file src="wp-includes/js/wp-emoji-loader.min.js">
+    <hash md5="4499553cf177cb964b0df8c445ebc798">
+      <version>4.5</version>
+    </hash>
+    <hash md5="2a684c8e10b5294903e28dcd9cac377b">
+      <version>4.4.2</version>
+    </hash>
+    <hash md5="8569719eaedca791a2136e7bad07de29">
+      <version>4.4.1</version>
+    </hash>
+    <hash md5="05fa167592d86e9c03dc30b4f868c00d">
+      <version>4.4</version>
+    </hash>
+  </file>
+  <file src="wp-includes/js/wp-emoji-loader.js">
+    <hash md5="4cac17278a207c14a58648c92b24e146">
+      <version>4.5</version>
+    </hash>
+    <hash md5="59250ea877230734339b12588fb56929">
+      <version>4.4.2</version>
+    </hash>
+    <hash md5="248977111a79cdb3aed53f8262e3c7da">
+      <version>4.4.1</version>
+    </hash>
+    <hash md5="355049f99f0565be72e7a2b4dcfd5e5e">
+      <version>4.4</version>
+    </hash>
+  </file>
+  <file src="wp-includes/css/media-views.min.css">
+    <hash md5="de3d0b7763542b94e4c86cf8c423013f">
+      <version>4.0.1</version>
+    </hash>
+    <hash md5="260dcaf7e6e2827dbca061b824b13dd0">
+      <version>4.0</version>
+    </hash>
+    <hash md5="3e32684f6b23d052378e1199045e920b">
+      <version>3.9</version>
+    </hash>
+    <hash md5="da980f717b09961e77acea1f0832d779">
+      <version>3.8</version>
+    </hash>
+  </file>
+  <file src="wp-admin/css/widgets-rtl.css">
+    <hash md5="11eb0df301b82d5775206d07575f08f9">
+      <version>4.8</version>
+    </hash>
+    <hash md5="a1a32a9b498dfa02859b1d03600b6668">
+      <version>2.6</version>
+    </hash>
+    <hash md5="5fd9135577a36d561dea45d8845fd9dd">
+      <version>2.5.1</version>
+    </hash>
+    <hash md5="cd137a3d74d868ba4bd25fe64b33892d">
+      <version>2.5</version>
+    </hash>
+  </file>
+  <file src="wp-includes/css/editor.css">
+    <hash md5="4016c604bcec8a6544c2c966cb8e6925">
+      <version>4.6</version>
+    </hash>
+    <hash md5="9ed346f17ea5f8a7d4f30d96003de9b1">
+      <version>3.9</version>
+    </hash>
+    <hash md5="aa297505c208b2b6860af82106d985ca">
+      <version>3.5</version>
+    </hash>
+    <hash md5="84a599e6afa0ba8b5a00af97787ac52d">
+      <version>3.4.2</version>
+    </hash>
+  </file>
+  <file src="wp-includes/js/tinymce/plugins/wpeditimage/plugin.min.js">
+    <hash md5="94bb3edac4f1fa30c3f25a79251b53d4">
+      <version>4.3</version>
+    </hash>
+    <hash md5="97ed56381413cfaf6d52dd5cb79b3e94">
+      <version>4.1</version>
+    </hash>
+    <hash md5="fd13d574bf148d9410d3a3d5554e8d1c">
+      <version>4.0</version>
+    </hash>
+    <hash md5="9404e45d965fd7625704430c3cee6e51">
+      <version>3.9</version>
+    </hash>
+  </file>
+  <file src="wp-includes/js/tinymce/plugins/wpeditimage/editor_plugin.js">
+    <hash md5="4eb9923fe07a29b24bac1e21aaa7e6eb">
+      <version>3.7</version>
+    </hash>
+    <hash md5="8b4d90c058f4f224c9c8f304d67e2dd5">
+      <version>3.4.2</version>
+    </hash>
+    <hash md5="5b140ddf0f08034402ae78b31d8a1a28">
+      <version>2.6</version>
+    </hash>
+  </file>
+  <file src="wp-includes/js/media-editor.min.js">
+    <hash md5="6399f3e251f5dd1604e7936c1634e199">
+      <version>3.5.2</version>
+    </hash>
+    <hash md5="960a0adb54a1ffa9bf62719e7896de57">
+      <version>3.5.1</version>
+    </hash>
+    <hash md5="74d81f993bcb756db962338aa45a7f37">
+      <version>3.5</version>
+    </hash>
+  </file>
+  <file src="wp-includes/js/tinymce/plugins/wplink/plugin.min.js">
+    <hash md5="5039db87abba4481d89e74ec591a761d">
+      <version>4.5</version>
+    </hash>
+    <hash md5="6f2e2cba06ccf7e1106d1de79b66ae8b">
+      <version>4.3</version>
+    </hash>
+    <hash md5="573ccd13990bffbf99e2273deb5b50dd">
+      <version>3.9</version>
+    </hash>
+  </file>
+  <file src="wp-admin/css/ie.css">
+    <hash md5="b4c57417333b659979469a7c496d5da2">
+      <version>2.8</version>
+    </hash>
+    <hash md5="1c73f84ad8fd0062cc75aab6c925d8c2">
+      <version>2.7.1</version>
+    </hash>
+    <hash md5="73b84824902a6efc5d892277c4dba147">
       <version>2.7</version>
     </hash>
   </file>
-  <file src="wp-admin/js/forms.js">
-    <hash md5="5248ccc0d3a9bcdd0dc8b2faf129db2d">
+  <file src="wp-includes/js/tinymce/plugins/wordpress/editor_plugin.js">
+    <hash md5="d3565905a56a8dc9268f4e2d225d8e0e">
+      <version>3.6</version>
+    </hash>
+    <hash md5="14dc2e370b485d43d4c0d28ba8883b92">
+      <version>2.5.1</version>
+    </hash>
+    <hash md5="87ade361a474d9b789bd894a25b7f085">
+      <version>2.5</version>
+    </hash>
+  </file>
+  <file src="wp-admin/js/theme.js">
+    <hash md5="5387070f8f034c0bcfcc1355eb42e767">
+      <version>4.7</version>
+    </hash>
+    <hash md5="e3a25a3cb6290e46ba89b17a32c62f6c">
+      <version>3.8</version>
+    </hash>
+    <hash md5="4dea99610abd3c166d4291d48039211d">
+      <version>4.9</version>
+    </hash>
+  </file>
+  <file src="wp-admin/css/wp-admin.dev.css">
+    <hash md5="5c6176761fc0ee644e210b33ba20357f">
+      <version>3.4</version>
+    </hash>
+    <hash md5="c8b8a4d72181369d2714002093e91c48">
+      <version>3.2.1</version>
+    </hash>
+    <hash md5="e55e5834423d22b753bc5f27fd90ba4a">
+      <version>3.2</version>
+    </hash>
+  </file>
+  <file src="wp-admin/js/customize-controls.dev.js">
+    <hash md5="4be2481e0d8960e317486394c2e5186f">
+      <version>3.4.2</version>
+    </hash>
+    <hash md5="f518a6c4b341dcad34ca7f5145485923">
+      <version>3.4.1</version>
+    </hash>
+    <hash md5="170885b4ee7eb66ed4220332d4b3e370">
+      <version>3.4</version>
+    </hash>
+  </file>
+  <file src="wp-includes/css/editor.min.css">
+    <hash md5="7f1d9aa97951aa4ef795807cacd48ed8">
+      <version>4.6</version>
+    </hash>
+    <hash md5="1c060d191ff63e841d8f72eacaf4a6bf">
+      <version>3.9</version>
+    </hash>
+    <hash md5="26c698cf4308f7411829719c0092e3ba">
+      <version>3.5</version>
+    </hash>
+  </file>
+  <file src="wp-admin/css/login.min.css">
+    <hash md5="42a6a3be4f2f11208a281be9be203427">
+      <version>4.3</version>
+    </hash>
+    <hash md5="eb6244e98261b7eca06d8d11cc9f28bf">
+      <version>3.9</version>
+    </hash>
+    <hash md5="af1bc6adf17f10ad34c9a0bd4c354df9">
+      <version>4.9.5</version>
+    </hash>
+  </file>
+  <file src="wp-admin/css/forms-rtl.css">
+    <hash md5="5d83454881d2a694d0593ae6c209778c">
+      <version>4.3</version>
+    </hash>
+    <hash md5="4719697b45dc80a4b21ac12c129ad378">
+      <version>3.9</version>
+    </hash>
+    <hash md5="c1d87fb1e7d4b5f8d925c59f2dcfa076">
+      <version>4.9.5</version>
+    </hash>
+  </file>
+  <file src="wp-admin/js/link.js">
+    <hash md5="03ef1e8b6d8670cd60cae80839934c69">
+      <version>3.4.2</version>
+    </hash>
+    <hash md5="c6f9330320b00237858bc6422a49aaf8">
+      <version>2.7.1</version>
+    </hash>
+    <hash md5="3c05b86e8eff05cd86141aeab299d69f">
+      <version>2.7</version>
+    </hash>
+  </file>
+  <file src="wp-admin/css/global.dev.css">
+    <hash md5="72e8801cc89a0b98141fc2dee9b873c6">
+      <version>3.2.1</version>
+    </hash>
+    <hash md5="d3cc587676f09f7e6ae73e6c8e7137b7">
+      <version>3.2</version>
+    </hash>
+    <hash md5="636fbecad6d5bd4bb3e4311c3a272877">
+      <version>2.9</version>
+    </hash>
+  </file>
+  <file src="wp-includes/js/tinymce/plugins/wpview/plugin.js">
+    <hash md5="e406fa32c549ac964de8735631008aeb">
+      <version>4.3</version>
+    </hash>
+    <hash md5="f42ee6c5e96683c1aabf77c479a07457">
+      <version>4.0</version>
+    </hash>
+    <hash md5="d71af8e409639e4fe29a82b2583e97ee">
+      <version>3.9</version>
+    </hash>
+  </file>
+  <file src="wp-admin/css/wp-admin-rtl.min.css">
+    <hash md5="a6d4e8c9cf807f9aa705a886020d93f6">
+      <version>4.3</version>
+    </hash>
+    <hash md5="4fcf0cc06914368854e8d3956d67701d">
+      <version>3.9</version>
+    </hash>
+    <hash md5="dc555dec7552e1b6da150c8ffeba9d72">
+      <version>3.8</version>
+    </hash>
+  </file>
+  <file src="wp-admin/js/theme.min.js">
+    <hash md5="e21167e2200cac86643cae38c67ace04">
+      <version>4.7</version>
+    </hash>
+    <hash md5="10e74c33a682b849626d06d7c826e8e6">
+      <version>3.8</version>
+    </hash>
+    <hash md5="cb53c25524a16659fc1f961d507ba8bb">
+      <version>4.9</version>
+    </hash>
+  </file>
+  <file src="wp-admin/css/global-rtl.css">
+    <hash md5="e62b1a3cc3693dfb1dbc9f3c99ee3ee2">
+      <version>3.2.1</version>
+    </hash>
+    <hash md5="615061f4d085863ef4eaf0b89eccb59c">
+      <version>3.2</version>
+    </hash>
+    <hash md5="9dcfffe3f2b12122ab451bc0c48df2ae">
       <version>2.6</version>
     </hash>
   </file>
-  <file src="wp-admin/js/wp-gears.js">
-    <hash md5="e08d34a883c155084296c35872e0b382">
-      <version>2.6</version>
+  <file src="wp-admin/css/install.css">
+    <hash md5="ef980e36248c52fdf84395bb16fed6c1">
+      <version>3.8</version>
+    </hash>
+    <hash md5="e4b5f221205f4075192a67ba25b1dd47">
+      <version>3.2.1</version>
+    </hash>
+    <hash md5="eb5a90b48f19ecb9a88c0a9254b7af32">
+      <version>3.2</version>
     </hash>
   </file>
-  <file src="wp-admin/css/login-rtl.css">
-    <hash md5="af2c241362bc2db6bf4a1ef85b8c1900">
-      <version>2.6</version>
+  <file src="wp-includes/css/media-views-rtl.css">
+    <hash md5="d290d20fcf52a06c1576ce599294b0ec">
+      <version>4.0</version>
+    </hash>
+    <hash md5="0896c8e772550ccc25dbf41ad56828f6">
+      <version>3.9</version>
+    </hash>
+    <hash md5="340776735208b7aa98106a0ac81ebeba">
+      <version>3.8</version>
     </hash>
   </file>
-  <file src="wp-admin/css/press-this-rtl.css">
-    <hash md5="1f790c5cfc12b650992c164051a09629">
-      <version>2.6</version>
+  <file src="wp-includes/js/tinymce/plugins/wpview/plugin.min.js">
+    <hash md5="8bdcfc3e4a5a6d512e326df5947cf442">
+      <version>4.3</version>
+    </hash>
+    <hash md5="5b3e602359d9f830634371082916a862">
+      <version>4.0</version>
+    </hash>
+    <hash md5="b8d0d2f9218cfb35658d15d11715ca6c">
+      <version>3.9</version>
     </hash>
   </file>
-  <file src="wp-admin/css/theme-editor-rtl.css">
-    <hash md5="a3cde5875a5257cc8c910d1a2838e801">
-      <version>2.6</version>
+  <file src="wp-admin/css/wp-admin-rtl.css">
+    <hash md5="0e672b35b6bfab72babe50424503466b">
+      <version>3.8</version>
+    </hash>
+    <hash md5="07ed58a67ed2becdbbe3657fb4da3e8e">
+      <version>3.2.1</version>
+    </hash>
+    <hash md5="2551f4595882e172dc1e6b68e8c64806">
+      <version>3.2</version>
     </hash>
   </file>
-  <file src="wp-admin/css/press-this-ie-rtl.css">
-    <hash md5="8a06d53fca440005e815e5654b152700">
-      <version>2.6</version>
+  <file src="wp-includes/js/media-editor.js">
+    <hash md5="1cde26c3ff2b26db1728fa937ca3cf2c">
+      <version>3.5.2</version>
+    </hash>
+    <hash md5="e4097e9dea685c3e613e0fc015ba2832">
+      <version>3.5.1</version>
+    </hash>
+    <hash md5="2609026f9412e8040a9b968ac127a1aa">
+      <version>3.5</version>
     </hash>
   </file>
-  <file src="wp-admin/css/dashboard-rtl.css">
-    <hash md5="e1532114021a77a683c7415ec4e29db3">
-      <version>2.6</version>
+  <file src="wp-admin/css/widgets.css">
+    <hash md5="d5aa95eb9b8a99353bb0bcd23e585035">
+      <version>4.8</version>
+    </hash>
+    <hash md5="d45da61a2c6ceb19f07c71aa48dae40a">
+      <version>2.5.1</version>
+    </hash>
+    <hash md5="74412c2868056ef2971bee2c271962a8">
+      <version>2.5</version>
+    </hash>
+  </file>
+  <file src="wp-includes/css/media-views.css">
+    <hash md5="a1ed9196e49fd033bff15737cbd393ef">
+      <version>4.0</version>
+    </hash>
+    <hash md5="d88c98cdb5bf2fe29417d2b92f5288c7">
+      <version>3.9</version>
+    </hash>
+    <hash md5="0642e47790eb3ebff77ad8451b11bf7d">
+      <version>3.8</version>
+    </hash>
+  </file>
+  <file src="wp-admin/css/login-rtl.min.css">
+    <hash md5="c25af084f22564159483a93fa3b1bd76">
+      <version>4.3</version>
+    </hash>
+    <hash md5="5f54285e40c9b21d507d2260a2420f47">
+      <version>3.9</version>
+    </hash>
+    <hash md5="57dafb76bdabe1eab5512ab4832c8f40">
+      <version>4.9.5</version>
+    </hash>
+  </file>
+  <file src="wp-admin/css/forms.css">
+    <hash md5="82a7baa833cfa3cacffe1567f417388e">
+      <version>4.3</version>
+    </hash>
+    <hash md5="fd519c207095336bb57294926a09461e">
+      <version>3.9</version>
+    </hash>
+    <hash md5="3133e7d3687ba997b268a0d0b920f7ca">
+      <version>4.9.5</version>
     </hash>
   </file>
   <file src="wp-includes/js/tinymce/wordpress.css">
@@ -2607,83 +1501,178 @@
       <version>2.5</version>
     </hash>
   </file>
-  <file src="wp-includes/js/tinymce/plugins/wpeditimage/js/editimage.js">
-    <hash md5="d4866567bb43a5f946d15a560629f063">
+  <file src="wp-includes/js/customize-preview.js">
+    <hash md5="d40869ecf7e2a8f99bf2ec2d69f6e0b5">
+      <version>4.7.3</version>
+    </hash>
+    <hash md5="34a3ec49d6414125c613e87f9a51cf20">
+      <version>4.7</version>
+    </hash>
+    <hash md5="da36bc2dfcb13350c799b62de68dfa4b">
+      <version>3.4</version>
+    </hash>
+  </file>
+  <file src="wp-includes/js/tinymce/plugins/wplink/plugin.js">
+    <hash md5="809bc21a5b35c1e60d107c830bff9474">
+      <version>4.5</version>
+    </hash>
+    <hash md5="4e3f972530a74ecdd1cb522418db3cb3">
+      <version>4.3</version>
+    </hash>
+    <hash md5="60cff85a34f1cf5ad273abe018e82252">
+      <version>3.9</version>
+    </hash>
+  </file>
+  <file src="wp-includes/js/tinymce/tinymce.min.js">
+    <hash md5="bae0e7d1036a75aeaed6461677f39adc">
+      <version>4.5</version>
+    </hash>
+    <hash md5="7fd549b2340d5da4b05e27f16655ce3c">
+      <version>4.3</version>
+    </hash>
+  </file>
+  <file src="wp-includes/css/editor-rtl.css">
+    <hash md5="325a6c7b04fbd7cf907f383aa5f4de38">
+      <version>4.6</version>
+    </hash>
+    <hash md5="ebc9181357a52cab8fab57d71c425834">
+      <version>3.9</version>
+    </hash>
+  </file>
+  <file src="wp-includes/css/editor-rtl.min.css">
+    <hash md5="097f71ecb19edf4fe945a8afee00c908">
+      <version>4.6</version>
+    </hash>
+    <hash md5="73c479e8517d6f74175bc745fdbb6d35">
+      <version>3.9</version>
+    </hash>
+  </file>
+  <file src="wp-includes/js/tinymce/skins/wordpress/wp-content.css">
+    <hash md5="dd1d6bb4548f4ee2ab740d8ba89b1b35">
+      <version>4.8</version>
+    </hash>
+    <hash md5="07743f0d829a3e47573f7bdf68760ff9">
+      <version>4.6</version>
+    </hash>
+  </file>
+  <file src="wp-includes/js/tinymce/plugins/paste/plugin.min.js">
+    <hash md5="1d72974d4431f1558f0be213ecf4b3f6">
+      <version>4.5</version>
+    </hash>
+    <hash md5="4bcf636bad04e64f10be7003828c210e">
+      <version>4.3</version>
+    </hash>
+  </file>
+  <file src="wp-admin/css/edit.css">
+    <hash md5="38a79bf55e7a3b6ccba3b242e9b2de00">
+      <version>4.7</version>
+    </hash>
+    <hash md5="8ac09095ebcc8c9ffcf6593c6f4118f7">
+      <version>3.9</version>
+    </hash>
+  </file>
+  <file src="wp-includes/js/tinymce/plugins/media/plugin.js">
+    <hash md5="e54ed18bea6c2c6ae2fd1909987d2416">
+      <version>4.5</version>
+    </hash>
+    <hash md5="1b56d9b064a6f1768301a2a33affd140">
+      <version>4.3</version>
+    </hash>
+  </file>
+  <file src="wp-includes/js/tinymce/plugins/media/plugin.min.js">
+    <hash md5="e729f9f1201575a9589363bcf7438cb0">
+      <version>4.5</version>
+    </hash>
+    <hash md5="d88ec9908ef4412275ccff68861a41c7">
+      <version>4.3</version>
+    </hash>
+  </file>
+  <file src="wp-includes/js/tinymce/themes/modern/theme.js">
+    <hash md5="48e1bb77c2ec2cdbb321e12a95fdf425">
+      <version>4.5</version>
+    </hash>
+    <hash md5="76569bb2afef83f696d146f1515d7308">
+      <version>4.3</version>
+    </hash>
+  </file>
+  <file src="wp-includes/js/tinymce/themes/modern/theme.min.js">
+    <hash md5="506dd1713e3fc6ed3de0c00867c4dfaa">
+      <version>4.5</version>
+    </hash>
+    <hash md5="d0d8223ac24917740b2f0f2423bf3410">
+      <version>4.3</version>
+    </hash>
+  </file>
+  <file src="wp-admin/css/edit-rtl.css">
+    <hash md5="66ea900f920a0f7b94920ef018724264">
+      <version>4.7</version>
+    </hash>
+    <hash md5="d96ee1aa49292d90a5d085764b1d33db">
+      <version>3.9</version>
+    </hash>
+  </file>
+  <file src="wp-admin/css/login.css">
+    <hash md5="af561b86efcd3c53a91ab4070b2c5bc4">
+      <version>3.2.1</version>
+    </hash>
+    <hash md5="02d549e3f066d130a5c6346d00529df5">
+      <version>3.2</version>
+    </hash>
+  </file>
+  <file src="wp-includes/js/tinymce/plugins/paste/plugin.js">
+    <hash md5="e5554fe0fe4861016f210fcb3ba9de9c">
+      <version>4.5</version>
+    </hash>
+    <hash md5="ba5c8a35df3adc61f0c8abccd371c3fd">
+      <version>4.3</version>
+    </hash>
+  </file>
+  <file src="wp-admin/css/themes-rtl.min.css">
+    <hash md5="f5a99b541f512e2c0395d7d2b40adb34">
+      <version>4.8</version>
+    </hash>
+    <hash md5="2b3dd6296037fabf5838dbb7abaf097a">
+      <version>4.5</version>
+    </hash>
+  </file>
+  <file src="wp-admin/css/themes.css">
+    <hash md5="44bafdf96fbd98c93ca4a6564cbe7e93">
+      <version>4.8</version>
+    </hash>
+    <hash md5="a67484679e8fd85db53b9619a2ac8f85">
+      <version>4.5</version>
+    </hash>
+  </file>
+  <file src="wp-admin/css/dashboard.css">
+    <hash md5="319ae2dfe4ba7ad0b5c1da8c5035205d">
+      <version>3.2.1</version>
+    </hash>
+    <hash md5="1e3ac8152f5ff972260ce1bd50bde322">
+      <version>3.2</version>
+    </hash>
+  </file>
+  <file src="wp-admin/css/install-rtl.css">
+    <hash md5="04328c1f971f271dc3618a71a0eee27d">
+      <version>3.8</version>
+    </hash>
+    <hash md5="ab9e254c14787712db65e61d2be6bef7">
       <version>2.6</version>
     </hash>
   </file>
-  <file src="wp-includes/js/tinymce/plugins/wpeditimage/editimage.html">
-    <hash md5="f325a73e1da24a2dc91c8ee18199bb02">
-      <version>2.6</version>
+  <file src="wp-admin/css/install.dev.css">
+    <hash md5="c0e587488b912245dbc1fe87fd58375d">
+      <version>3.2.1</version>
+    </hash>
+    <hash md5="eed157f75067e0523c72267c8a1718a9">
+      <version>3.2</version>
     </hash>
   </file>
-  <file src="wp-includes/js/tinymce/themes/advanced/skins/wp_theme/content.css">
-    <hash md5="ebd8fd56a3afb904d89ce735a8aba65b">
-      <version>2.6</version>
+  <file src="wp-admin/css/wp-admin-rtl.dev.css">
+    <hash md5="9a959ab5f438970e3ff6b81b14e2351e">
+      <version>3.2.1</version>
     </hash>
-  </file>
-  <file src="wp-admin/js/widgets.js">
-    <hash md5="2d8e2c042b6c0ea040fa6442e5d10a14">
-      <version>2.5.1</version>
-    </hash>
-    <hash md5="6e250c8c021b3bda740e2abd0728685a">
-      <version>2.5</version>
-    </hash>
-  </file>
-  <file src="wp-includes/js/tinymce/plugins/media/media.htm">
-    <hash md5="e2a663d0abbf3c98e9c80e2df3d575a9">
-      <version>2.5.1</version>
-    </hash>
-    <hash md5="65c3b3ce2f72ce3436d6cda2ef852668">
-      <version>2.5</version>
-    </hash>
-  </file>
-  <file src="wp-includes/js/tinymce/plugins/media/editor_plugin.js">
-    <hash md5="f6c1ba01ff7b8fb600c8a906a573c0ab">
-      <version>2.5.1</version>
-    </hash>
-    <hash md5="d3eca453edb0893447a1e993ce05a0f0">
-      <version>2.5</version>
-    </hash>
-  </file>
-  <file src="wp-includes/js/tinymce/plugins/inlinepopups/template.htm">
-    <hash md5="7ef20f66074ae548be36c37667e65e52">
-      <version>2.5.1</version>
-    </hash>
-    <hash md5="c01f15cd357d8dba4610c3eae6321930">
-      <version>2.5</version>
-    </hash>
-  </file>
-  <file src="wp-includes/js/tinymce/plugins/inlinepopups/editor_plugin.js">
-    <hash md5="6d22dd7115baffc34269f0eef6b618ba">
-      <version>2.5.1</version>
-    </hash>
-    <hash md5="49982a4eed623c011535b63e82aadaef">
-      <version>2.5</version>
-    </hash>
-  </file>
-  <file src="wp-includes/js/tinymce/plugins/fullscreen/fullscreen.htm">
-    <hash md5="99a680170eaa55f849619048204f74d4">
-      <version>2.5.1</version>
-    </hash>
-    <hash md5="f8d9aec34e586ebb299ed43a39b7f7b0">
-      <version>2.5</version>
-    </hash>
-  </file>
-  <file src="wp-includes/js/tinymce/plugins/fullscreen/editor_plugin.js">
-    <hash md5="e1be69ab8e117a7f82952dfd9c2375e4">
-      <version>2.5.1</version>
-    </hash>
-    <hash md5="f45368a75b1c1879d5b0f5f164045e60">
-      <version>2.5</version>
-    </hash>
-  </file>
-  <file src="wp-includes/js/tinymce/plugins/paste/pasteword.htm">
-    <hash md5="bc4d612287743f988a3f20fa66d2e611">
-      <version>2.5.1</version>
-    </hash>
-    <hash md5="002daa009655fa5e52d8374c25b7b95e">
-      <version>2.5</version>
+    <hash md5="c5403fa2bb45c8eb102e4e958c5ab1fd">
+      <version>3.2</version>
     </hash>
   </file>
   <file src="wp-includes/js/tinymce/plugins/paste/blank.htm">
@@ -2694,6 +1683,14 @@
       <version>2.5</version>
     </hash>
   </file>
+  <file src="wp-admin/css/login.dev.css">
+    <hash md5="1d28a5b5ee8474f5f07e9bf15a4cc49a">
+      <version>3.2.1</version>
+    </hash>
+    <hash md5="2b2e425ed02d774f5fc008f71b141d08">
+      <version>3.2</version>
+    </hash>
+  </file>
   <file src="wp-includes/js/tinymce/plugins/paste/pastetext.htm">
     <hash md5="0aebc1e2f8890d774f61971091e3eba3">
       <version>2.5.1</version>
@@ -2702,12 +1699,68 @@
       <version>2.5</version>
     </hash>
   </file>
+  <file src="wp-admin/js/dashboard.js">
+    <hash md5="e0e87cf173989432bb55a610b0482fa7">
+      <version>3.8</version>
+    </hash>
+    <hash md5="581b9ca830642beef916bcd39d089e4b">
+      <version>2.8</version>
+    </hash>
+  </file>
+  <file src="wp-admin/css/themes-rtl.css">
+    <hash md5="8f0a90ccd54ad9f8b584a77ad5fc4df4">
+      <version>4.8</version>
+    </hash>
+    <hash md5="9244c8ce5e9d98581459de46b8b1bcd1">
+      <version>4.5</version>
+    </hash>
+  </file>
   <file src="wp-includes/js/tinymce/themes/advanced/charmap.htm">
     <hash md5="cafb84f559d7de79277a5b96a0e45f4a">
       <version>2.5.1</version>
     </hash>
     <hash md5="b3f3e37cff43d90e2fec656b52f1b67a">
       <version>2.5</version>
+    </hash>
+  </file>
+  <file src="wp-admin/css/press-this.dev.css">
+    <hash md5="61db67d7f5c655ce5176dc6204415e5d">
+      <version>3.2.1</version>
+    </hash>
+    <hash md5="ffdc847cfa0a6dc1ee2df38a53c28bd2">
+      <version>3.2</version>
+    </hash>
+  </file>
+  <file src="wp-admin/css/global-rtl.dev.css">
+    <hash md5="e8cafb493fccd3a14877aecbabea22bb">
+      <version>3.2.1</version>
+    </hash>
+    <hash md5="a2741e62a5cc2bd28d8346c004eba7bd">
+      <version>3.2</version>
+    </hash>
+  </file>
+  <file src="wp-admin/css/dashboard.dev.css">
+    <hash md5="fd95127ba19547f5e4bd54307ea401e5">
+      <version>3.2.1</version>
+    </hash>
+    <hash md5="a8b2505542267a8315fb283bd5073dcc">
+      <version>3.2</version>
+    </hash>
+  </file>
+  <file src="wp-layout.css">
+    <hash md5="7140e06c00ed03d2bb3dad7672557510">
+      <version>1.2.1</version>
+    </hash>
+    <hash md5="1bcc9253506c067eb130c9fc4f211a2f">
+      <version>1.2-delta</version>
+    </hash>
+  </file>
+  <file src="wp-admin/js/plugin-install.js">
+    <hash md5="6d35bcfe2573200a1349a95b8234c411">
+      <version>2.7.1</version>
+    </hash>
+    <hash md5="ba82272c84110566e42d32c99897b48f">
+      <version>2.7</version>
     </hash>
   </file>
   <file src="wp-includes/js/tinymce/themes/advanced/js/image.js">
@@ -2726,20 +1779,172 @@
       <version>2.5</version>
     </hash>
   </file>
-  <file src="wp-includes/js/tinymce/themes/advanced/editor_template.js">
-    <hash md5="0b6cb9758b31dc49a1e6051dc67f56fa">
-      <version>2.5.1</version>
+  <file src="wp-includes/js/wp-emoji.min.js">
+    <hash md5="137858b0d72b5f4637d414461f445008">
+      <version>4.4</version>
     </hash>
-    <hash md5="dbe88526b02537b5670af1ae17b297df">
+    <hash md5="3a083b99f4d138b72547e42f77027320">
+      <version>4.2.2</version>
+    </hash>
+  </file>
+  <file src="wp-includes/js/wp-lists.js">
+    <hash md5="46e1341cd4ea49f31046f7d7962adc7f">
+      <version>3.4.2</version>
+    </hash>
+    <hash md5="3f3d922461418335261f26c4f97931c1">
       <version>2.5</version>
     </hash>
   </file>
-  <file src="wp-includes/js/tinymce/themes/advanced/color_picker.htm">
-    <hash md5="5a20037a144e58522a11fdd71352ae08">
+  <file src="wp-includes/js/tinymce/skins/lightgray/skin.ie7.min.css">
+    <hash md5="58490013777e57ebaab84893713280c1">
+      <version>4.5</version>
+    </hash>
+    <hash md5="f85aec87569380b36901c67b3c2fad81">
+      <version>4.3</version>
+    </hash>
+  </file>
+  <file src="wp-includes/js/customize-preview.min.js">
+    <hash md5="c2f8e7dbb3732123437acde95db6cfb8">
+      <version>4.7.3</version>
+    </hash>
+    <hash md5="8eb16dc701cf206c22ab40082d814cb5">
+      <version>4.7</version>
+    </hash>
+  </file>
+  <file src="wp-includes/js/tinymce/tiny_mce_popup.js">
+    <hash md5="c96b7c2981d7b5c253812487be5cd71a">
       <version>2.5.1</version>
     </hash>
-    <hash md5="01474b7f41da7d851c5a7f27aa2f2ff0">
+    <hash md5="f539ddea7e23c2511166429ea78a2908">
       <version>2.5</version>
+    </hash>
+  </file>
+  <file src="wp-admin/js/edit-comments.js">
+    <hash md5="e7e22b2197cc81ee0c5cf30460ede00f">
+      <version>4.3</version>
+    </hash>
+    <hash md5="cea7fcad6f59dceb354ea33628d67926">
+      <version>2.8</version>
+    </hash>
+  </file>
+  <file src="wp-admin/js/editor-expand.js">
+    <hash md5="bc3aaa870920e8272d795377983284e6">
+      <version>4.6</version>
+    </hash>
+    <hash md5="404895c4518505935866c5eb11047c30">
+      <version>4.0</version>
+    </hash>
+  </file>
+  <file src="wp-includes/js/swfupload/handlers.js">
+    <hash md5="a9c61c5f04847006bfd229057721184a">
+      <version>2.5.1</version>
+    </hash>
+    <hash md5="4d16bff72b33fb1e11fc960aa4a4a23e">
+      <version>2.5</version>
+    </hash>
+  </file>
+  <file src="wp-admin/js/widgets/text-widgets.min.js">
+    <hash md5="3651b41fcb718e55e0de3a29212d71ea">
+      <version>4.8.1</version>
+    </hash>
+    <hash md5="ccbae9a28443a1ad1b5bbee115dc045b">
+      <version>4.8</version>
+    </hash>
+  </file>
+  <file src="wp-admin/js/widgets/text-widgets.js">
+    <hash md5="2eda0fba7c33c68b92a25d71e49f24f7">
+      <version>4.8.1</version>
+    </hash>
+    <hash md5="bff1d54a16cd5b99c51bb68b6d9cde1b">
+      <version>4.8</version>
+    </hash>
+  </file>
+  <file src="wp-includes/js/media-grid.min.js">
+    <hash md5="9a70c60a2cf8bdf9508df9bb94706065">
+      <version>4.1</version>
+    </hash>
+    <hash md5="d863d1e6f0e999c2080b1190d31cdccc">
+      <version>4.0</version>
+    </hash>
+  </file>
+  <file src="wp-admin/js/editor-expand.min.js">
+    <hash md5="2003869bb96b00cd78b008bd667dd57d">
+      <version>4.6</version>
+    </hash>
+    <hash md5="32c49e20a3451da0f1b76d1d218c684c">
+      <version>4.0</version>
+    </hash>
+  </file>
+  <file src="wp-admin/js/postbox.js">
+    <hash md5="626e31e5abab7aae41a74691d1185e69">
+      <version>4.4</version>
+    </hash>
+    <hash md5="5834e331f60318d3f00b919ccf515e3a">
+      <version>2.8</version>
+    </hash>
+  </file>
+  <file src="wp-admin/js/post.min.js">
+    <hash md5="96e5a6b4448a8817566d3575925a9660">
+      <version>3.9</version>
+    </hash>
+    <hash md5="1e251e3ba10b2a9d7f3f496cec3ba3df">
+      <version>3.5</version>
+    </hash>
+  </file>
+  <file src="wp-includes/js/wp-emoji.js">
+    <hash md5="a57538e3c37236da55c1f1da474e015e">
+      <version>4.4</version>
+    </hash>
+    <hash md5="a1ee27ad90d9bd862c162080115b1890">
+      <version>4.2.2</version>
+    </hash>
+  </file>
+  <file src="wp-includes/js/media-grid.js">
+    <hash md5="8d2e9573969040d7c24f7d46776962c5">
+      <version>4.1</version>
+    </hash>
+    <hash md5="b04ed37dbd60bc3663ada890d5af18e6">
+      <version>4.0</version>
+    </hash>
+  </file>
+  <file src="wp-includes/js/tinymce/plugins/inlinepopups/editor_plugin.js">
+    <hash md5="6d22dd7115baffc34269f0eef6b618ba">
+      <version>2.5.1</version>
+    </hash>
+    <hash md5="49982a4eed623c011535b63e82aadaef">
+      <version>2.5</version>
+    </hash>
+  </file>
+  <file src="wp-includes/js/tinymce/plugins/inlinepopups/template.htm">
+    <hash md5="7ef20f66074ae548be36c37667e65e52">
+      <version>2.5.1</version>
+    </hash>
+    <hash md5="c01f15cd357d8dba4610c3eae6321930">
+      <version>2.5</version>
+    </hash>
+  </file>
+  <file src="wp-includes/js/tinymce/plugins/media/editor_plugin.js">
+    <hash md5="f6c1ba01ff7b8fb600c8a906a573c0ab">
+      <version>2.5.1</version>
+    </hash>
+    <hash md5="d3eca453edb0893447a1e993ce05a0f0">
+      <version>2.5</version>
+    </hash>
+  </file>
+  <file src="wp-includes/js/tinymce/plugins/media/media.htm">
+    <hash md5="e2a663d0abbf3c98e9c80e2df3d575a9">
+      <version>2.5.1</version>
+    </hash>
+    <hash md5="65c3b3ce2f72ce3436d6cda2ef852668">
+      <version>2.5</version>
+    </hash>
+  </file>
+  <file src="wp-admin/js/wp-fullscreen.js">
+    <hash md5="5675f7793f171b6424bf72f9d7bf4d9a">
+      <version>3.2.1</version>
+    </hash>
+    <hash md5="7b423e0b7c9221092737ad5271d09863">
+      <version>3.2</version>
     </hash>
   </file>
   <file src="wp-includes/js/tinymce/themes/advanced/source_editor.htm">
@@ -2790,121 +1995,161 @@
       <version>2.5</version>
     </hash>
   </file>
-  <file src="wp-includes/js/tinymce/tiny_mce_popup.js">
-    <hash md5="c96b7c2981d7b5c253812487be5cd71a">
+  <file src="wp-admin/js/post.dev.js">
+    <hash md5="b7f14147f98e067f4c2df1cba298fd1a">
+      <version>3.4.2</version>
+    </hash>
+    <hash md5="392cf5bd0d18d352cf7e8178d5870be0">
+      <version>2.8</version>
+    </hash>
+  </file>
+  <file src="wp-admin/js/wp-fullscreen.dev.js">
+    <hash md5="70d51eecfd8d02a5f538c3be731fdedd">
+      <version>3.2.1</version>
+    </hash>
+    <hash md5="ff1fafac6a69b8ebced1965e18e39b4a">
+      <version>3.2</version>
+    </hash>
+  </file>
+  <file src="wp-admin/js/common.dev.js">
+    <hash md5="d50cb86c0c59bddf298adc39d6a41f60">
+      <version>3.4</version>
+    </hash>
+    <hash md5="15668f1c67a3fdb80cf021e231c085d8">
+      <version>3.3</version>
+    </hash>
+  </file>
+  <file src="wp-admin/css/themes.min.css">
+    <hash md5="ed740c0a3115880e47cba29134ed6bf8">
+      <version>4.8</version>
+    </hash>
+    <hash md5="12ea589ec56cee96417b3af756d724b4">
+      <version>4.5</version>
+    </hash>
+  </file>
+  <file src="wp-includes/js/tinymce/plugins/paste/pasteword.htm">
+    <hash md5="bc4d612287743f988a3f20fa66d2e611">
       <version>2.5.1</version>
     </hash>
-    <hash md5="f539ddea7e23c2511166429ea78a2908">
+    <hash md5="002daa009655fa5e52d8374c25b7b95e">
       <version>2.5</version>
     </hash>
   </file>
-  <file src="wp-includes/js/swfupload/handlers.js">
-    <hash md5="a9c61c5f04847006bfd229057721184a">
+  <file src="wp-includes/js/tinymce/plugins/wordpress/plugin.min.js">
+    <hash md5="13b554d6a123f78c5cb3b601c24c0e09">
+      <version>4.8</version>
+    </hash>
+    <hash md5="6319d1ae71068739dc713d26fd7da312">
+      <version>3.9</version>
+    </hash>
+  </file>
+  <file src="wp-includes/js/tinymce/plugins/wordpress/plugin.js">
+    <hash md5="049a123027cc7ed6f5cb6e567b631746">
+      <version>4.8</version>
+    </hash>
+    <hash md5="4a542ce8fe045da7e3048411e421ba28">
+      <version>3.9</version>
+    </hash>
+  </file>
+  <file src="wp-includes/js/tinymce/plugins/fullscreen/editor_plugin.js">
+    <hash md5="e1be69ab8e117a7f82952dfd9c2375e4">
       <version>2.5.1</version>
     </hash>
-    <hash md5="4d16bff72b33fb1e11fc960aa4a4a23e">
+    <hash md5="f45368a75b1c1879d5b0f5f164045e60">
       <version>2.5</version>
     </hash>
   </file>
-  <file src="wp-includes/js/tinymce/plugins/inlinepopups/skins/clearlooks2/window.css">
-    <hash md5="3008a345f351badd78a6d1ace150c901">
+  <file src="wp-includes/js/tinymce/plugins/fullscreen/fullscreen.htm">
+    <hash md5="99a680170eaa55f849619048204f74d4">
+      <version>2.5.1</version>
+    </hash>
+    <hash md5="f8d9aec34e586ebb299ed43a39b7f7b0">
       <version>2.5</version>
     </hash>
   </file>
-  <file src="wp-includes/js/tinymce/themes/advanced/js/link.js">
-    <hash md5="19c6f3118728c38eb7779aab4847d2d9">
+  <file src="wp-includes/css/admin-bar.css">
+    <hash md5="4077bbaddd5b0afec30d0465dfee9a1f">
+      <version>3.8</version>
+    </hash>
+    <hash md5="181250fab3a7e2549a7e7fa21c2e6079">
+      <version>3.1</version>
+    </hash>
+  </file>
+  <file src="wp-includes/js/wp-emoji-release.min.js">
+    <hash md5="1601e8da361dc8f86caa5afe88e37f5c">
+      <version>4.4</version>
+    </hash>
+    <hash md5="c2e58e292752044c979a4efe494e1299">
+      <version>4.2.2</version>
+    </hash>
+  </file>
+  <file src="wp-admin/js/widgets.js">
+    <hash md5="2d8e2c042b6c0ea040fa6442e5d10a14">
+      <version>2.5.1</version>
+    </hash>
+    <hash md5="6e250c8c021b3bda740e2abd0728685a">
       <version>2.5</version>
     </hash>
   </file>
-  <file src="wp-includes/js/tinymce/themes/advanced/skins/o2k7/ui.css">
-    <hash md5="7778e41dc9384c147e4e1bd44adafa1c">
+  <file src="wp-includes/js/tinymce/themes/advanced/editor_template.js">
+    <hash md5="0b6cb9758b31dc49a1e6051dc67f56fa">
+      <version>2.5.1</version>
+    </hash>
+    <hash md5="dbe88526b02537b5670af1ae17b297df">
       <version>2.5</version>
     </hash>
   </file>
-  <file src="wp-includes/js/tinymce/themes/advanced/skins/default/ui.css">
-    <hash md5="c11ec4198ab67a1baa9e2d8f515a8629">
+  <file src="wp-includes/js/tinymce/themes/advanced/color_picker.htm">
+    <hash md5="5a20037a144e58522a11fdd71352ae08">
+      <version>2.5.1</version>
+    </hash>
+    <hash md5="01474b7f41da7d851c5a7f27aa2f2ff0">
       <version>2.5</version>
     </hash>
   </file>
-  <file src="wp-admin/widgets-rtl.css">
-    <hash md5="616cfd535e185eab0a2e2035d2367d70">
-      <version>2.2.3</version>
+  <file src="wp-includes/js/tinymce/skins/lightgray/skin.min.css">
+    <hash md5="54ae8d249d7e018ff9f44e8de2ff7a73">
+      <version>4.5</version>
+    </hash>
+    <hash md5="14dc424b662c53b5f48fecdc03772c88">
+      <version>4.3</version>
     </hash>
   </file>
-  <file src="wp-admin/widgets.css">
-    <hash md5="2ab4e0bc7e978c7eecaf6d54867370a8">
-      <version>2.2</version>
+  <file src="wp-admin/css/media.dev.css">
+    <hash md5="f9755a2abfe8ebdf14ae665d4e64f25b">
+      <version>3.2.1</version>
+    </hash>
+    <hash md5="7b2de212dde19888dc191e7ba40c967e">
+      <version>3.2</version>
     </hash>
   </file>
-  <file src="wp-includes/js/wp-ajax.js">
-    <hash md5="c5dbce0c3232c477033e0ce486c62755">
-      <version>2.2</version>
+  <file src="wp-includes/js/mediaelement/wp-playlist.js">
+    <hash md5="bbb0981d3bb6131a999a42a42dcce185">
+      <version>3.9</version>
     </hash>
   </file>
-  <file src="wp-admin/quicktags.js">
-    <hash md5="3081c635f5f5aa2394d8329cbf0a9346">
-      <version>1.5.1</version>
-    </hash>
-    <hash md5="e9cfc5831a5db27731be236ede39c9b5">
-      <version>1.5-strayhorn</version>
-    </hash>
-    <hash md5="b60c22b11fb52febf809b1aea7fc463b">
-      <version>1.2.1</version>
-    </hash>
-    <hash md5="dd3f50ec1b6f1c60d0c8cf487584ac80">
-      <version>1.2-delta</version>
+  <file src="wp-admin/js/updates.min.js">
+    <hash md5="c0f5ff6dd746ec2a6581fefcb2463381">
+      <version>4.7</version>
     </hash>
   </file>
-  <file src="wp-layout.css">
-    <hash md5="7140e06c00ed03d2bb3dad7672557510">
-      <version>1.2.1</version>
-    </hash>
-    <hash md5="1bcc9253506c067eb130c9fc4f211a2f">
-      <version>1.2-delta</version>
+  <file src="wp-includes/js/customize-selective-refresh.min.js">
+    <hash md5="1969be970d4928a749df77e59b27c788">
+      <version>4.7</version>
     </hash>
   </file>
-  <file src="print.css">
-    <hash md5="fabceb537401cb07c705e7a7203f3cf6">
-      <version>1.2.1</version>
+  <file src="wp-admin/js/editor.min.js">
+    <hash md5="afb2c16bfc582737cabffd2957caf7aa">
+      <version>4.9.2</version>
     </hash>
   </file>
-  <file src="example.htaccess">
-    <hash md5="194e5ef5e9fcfffb5ad172c3c6338ce4">
+  <file src="b2-img/wpminilogo.png">
+    <hash md5="2f58b9a016e6da1012819decfc6dd331">
       <version>0.71-gold</version>
     </hash>
   </file>
-  <file src="wp-admin/b2.css">
-    <hash md5="3c14414953b50843020e9ffdab7d8f9b">
-      <version>0.71-gold</version>
-    </hash>
-  </file>
-  <file src="wp-admin/b2menutop.txt">
-    <hash md5="75c44385f76be11e237f16e6197cf5f7">
-      <version>0.71-gold</version>
-    </hash>
-  </file>
-  <file src="wp-admin/b2quicktags.js">
-    <hash md5="e7df5ea2abd8e8ff1cdc33c890f8b158">
-      <version>0.71-gold</version>
-    </hash>
-  </file>
-  <file src="readme.txt">
-    <hash md5="d6a0bc72fe7314bf9e5a823476464f35">
-      <version>0.71-gold</version>
-    </hash>
-  </file>
-  <file src="layout2b.css">
-    <hash md5="baec6b6ccbf71d8dced9f1bf67c751e1">
-      <version>0.71-gold</version>
-    </hash>
-  </file>
-  <file src="b2-include/xmlrpc.inc">
-    <hash md5="14524c5d7f9f72394e04512d9941bc50">
-      <version>0.71-gold</version>
-    </hash>
-  </file>
-  <file src="b2-include/xmlrpcs.inc">
-    <hash md5="0d59ddac24244f58002965f254602d32">
+  <file src="b2-img/xml.gif">
+    <hash md5="e67c90a18c89f8d05125c045b2978dcf">
       <version>0.71-gold</version>
     </hash>
   </file>
@@ -2941,6 +2186,826 @@
   <file src="b2-img/wp-small.png">
     <hash md5="ac8d6980faf95aa199492d5f3abdfa82">
       <version>0.71-gold</version>
+    </hash>
+  </file>
+  <file src="wp-includes/js/wplink.min.js">
+    <hash md5="18f38030b7acd35250c60fe80ab73699">
+      <version>4.7</version>
+    </hash>
+  </file>
+  <file src="wp-includes/js/wplink.js">
+    <hash md5="d1ca5593704c028cafa1e8bbd15f1b99">
+      <version>4.7</version>
+    </hash>
+  </file>
+  <file src="wp-admin/css/customize-nav-menus.css">
+    <hash md5="2e38f00fdfff5ee896dd3f15f06cf5d3">
+      <version>4.7</version>
+    </hash>
+  </file>
+  <file src="wp-admin/css/customize-nav-menus-rtl.min.css">
+    <hash md5="c859a7494e93d515ea023e845b862de0">
+      <version>4.7</version>
+    </hash>
+  </file>
+  <file src="wp-includes/js/mce-view.js">
+    <hash md5="3ab7c5e518658b152c35ee8ff512fdc4">
+      <version>3.9</version>
+    </hash>
+  </file>
+  <file src="wp-admin/css/customize-nav-menus-rtl.css">
+    <hash md5="f47ee453000230a6e509e5eb09d21b53">
+      <version>4.7</version>
+    </hash>
+  </file>
+  <file src="wp-admin/css/customize-nav-menus.min.css">
+    <hash md5="080248c963bb67242f323af5cab56734">
+      <version>4.7</version>
+    </hash>
+  </file>
+  <file src="wp-includes/js/mce-view.min.js">
+    <hash md5="140e4a74c6be70800fcef20fce9ae444">
+      <version>3.9</version>
+    </hash>
+  </file>
+  <file src="wp-includes/css/wp-pointer-rtl.css">
+    <hash md5="4711e5e8702a25a94284a833dd04cebf">
+      <version>3.8</version>
+    </hash>
+  </file>
+  <file src="wp-admin/css/common.min.css">
+    <hash md5="595620900f9d6ee0537856376b500bb6">
+      <version>4.9.5</version>
+    </hash>
+  </file>
+  <file src="wp-admin/css/common-rtl.min.css">
+    <hash md5="eca5a62aacdb686c26e850a4529662a8">
+      <version>4.9.5</version>
+    </hash>
+  </file>
+  <file src="wp-admin/css/common-rtl.css">
+    <hash md5="2a75a758f97514530f0ae7ba984e9392">
+      <version>4.9.5</version>
+    </hash>
+  </file>
+  <file src="wp-includes/js/media-models.js">
+    <hash md5="d0fbf5b6c322c1ebe3b972eea62ec894">
+      <version>4.9.5</version>
+    </hash>
+  </file>
+  <file src="wp-admin/css/edit-rtl.min.css">
+    <hash md5="500f084226ee39c6b11b9974a65a32f2">
+      <version>4.7</version>
+    </hash>
+  </file>
+  <file src="wp-admin/css/common.css">
+    <hash md5="9d21197ec7821a31b6cb867a509eea42">
+      <version>4.9.5</version>
+    </hash>
+  </file>
+  <file src="wp-includes/js/tinymce/plugins/charmap/plugin.js">
+    <hash md5="b4f29c072885c987beb19599798babb3">
+      <version>4.3</version>
+    </hash>
+  </file>
+  <file src="wp-includes/js/tinymce/plugins/fullscreen/plugin.js">
+    <hash md5="38740af5358c42ca3770804aca9b1e2d">
+      <version>4.5</version>
+    </hash>
+  </file>
+  <file src="wp-includes/js/tinymce/plugins/lists/plugin.js">
+    <hash md5="9007b591cde52e133de6a54490a4ea59">
+      <version>4.3</version>
+    </hash>
+  </file>
+  <file src="wp-admin/css/forms.min.css">
+    <hash md5="d8c9fc3fe6bcc0d3e421d07de6d0631a">
+      <version>4.9.5</version>
+    </hash>
+  </file>
+  <file src="wp-admin/css/forms-rtl.min.css">
+    <hash md5="76fce113f718ef60c9931f72c13d5f9a">
+      <version>4.9.5</version>
+    </hash>
+  </file>
+  <file src="wp-includes/css/wp-pointer.min.css">
+    <hash md5="2db0af168008dd4ba838cda3e111ebe4">
+      <version>3.8</version>
+    </hash>
+  </file>
+  <file src="wp-includes/js/tinymce/plugins/fullscreen/plugin.min.js">
+    <hash md5="7399d7a8a9a716303de9628083a61070">
+      <version>4.5</version>
+    </hash>
+  </file>
+  <file src="wp-includes/css/wp-pointer-rtl.min.css">
+    <hash md5="264b969d3c1ba2cc8eb3df7fe4feaaaf">
+      <version>3.8</version>
+    </hash>
+  </file>
+  <file src="wp-includes/js/media-models.min.js">
+    <hash md5="593e7c8882f465ea251aa3707010969a">
+      <version>4.9.5</version>
+    </hash>
+  </file>
+  <file src="wp-admin/css/login-rtl.css">
+    <hash md5="af2c241362bc2db6bf4a1ef85b8c1900">
+      <version>2.6</version>
+    </hash>
+  </file>
+  <file src="wp-admin/css/edit.min.css">
+    <hash md5="8c4b91d038300235db9877d6a4196674">
+      <version>4.7</version>
+    </hash>
+  </file>
+  <file src="wp-includes/css/wp-pointer.css">
+    <hash md5="7e45d0e701aead8de6f0e9ab63b15741">
+      <version>3.8</version>
+    </hash>
+  </file>
+  <file src="wp-includes/css/customize-preview-rtl.min.css">
+    <hash md5="c48fdf5861c04e2024cfdd46da5955ee">
+      <version>4.7</version>
+    </hash>
+  </file>
+  <file src="wp-includes/css/customize-preview.min.css">
+    <hash md5="f97c81542e5a01d1d1fafc83d3e919e4">
+      <version>4.7</version>
+    </hash>
+  </file>
+  <file src="wp-includes/css/buttons-rtl.min.css">
+    <hash md5="2f4716ac8571b8887ab6ce14764075d9">
+      <version>3.8</version>
+    </hash>
+  </file>
+  <file src="wp-includes/css/customize-preview.css">
+    <hash md5="f77ee2e90b397bdc85b94fef4ec3c339">
+      <version>4.7</version>
+    </hash>
+  </file>
+  <file src="wp-includes/css/admin-bar-rtl.css">
+    <hash md5="20b09b48f38414802780b0e76ce0bd23">
+      <version>3.8</version>
+    </hash>
+  </file>
+  <file src="wp-includes/css/admin-bar-rtl.min.css">
+    <hash md5="8917960dfdd03a01d3c003f403eea83f">
+      <version>3.8</version>
+    </hash>
+  </file>
+  <file src="wp-includes/css/buttons.css">
+    <hash md5="a1bde984a0c1ddd244220da833cabeb1">
+      <version>3.8</version>
+    </hash>
+  </file>
+  <file src="wp-includes/css/dashicons.min.css">
+    <hash md5="c2566febd39864bf4abe0ebebd0f147d">
+      <version>3.8</version>
+    </hash>
+  </file>
+  <file src="wp-admin/js/media.min.js">
+    <hash md5="1c1a6cef0123a419a9fb9595c199fe78">
+      <version>4.0</version>
+    </hash>
+  </file>
+  <file src="wp-admin/js/postbox.min.js">
+    <hash md5="f07216a42e8487aea5738f6d71b5c7d3">
+      <version>4.4</version>
+    </hash>
+  </file>
+  <file src="wp-admin/css/press-this-rtl.css">
+    <hash md5="1f790c5cfc12b650992c164051a09629">
+      <version>2.6</version>
+    </hash>
+  </file>
+  <file src="wp-admin/images/sort-2x.gif">
+    <hash md5="45592749900dae6565848a310a0c0fbd">
+      <version>3.5</version>
+    </hash>
+  </file>
+  <file src="wp-includes/js/customize-preview-nav-menus.min.js">
+    <hash md5="4f1fc16aa63323570bfde1539ec30245">
+      <version>4.7</version>
+    </hash>
+  </file>
+  <file src="wp-admin/js/user-profile.min.js">
+    <hash md5="d990a5a8ca17c099a994cce6fc99a63e">
+      <version>4.3</version>
+    </hash>
+  </file>
+  <file src="wp-admin/js/media.js">
+    <hash md5="8b7746f89178fcba2f84b7f4dd295571">
+      <version>4.0</version>
+    </hash>
+  </file>
+  <file src="wp-admin/js/dashboard.min.js">
+    <hash md5="b7f0a17a87fc20fe83d0a7b3d97b97b0">
+      <version>3.8</version>
+    </hash>
+  </file>
+  <file src="wp-admin/js/edit-comments.min.js">
+    <hash md5="f56147d75a8ff4d0a9a62f88a5203d9a">
+      <version>4.3</version>
+    </hash>
+  </file>
+  <file src="wp-admin/css/admin-menu-rtl.css">
+    <hash md5="617bad9e838b5d8ff1a6694a2c2cf79a">
+      <version>3.9</version>
+    </hash>
+  </file>
+  <file src="wp-admin/css/install.min.css">
+    <hash md5="de9a85a063de74e38a9fd4cb41c2b0ce">
+      <version>3.8</version>
+    </hash>
+  </file>
+  <file src="wp-admin/css/list-tables-rtl.css">
+    <hash md5="8450e3801667a4d5f4d5119cf76d23ac">
+      <version>4.3</version>
+    </hash>
+  </file>
+  <file src="wp-admin/css/install-rtl.min.css">
+    <hash md5="35593db173c2dfce8b63f1a39f2eb3b7">
+      <version>3.8</version>
+    </hash>
+  </file>
+  <file src="wp-admin/css/admin-menu.css">
+    <hash md5="734bf76b45a2a690043446ededf94b7d">
+      <version>3.9</version>
+    </hash>
+  </file>
+  <file src="wp-admin/css/list-tables.css">
+    <hash md5="e5a6313e0366749912b54fc9e6040369">
+      <version>4.3</version>
+    </hash>
+  </file>
+  <file src="wp-admin/css/dashboard-rtl.css">
+    <hash md5="e1532114021a77a683c7415ec4e29db3">
+      <version>2.6</version>
+    </hash>
+  </file>
+  <file src="wp-includes/js/media-audiovideo.js">
+    <hash md5="b6e377d5177058bc872fd72c625df119">
+      <version>3.9</version>
+    </hash>
+  </file>
+  <file src="wp-includes/js/customize-models.js">
+    <hash md5="edb4c59aa080eeaa22439faba31f8558">
+      <version>3.9</version>
+    </hash>
+  </file>
+  <file src="wp-includes/js/customize-models.min.js">
+    <hash md5="aa94f4d4ff1df18548142ad13d427ca5">
+      <version>3.9</version>
+    </hash>
+  </file>
+  <file src="wp-includes/js/mediaelement/wp-mediaelement.css">
+    <hash md5="fa1ab1ee7f929d54403190cb29e496fe">
+      <version>3.9</version>
+    </hash>
+  </file>
+  <file src="wp-includes/js/mediaelement/mediaelement-and-player.min.js">
+    <hash md5="0015bf4818e9adf776ef6a35e791b855">
+      <version>4.0</version>
+    </hash>
+  </file>
+  <file src="wp-includes/js/thickbox/thickbox.css">
+    <hash md5="9c2bd2be0893adbe02a0f864526734c2">
+      <version>2.7</version>
+    </hash>
+  </file>
+  <file src="wp-includes/js/customize-preview-nav-menus.js">
+    <hash md5="191408780b5578f0b022dece40792719">
+      <version>4.7</version>
+    </hash>
+  </file>
+  <file src="wp-includes/js/customize-views.js">
+    <hash md5="0aeeca504e00db4a8bef755c7a85a4fa">
+      <version>3.9</version>
+    </hash>
+  </file>
+  <file src="wp-includes/js/mediaelement/flashmediaelement.swf">
+    <hash md5="582ba00d7a38795bba1306b30c31a6f1">
+      <version>4.0</version>
+    </hash>
+  </file>
+  <file src="wp-includes/js/jquery/jquery.js">
+    <hash md5="9dcde2d5e8aeda556a0c52239fa2f44c">
+      <version>3.6</version>
+    </hash>
+  </file>
+  <file src="wp-includes/js/customize-views.min.js">
+    <hash md5="83c37717273f92513d2f93ca28931fe4">
+      <version>3.9</version>
+    </hash>
+  </file>
+  <file src="wp-admin/js/forms.js">
+    <hash md5="5248ccc0d3a9bcdd0dc8b2faf129db2d">
+      <version>2.6</version>
+    </hash>
+  </file>
+  <file src="wp-admin/css/press-this-ie-rtl.css">
+    <hash md5="8a06d53fca440005e815e5654b152700">
+      <version>2.6</version>
+    </hash>
+  </file>
+  <file src="wp-includes/js/wp-ajax.js">
+    <hash md5="c5dbce0c3232c477033e0ce486c62755">
+      <version>2.2</version>
+    </hash>
+  </file>
+  <file src="wp-admin/widgets.css">
+    <hash md5="2ab4e0bc7e978c7eecaf6d54867370a8">
+      <version>2.2</version>
+    </hash>
+  </file>
+  <file src="wp-admin/install-rtl.css">
+    <hash md5="77b94469c0536617ccf3f128e82629e7">
+      <version>2.2.3</version>
+    </hash>
+  </file>
+  <file src="wp-admin/widgets-rtl.css">
+    <hash md5="616cfd535e185eab0a2e2035d2367d70">
+      <version>2.2.3</version>
+    </hash>
+  </file>
+  <file src="print.css">
+    <hash md5="fabceb537401cb07c705e7a7203f3cf6">
+      <version>1.2.1</version>
+    </hash>
+  </file>
+  <file src="example.htaccess">
+    <hash md5="194e5ef5e9fcfffb5ad172c3c6338ce4">
+      <version>0.71-gold</version>
+    </hash>
+  </file>
+  <file src="wp-admin/b2.css">
+    <hash md5="3c14414953b50843020e9ffdab7d8f9b">
+      <version>0.71-gold</version>
+    </hash>
+  </file>
+  <file src="b2-img/blank.gif">
+    <hash md5="6d22e4f2d2057c6e8d6fab098e76e80f">
+      <version>0.71-gold</version>
+    </hash>
+  </file>
+  <file src="b2-img/smilies/icon_eek.gif">
+    <hash md5="52e43743e38a67d5d28845a104ca8c7d">
+      <version>0.71-gold</version>
+    </hash>
+  </file>
+  <file src="b2-img/smilies/icon_arrow.gif">
+    <hash md5="394bffa679f650b7d2f22aa263cc06ba">
+      <version>0.71-gold</version>
+    </hash>
+  </file>
+  <file src="b2-img/smilies/icon_twisted.gif">
+    <hash md5="c9c3d12da1e9da699e490b86d24eee85">
+      <version>0.71-gold</version>
+    </hash>
+  </file>
+  <file src="b2-img/smilies/icon_mad.gif">
+    <hash md5="e4355c00894da1bd78341a6b54d20b56">
+      <version>0.71-gold</version>
+    </hash>
+  </file>
+  <file src="wp-admin/js/widgets/media-widgets.js">
+    <hash md5="b8300b64a85bea2d8bb7ba4c8ac810be">
+      <version>4.8</version>
+    </hash>
+  </file>
+  <file src="wp-includes/fonts/dashicons.ttf">
+    <hash md5="ece97919ac9f753c2ed3578d70c6e64c">
+      <version>3.8</version>
+    </hash>
+  </file>
+  <file src="wp-includes/certificates/ca-bundle.crt">
+    <hash md5="b6ea3b5f9b5cc919157579ecdefd7901">
+      <version>4.4</version>
+    </hash>
+  </file>
+  <file src="wp-includes/js/tinymce/wp-tinymce-schema.js">
+    <hash md5="cb88e8f50b53365fb94422e9a269226a">
+      <version>3.5</version>
+    </hash>
+  </file>
+  <file src="wp-includes/js/tinymce/plugins/wordpress/editor_plugin_src.js">
+    <hash md5="065e5a8b0d8875768f0b75fc1bf7b6f0">
+      <version>3.6</version>
+    </hash>
+  </file>
+  <file src="wp-admin/js/edit-comments.dev.js">
+    <hash md5="9b02ddd09ea4d920bcb98e6736fa26ba">
+      <version>2.8</version>
+    </hash>
+  </file>
+  <file src="wp-admin/js/postbox.dev.js">
+    <hash md5="19bf9fa83624020a518d7bcc8b60c1bd">
+      <version>2.8</version>
+    </hash>
+  </file>
+  <file src="wp-admin/js/link.dev.js">
+    <hash md5="573fdbc34e8d60090cd5f5290a677078">
+      <version>3.4.2</version>
+    </hash>
+  </file>
+  <file src="wp-admin/js/user-profile.dev.js">
+    <hash md5="b2385b31e10f0e05868dc9963f6b5492">
+      <version>3.1.4</version>
+    </hash>
+  </file>
+  <file src="wp-includes/js/customize-preview.dev.js">
+    <hash md5="7ea457381aefb6d20836d3af804af618">
+      <version>3.4</version>
+    </hash>
+  </file>
+  <file src="wp-includes/js/wp-lists.dev.js">
+    <hash md5="bb69091155683715d2902019693ceeac">
+      <version>3.4.2</version>
+    </hash>
+  </file>
+  <file src="b2-img/smilies/icon_exclaim.gif">
+    <hash md5="da86bbf377f97d06047aa781a582c52f">
+      <version>0.71-gold</version>
+    </hash>
+  </file>
+  <file src="b2-img/smilies/icon_rolleyes.gif">
+    <hash md5="19071b1af987946e96dcef6ce0611c6b">
+      <version>0.71-gold</version>
+    </hash>
+  </file>
+  <file src="b2-img/smilies/icon_lol.gif">
+    <hash md5="b76e7729d43c4a49182d020741285bef">
+      <version>0.71-gold</version>
+    </hash>
+  </file>
+  <file src="wp-includes/js/imgareaselect/jquery.imgareaselect.dev.js">
+    <hash md5="7958066469b0a567962a6355d9c5f817">
+      <version>3.4.2</version>
+    </hash>
+  </file>
+  <file src="wp-includes/js/plupload/wp-plupload.dev.js">
+    <hash md5="75bd0d965758c849bd27173d7aec1923">
+      <version>3.4.2</version>
+    </hash>
+  </file>
+  <file src="wp-includes/css/editor.dev.css">
+    <hash md5="8f375efc2f2a3f703d6ba284f99830d4">
+      <version>3.4.2</version>
+    </hash>
+  </file>
+  <file src="wp-includes/css/admin-bar.dev.css">
+    <hash md5="afebbd5ba8b14fdd0397021244066daa">
+      <version>3.1</version>
+    </hash>
+  </file>
+  <file src="wp-admin/css/theme-editor-rtl.css">
+    <hash md5="a3cde5875a5257cc8c910d1a2838e801">
+      <version>2.6</version>
+    </hash>
+  </file>
+  <file src="wp-admin/css/theme-editor.css">
+    <hash md5="049a5595657f110b9cbbb31cad73b094">
+      <version>2.8</version>
+    </hash>
+  </file>
+  <file src="wp-admin/js/wp-gears.js">
+    <hash md5="e08d34a883c155084296c35872e0b382">
+      <version>2.6</version>
+    </hash>
+  </file>
+  <file src="wp-admin/wp-admin.dev.css">
+    <hash md5="59bd3e53cbab943706702e18622f517d">
+      <version>2.9</version>
+    </hash>
+  </file>
+  <file src="b2-img/smilies/icon_razz.gif">
+    <hash md5="7aec68426aa06f01e2b1ac250e5aee62">
+      <version>0.71-gold</version>
+    </hash>
+  </file>
+  <file src="b2-img/smilies/icon_idea.gif">
+    <hash md5="aaebc9c048367118ba65e1da46bc3e08">
+      <version>0.71-gold</version>
+    </hash>
+  </file>
+  <file src="b2-img/smilies/icon_mrgreen.gif">
+    <hash md5="54e8505227edae1e583cf2f9554abc3a">
+      <version>0.71-gold</version>
+    </hash>
+  </file>
+  <file src="b2-img/smilies/icon_evil.gif">
+    <hash md5="178255bb3fe2c3aa790c1f8ec8738504">
+      <version>0.71-gold</version>
+    </hash>
+  </file>
+  <file src="b2-img/smilies/icon_smile.gif">
+    <hash md5="9ee646ffab71107d1a11407be52f33a5">
+      <version>0.71-gold</version>
+    </hash>
+  </file>
+  <file src="b2-img/smilies/icon_cry.gif">
+    <hash md5="7605eca95aaeda46e641745ef6f0e0b0">
+      <version>0.71-gold</version>
+    </hash>
+  </file>
+  <file src="b2-img/smilies/icon_redface.gif">
+    <hash md5="d7e9d095432cbcf09375ffc782c30c23">
+      <version>0.71-gold</version>
+    </hash>
+  </file>
+  <file src="b2-img/smilies/icon_confused.gif">
+    <hash md5="4affed1b55e5f73c9f0675ae7d0ad823">
+      <version>0.71-gold</version>
+    </hash>
+  </file>
+  <file src="b2-img/smilies/icon_cool.gif">
+    <hash md5="25c83ea511f206e88f214719dad9c88c">
+      <version>0.71-gold</version>
+    </hash>
+  </file>
+  <file src="b2-img/smilies/icon_wink.gif">
+    <hash md5="f058206bb8ff732dbe8e7aa10d74c9cd">
+      <version>0.71-gold</version>
+    </hash>
+  </file>
+  <file src="b2-img/smilies/icon_surprised.gif">
+    <hash md5="ae735b5dd659dc4b3b0f249ce59bef79">
+      <version>0.71-gold</version>
+    </hash>
+  </file>
+  <file src="b2-include/xmlrpc.inc">
+    <hash md5="14524c5d7f9f72394e04512d9941bc50">
+      <version>0.71-gold</version>
+    </hash>
+  </file>
+  <file src="b2-include/xmlrpcs.inc">
+    <hash md5="0d59ddac24244f58002965f254602d32">
+      <version>0.71-gold</version>
+    </hash>
+  </file>
+  <file src="wp-links/links-images/rating-5.gif">
+    <hash md5="42698681e4d8734c2932c2415b94b713">
+      <version>0.71-gold</version>
+    </hash>
+  </file>
+  <file src="wp-links/links-images/rating-1.gif">
+    <hash md5="bdc9ea72a16082ff4d0ac730f090e0d7">
+      <version>0.71-gold</version>
+    </hash>
+  </file>
+  <file src="wp-links/links-images/rating-4.gif">
+    <hash md5="aa064cadd0f43c0352607dad68bc5af2">
+      <version>0.71-gold</version>
+    </hash>
+  </file>
+  <file src="wp-links/links-images/rating-8.gif">
+    <hash md5="c5cb7ee14792e1658bc0663014d37f65">
+      <version>0.71-gold</version>
+    </hash>
+  </file>
+  <file src="wp-links/links-images/rating-7.gif">
+    <hash md5="a8cbf1fe3a498f4a20abd6768a46de7c">
+      <version>0.71-gold</version>
+    </hash>
+  </file>
+  <file src="wp-admin/b2quicktags.js">
+    <hash md5="e7df5ea2abd8e8ff1cdc33c890f8b158">
+      <version>0.71-gold</version>
+    </hash>
+  </file>
+  <file src="readme.txt">
+    <hash md5="d6a0bc72fe7314bf9e5a823476464f35">
+      <version>0.71-gold</version>
+    </hash>
+  </file>
+  <file src="wp-links/links-images/rating-9.gif">
+    <hash md5="4eda31d251821e5d6e5ed9cad411434f">
+      <version>0.71-gold</version>
+    </hash>
+  </file>
+  <file src="wp-links/links-images/rating-3.gif">
+    <hash md5="a5b70a894f90cf8574284b7296f7661c">
+      <version>0.71-gold</version>
+    </hash>
+  </file>
+  <file src="wp-links/links-images/star.gif">
+    <hash md5="888920359f8931eb72582d0c352722ff">
+      <version>0.71-gold</version>
+    </hash>
+  </file>
+  <file src="wp-links/links-images/rating-2.gif">
+    <hash md5="de5cf34823da2cfed273b9c8cf52248a">
+      <version>0.71-gold</version>
+    </hash>
+  </file>
+  <file src="wp-includes/js/media-audiovideo.min.js">
+    <hash md5="6c9436bcb7fab07b86de4e469279eb22">
+      <version>3.9</version>
+    </hash>
+  </file>
+  <file src="wp-includes/css/dashicons.css">
+    <hash md5="7764b220df0d9356ec51b6946533c7ac">
+      <version>3.8</version>
+    </hash>
+  </file>
+  <file src="wp-includes/css/buttons-rtl.css">
+    <hash md5="71c13ab1693b45fb3d7712e540c4dfe0">
+      <version>3.8</version>
+    </hash>
+  </file>
+  <file src="wp-includes/css/buttons.min.css">
+    <hash md5="47b1080fc3e5f6630771c5844dc342ec">
+      <version>3.8</version>
+    </hash>
+  </file>
+  <file src="wp-includes/js/tinymce/plugins/wpeditimage/editor_plugin_src.js">
+    <hash md5="23acb7d19b52e8fafaa84c3a342cfe7c">
+      <version>3.4.2</version>
+    </hash>
+  </file>
+  <file src="wp-includes/js/tinymce/themes/advanced/js/link.js">
+    <hash md5="19c6f3118728c38eb7779aab4847d2d9">
+      <version>2.5</version>
+    </hash>
+  </file>
+  <file src="wp-includes/js/tinymce/themes/advanced/skins/o2k7/ui.css">
+    <hash md5="7778e41dc9384c147e4e1bd44adafa1c">
+      <version>2.5</version>
+    </hash>
+  </file>
+  <file src="wp-includes/js/tinymce/themes/advanced/skins/default/ui.css">
+    <hash md5="c11ec4198ab67a1baa9e2d8f515a8629">
+      <version>2.5</version>
+    </hash>
+  </file>
+  <file src="wp-includes/js/swfupload/swfupload.swf">
+    <hash md5="3dc9c7e7c13b2d4edc3ebb7d0e9cdb94">
+      <version>3.5.2</version>
+    </hash>
+  </file>
+  <file src="wp-includes/js/thickbox/thickbox.js">
+    <hash md5="bf6afa6da821fca17b1d36692adb88d6">
+      <version>2.7.1</version>
+    </hash>
+  </file>
+  <file src="wp-includes/fonts/dashicons.svg">
+    <hash md5="1c7e93cbb4adc19d2d93774853614642">
+      <version>3.8</version>
+    </hash>
+  </file>
+  <file src="wp-includes/fonts/dashicons.woff">
+    <hash md5="088ab6f8565d3a0bcc6bee7a64fee658">
+      <version>3.8</version>
+    </hash>
+  </file>
+  <file src="wp-includes/fonts/dashicons.eot">
+    <hash md5="2702a00aa0b250258802454163f55d22">
+      <version>3.8</version>
+    </hash>
+  </file>
+  <file src="b2-img/smilies/icon_biggrin.gif">
+    <hash md5="f970a6591668c625e4b9dbd3b7a450d7">
+      <version>0.71-gold</version>
+    </hash>
+  </file>
+  <file src="wp-includes/js/autosave.min.js">
+    <hash md5="5e1ea0845232846c1907d9fe70864d23">
+      <version>4.4</version>
+    </hash>
+  </file>
+  <file src="b2-img/smilies/icon_sad.gif">
+    <hash md5="5a50535a06def9d01076772e5e9d235b">
+      <version>0.71-gold</version>
+    </hash>
+  </file>
+  <file src="b2-img/smilies/icon_neutral.gif">
+    <hash md5="4e8b7a51c7f60a2362a4f67fbbc937e7">
+      <version>0.71-gold</version>
+    </hash>
+  </file>
+  <file src="b2-img/smilies/icon_question.gif">
+    <hash md5="0518596a4eb94c32a2b2ed898bdc3549">
+      <version>0.71-gold</version>
+    </hash>
+  </file>
+  <file src="wp-includes/js/plupload/wp-plupload.js">
+    <hash md5="839d6017ae96d4f4bfd3a8a88b5bd131">
+      <version>3.4.2</version>
+    </hash>
+  </file>
+  <file src="wp-includes/css/admin-bar.min.css">
+    <hash md5="ea21d81ce5d4c547a1c13476f1274ffb">
+      <version>3.8</version>
+    </hash>
+  </file>
+  <file src="layout2b.css">
+    <hash md5="baec6b6ccbf71d8dced9f1bf67c751e1">
+      <version>0.71-gold</version>
+    </hash>
+  </file>
+  <file src="wp-links/links-images/rating-6.gif">
+    <hash md5="7320c171d53bc359b0cd7ae1b53774d8">
+      <version>0.71-gold</version>
+    </hash>
+  </file>
+  <file src="wp-links/links-images/rating-0.gif">
+    <hash md5="745de19d2c08e95dfa07113d16d77ace">
+      <version>0.71-gold</version>
+    </hash>
+  </file>
+  <file src="wp-admin/b2menutop.txt">
+    <hash md5="75c44385f76be11e237f16e6197cf5f7">
+      <version>0.71-gold</version>
+    </hash>
+  </file>
+  <file src="wp-includes/js/tinymce/plugins/inlinepopups/skins/clearlooks2/window.css">
+    <hash md5="3008a345f351badd78a6d1ace150c901">
+      <version>2.5</version>
+    </hash>
+  </file>
+  <file src="wp-includes/js/tinymce/plugins/wpeditimage/js/editimage.js">
+    <hash md5="d4866567bb43a5f946d15a560629f063">
+      <version>2.6</version>
+    </hash>
+  </file>
+  <file src="wp-includes/js/tinymce/plugins/wpeditimage/editimage.html">
+    <hash md5="f325a73e1da24a2dc91c8ee18199bb02">
+      <version>2.6</version>
+    </hash>
+  </file>
+  <file src="wp-includes/js/tinymce/themes/advanced/skins/wp_theme/content.css">
+    <hash md5="ebd8fd56a3afb904d89ce735a8aba65b">
+      <version>2.6</version>
+    </hash>
+  </file>
+  <file src="wp-admin/js/user-profile.js">
+    <hash md5="e97fed4b3c06493ab6d1a3d15408ab15">
+      <version>4.3</version>
+    </hash>
+  </file>
+  <file src="wp-admin/js/widgets/media-widgets.min.js">
+    <hash md5="030addbc8364e837fde9d573fa433329">
+      <version>4.8</version>
+    </hash>
+  </file>
+  <file src="wp-admin/js/dashboard.dev.js">
+    <hash md5="9abcfc44be1c15b96453f8b62a5ababf">
+      <version>2.8</version>
+    </hash>
+  </file>
+  <file src="wp-includes/js/wp-ajax-response.js">
+    <hash md5="0289d1c13821599764774d55516ab81a">
+      <version>2.7.1</version>
+    </hash>
+  </file>
+  <file src="wp-includes/js/wp-api.min.js">
+    <hash md5="632a0df5fc4f02477aa93f838530c4e0">
+      <version>4.7</version>
+    </hash>
+  </file>
+  <file src="wp-includes/js/wp-api.js">
+    <hash md5="2933e0915238937a85a3a6730a6959da">
+      <version>4.7</version>
+    </hash>
+  </file>
+  <file src="wp-includes/js/imgareaselect/jquery.imgareaselect.js">
+    <hash md5="6bc47583ef2dfc50dda136132e465b5f">
+      <version>3.4.2</version>
+    </hash>
+  </file>
+  <file src="wp-admin/css/widgets.min.css">
+    <hash md5="c2c8b0acd264abd814f40dab2563f3cf">
+      <version>4.8</version>
+    </hash>
+  </file>
+  <file src="wp-includes/js/twemoji.min.js">
+    <hash md5="446ab329d408aa69da0e448298a039f4">
+      <version>4.4</version>
+    </hash>
+  </file>
+  <file src="wp-includes/js/twemoji.js">
+    <hash md5="3ee6d376cd81409dd12d29b5dfcbf385">
+      <version>4.4</version>
+    </hash>
+  </file>
+  <file src="wp-admin/css/widgets-rtl.min.css">
+    <hash md5="28048bd84191c288acbb362dea9da056">
+      <version>4.8</version>
+    </hash>
+  </file>
+  <file src="wp-includes/js/customize-selective-refresh.js">
+    <hash md5="68c83cd50c29e7924959c18b4ee5cc84">
+      <version>4.7</version>
+    </hash>
+  </file>
+  <file src="wp-admin/js/updates.js">
+    <hash md5="7b77a3b55888f6e3c119b109b126c2c6">
+      <version>4.7</version>
+    </hash>
+  </file>
+  <file src="wp-includes/css/customize-preview-rtl.css">
+    <hash md5="aa094951adcb751c299c0bd6b88468a8">
+      <version>4.7</version>
     </hash>
   </file>
 </wp-versions>

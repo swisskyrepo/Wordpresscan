@@ -14,6 +14,7 @@ class Wordpress:
 	index   = None
 	agent   = False
 	users   = {}
+	files   = set()
 
 	def __init__(self, url, user_agent, nocheck, max_threads):
 		print info("URL: %s" % url)
@@ -113,6 +114,7 @@ class Wordpress:
 		r = requests.get(self.url + 'readme.html', headers={"User-Agent":self.agent}, verify=False)
 
 		if "200" in str(r):
+			self.files.add('readme.html')
 
 			# Basic version fingerprinting
 			regex = 'Version (.*)'
@@ -130,6 +132,7 @@ class Wordpress:
 	def is_debug_log(self):
 		r = requests.get(self.url + 'debug.log', headers={"User-Agent":self.agent}, verify=False)
 		if "200" in str(r) and not "404" in r.text :
+			self.files.add('debug.log')
 			print critical( "Debug log file found: %s" % (self.url + 'debug.log') )
 
 
@@ -138,10 +141,26 @@ class Wordpress:
 	description : determine if there is any unsafe wp-config backup
 	"""
 	def is_backup_file(self):
-		backup = ['wp-config.php~', 'wp-config.php.save', '.wp-config.php.bck', 'wp-config.php.bck', '.wp-config.php.swp', 'wp-config.php.swp', 'wp-config.php.swo', 'wp-config.php_bak', 'wp-config.bak', 'wp-config.php.bak', 'wp-config.save', 'wp-config.old', 'wp-config.php.old', 'wp-config.php.orig', 'wp-config.orig', 'wp-config.php.original', 'wp-config.original', 'wp-config.txt', 'wp-config.php.txt', 'wp-config.backup', 'wp-config.php.backup', 'wp-config.copy', 'wp-config.php.copy', 'wp-config.tmp', 'wp-config.php.tmp', 'wp-config.zip', 'wp-config.php.zip', 'wp-config.db', 'wp-config.php.db', 'wp-config.dat','wp-config.php.dat', 'wp-config.tar.gz', 'wp-config.php.tar.gz', 'wp-config.back', 'wp-config.php.back', 'wp-config.test', 'wp-config.php.test']
+		backup = [
+			'wp-config.php~', 'wp-config.php.save', '.wp-config.php.bck', 
+			'wp-config.php.bck', '.wp-config.php.swp', 'wp-config.php.swp', 
+			'wp-config.php.swo', 'wp-config.php_bak', 'wp-config.bak', 
+			'wp-config.php.bak', 'wp-config.save', 'wp-config.old', 
+			'wp-config.php.old', 'wp-config.php.orig', 'wp-config.orig', 
+			'wp-config.php.original', 'wp-config.original', 'wp-config.txt', 
+			'wp-config.php.txt', 'wp-config.backup', 'wp-config.php.backup', 
+			'wp-config.copy', 'wp-config.php.copy', 'wp-config.tmp', 
+			'wp-config.php.tmp', 'wp-config.zip', 'wp-config.php.zip', 
+			'wp-config.db', 'wp-config.php.db', 'wp-config.dat',
+			'wp-config.php.dat', 'wp-config.tar.gz', 'wp-config.php.tar.gz', 
+			'wp-config.back', 'wp-config.php.back', 'wp-config.test', 
+			'wp-config.php.test', "wp-config.php.1","wp-config.php.2",
+			"wp-config.php.3", "wp-config.php._inc", "wp-config_inc"]
+
 		for b in backup:
 			r = requests.get(self.url + b, headers={"User-Agent":self.agent}, verify=False)
 			if "200" in str(r) and not "404" in r.text :
+				self.files.add(b)
 				print critical("A wp-config.php backup file has been found in: %s" % (self.url + b) )
 
 
@@ -151,7 +170,8 @@ class Wordpress:
 	"""
 	def is_xml_rpc(self):
 		r = requests.get(self.url + "xmlrpc.php", headers={"User-Agent":self.agent}, verify=False)
-		if "200" in str(r) and "404" in r.text :
+		if r.status_code == 405 :
+			self.files.add("xmlrpc.php")
 			print info("XML-RPC Interface available under: %s " % (self.url+"xmlrpc.php") )
 
 
@@ -166,6 +186,7 @@ class Wordpress:
 		for directory, name in zip(directories,dir_name):
 			r = requests.get(self.url + directory, headers={"User-Agent":self.agent}, verify=False)
 			if "Index of" in r.text:
+				self.files.add(directory)
 				print warning("%s directory has directory listing enabled : %s" % (name, self.url + directory))
 
 
@@ -176,6 +197,7 @@ class Wordpress:
 	def is_robots_text(self):
 		r = requests.get(self.url + "robots.txt", headers={"User-Agent":self.agent}, verify=False)
 		if "200" in str(r) and not "404" in r.text :
+			self.files.add("robots.txt")
 			print info("robots.txt available under: %s " % (self.url+"robots.txt") )
 			lines = r.text.split('\n')
 			for l in lines:
@@ -191,6 +213,7 @@ class Wordpress:
 		for f in files:
 			r = requests.get(self.url + f, headers={"User-Agent":self.agent}, verify=False)
 			if "200" in str(r) and not "404" in r.text :
+				self.files.add(f)
 				print info("%s available under: %s " % (f, self.url+f) )
 
 	"""
@@ -233,4 +256,5 @@ class Wordpress:
 		print "Themes  : %s" % self.themes
 		print "Agent   : %s" % self.agent
 		print "Users   : %s" % self.users
+		print "Files   : %s" % self.files
 		print "---------------------------"

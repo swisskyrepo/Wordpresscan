@@ -25,7 +25,7 @@ pip install -r requirements.txt
 
 ## Examples
 ### Example 1 : Basic update and scan of a wordpress
-```python
+```powershell
 python main.py -u "http://localhost/wordpress" --update --random-agent
 
 -u : Url of the WordPress
@@ -36,11 +36,11 @@ python main.py -u "http://localhost/wordpress" --update --random-agent
 
 ### Example 2 : Basic bruteforce (option --brute, option --nocheck)
 * bruteforce customs usernames
-```python
+```powershell
 python main.py -u "http://127.0.0.1/wordpress/" --brute --usernames "admin,guest" --passwords-list fuzz/wordlist.lst
 ```
 * bruteforce with usernames list
-```python
+```powershell
 python main.py -u "http://127.0.0.1/wordpress/" --brute --users-list fuzz/wordlist.lst --passwords-list fuzz/wordlist.lst
 ```
 * bruteforce detected users
@@ -49,7 +49,7 @@ python main.py -u "http://127.0.0.1/wordpress/" --brute --passwords-list fuzz/wo
 ```
 
 
-```python
+```powershell
 ╭─ 👻 swissky@crashlab: ~/Github/Wordpresscan  ‹master*›
 ╰─$ python main.py -u "http://127.0.0.1/wordpress/" --brute --users-list fuzz/wordlist.lst --passwords-list fuzz/wordlist.lst --nocheck       
 _______________________________________________________________
@@ -76,7 +76,7 @@ Bruteforcing - ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓�
 ```
 
 ### Example 3 : Thinking is overrated, this is aggressive, mostly not advised!
-```python
+```powershell
 python main.py -u "http://127.0.0.1/wordpress/" --fuzz
 
 [i] Enumerating components from aggressive fuzzing ...

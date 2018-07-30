@@ -155,7 +155,22 @@ class Wordpress:
 			'wp-config.php.dat', 'wp-config.tar.gz', 'wp-config.php.tar.gz', 
 			'wp-config.back', 'wp-config.php.back', 'wp-config.test', 
 			'wp-config.php.test', "wp-config.php.1","wp-config.php.2",
-			"wp-config.php.3", "wp-config.php._inc", "wp-config_inc"]
+			"wp-config.php.3", "wp-config.php._inc", "wp-config_inc",
+			
+			'wp-config.php.SAVE', '.wp-config.php.BCK', 
+			'wp-config.php.BCK', '.wp-config.php.SWP', 'wp-config.php.SWP', 
+			'wp-config.php.SWO', 'wp-config.php_BAK', 'wp-config.BAK', 
+			'wp-config.php.BAK', 'wp-config.SAVE', 'wp-config.OLD', 
+			'wp-config.php.OLD', 'wp-config.php.ORIG', 'wp-config.ORIG', 
+			'wp-config.php.ORIGINAL', 'wp-config.ORIGINAL', 'wp-config.TXT', 
+			'wp-config.php.TXT', 'wp-config.BACKUP', 'wp-config.php.BACKUP', 
+			'wp-config.COPY', 'wp-config.php.COPY', 'wp-config.TMP', 
+			'wp-config.php.TMP', 'wp-config.ZIP', 'wp-config.php.ZIP', 
+			'wp-config.DB', 'wp-config.php.DB', 'wp-config.DAT',
+			'wp-config.php.DAT', 'wp-config.TAR.GZ', 'wp-config.php.TAR.GZ', 
+			'wp-config.BACK', 'wp-config.php.BACK', 'wp-config.TEST', 
+			'wp-config.php.TEST', "wp-config.php._INC", "wp-config_INC"
+			]
 
 		for b in backup:
 			r = requests.get(self.url + b, headers={"User-Agent":self.agent}, verify=False)

@@ -47,10 +47,14 @@ def format_url(url):
 name        : unzip_file()
 description : unzip a file, used for user-agents.txt and timthumbs.txt
 """
-# TODO improve this , os.system is a dirty method
 def unzip_file(filename):
-    os.system('mv '+ filename + ' ' + filename + ".gz")
-    os.system('gzip -d '+ filename+".gz")
+  with open(filename, 'r') as f:
+    data = f.read()
+
+    # Check for a buggy .gz
+    if not "/timthumb.php" in data and not "Mozilla/5.0" in data:
+      os.system('mv '+ filename + ' ' + filename + ".gz")
+      os.system('gzip -d '+ filename+".gz")
 
 """
 name        : database_update()

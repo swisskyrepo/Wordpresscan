@@ -23,6 +23,10 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
+### This script is tested in kali linux , parrot os , ubuntu 
+in all of these opreating system (os) it works like butter 
+
+
 ## Examples
 ### Example 1 : Basic update and scan of a wordpress
 ```powershell

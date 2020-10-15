@@ -6,7 +6,7 @@ import json
 import os
 import imp
 
-from wordpress import *
+from engine.wordpress import *
 
 class Load_Plugins:
 	plugin_folder = "./plugins"
@@ -14,7 +14,7 @@ class Load_Plugins:
 	def __init__(self, wordpress):
 		available_plugins = os.listdir(self.plugin_folder)
 		for plugins in available_plugins:
-			if not ".pyc" in plugins and not "__init__" in plugins:
+			if not ".pyc" in plugins and not "__init__" in plugins and not "__pycache__" in plugins:
 
 				# Find and load the package
 				name = plugins.replace('.py','')
@@ -26,5 +26,5 @@ class Load_Plugins:
 				loaded = imp.load_module('plugins.' + name, f, file, desc)
 
 				# Run the __init__
-				print notice('Plugin %s loaded.' % loaded.name)
+				print(notice('Plugin %s loaded.' % loaded.name))
 				loaded.__init__(wordpress)

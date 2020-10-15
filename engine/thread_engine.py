@@ -2,17 +2,17 @@
 # -*- coding: utf-8 -*-
 from threading import Thread
 # from time import sleep
-from core import critical, info
+from engine.core import critical, info
 
 
 class ThreadEngine(object):
     def __init__(self, max_threads):
         if max_threads < 1:
-            print critical('Threads number must be > 0')
+            print(critical('Threads number must be > 0'))
             exit()
         self.max_threads = max_threads
         self.threads = []
-        print info('Start %d threads ...' % self.max_threads)
+        print(info('Start %d threads ...' % self.max_threads))
 
     def new_task(self, task, args):
         """ Try to launch the new task,
@@ -38,9 +38,9 @@ class ThreadEngine(object):
 
     def clean_threads(self):
         """ Remove ended threads """
-    	for thread in self.threads:
-    		if not thread.isAlive():
-    			self.threads.remove(thread)
+        for thread in self.threads:
+            if not thread.isAlive():
+                self.threads.remove(thread)
 
     def wait(self):
         """ Wait for threads end """

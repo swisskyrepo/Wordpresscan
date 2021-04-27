@@ -62,14 +62,14 @@ description : download and update the database from wpscan website
 warning     : user-agents.txt and timthumbs.txt are zip files
 """
 def database_update():
-  print "\033[93mUpdating database\033[92m - Last update: \033[0m" + database_last_date('database/local_vulnerable_files.xml')
+  print("\033[93mUpdating database\033[92m - Last update: \033[0m" + database_last_date('database/local_vulnerable_files.xml'))
   update_url = "https://data.wpscan.org/"
   update_files = [ 'local_vulnerable_files.xml', 'local_vulnerable_files.xsd',
   'timthumbs.txt', 'user-agents.txt', 'wp_versions.xml', 'wp_versions.xsd',
   'wordpresses.json', 'plugins.json', 'themes.json']
 
   for f in update_files:
-    print "\t\033[93mDownloading \033[0m"+ f +" \033[92mFile updated !\033[0m"
+    print("\t\033[93mDownloading \033[0m"+ f +" \033[92mFile updated !\033[0m")
     download_raw_file(update_url+f, "database/"+f, True)
 
   unzip_file("database/user-agents.txt")
@@ -214,26 +214,26 @@ def display_vulnerable_component(name, version, file):
     with open('database/' + file + '.json') as data_file:
       data = json.load(data_file)
 
-    print warning("Name: %s - v%s" % (name, version))
+    print(warning("Name: %s - v%s" % (name, version)))
     if name in data.keys():
 
       # Display the out of date info if the version is lower of the latest version
       if is_lower(version, data[name]['latest_version'], False):
-        print info("The version is out of date, the latest version is %s" % data[name]['latest_version'])
+        print(info("The version is out of date, the latest version is %s" % data[name]['latest_version']))
 
       # Display the vulnerability if it's not patched version
       for vuln in data[name]['vulnerabilities']:
         if 'fixed_in' in vuln.keys() and (vuln['fixed_in'] == None or is_lower(version, vuln['fixed_in'], True)):
 
           # Main informations
-          print "\t",vulnerable("%s : %s - ID:%s" % (vuln['vuln_type'], vuln['title'] , vuln['id']) )
-          print "\t",display("Fixed in %s"% vuln['fixed_in'])
+          print("\t",vulnerable("%s : %s - ID:%s" % (vuln['vuln_type'], vuln['title'] , vuln['id']) ))
+          print("\t",display("Fixed in %s"% vuln['fixed_in']))
 
           # Display references
-          print "\t",display("References:")
+          print("\t",display("References:"))
           for refkey in vuln['references'].keys():
             for ref in vuln['references'][refkey]:
               if refkey != 'url':
-                print "\t\t - %s %s" % (refkey.capitalize(), ref)
+                print("\t\t - %s %s" % (refkey.capitalize(), ref))
               else:
-                print "\t\t - %s" %ref
+                print("\t\t - %s" % ref)

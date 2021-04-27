@@ -11,5 +11,5 @@ name = "Thank You"
 
 def __init__(wordpress):
 	# INSERT CODE HERE!
-	print "Thank you for using this software :)"
+	print("Thank you for using this software :)")
 	return

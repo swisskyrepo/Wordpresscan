@@ -6,9 +6,9 @@ import json
 import os
 import urllib
 
-from core import *
-from wordpress import *
-from thread_engine import ThreadEngine
+from engine.core import *
+from engine.wordpress import *
+from engine.thread_engine import ThreadEngine
 
 class Brute_Engine:
 	def __init__(self, wordpress, brute, usernames, users_list, passwords_list):
@@ -39,7 +39,7 @@ class Brute_Engine:
 
 					print(notice("Bruteforcing detected users: "))
 					for user in wordpress.users:
-						print info("User found "+ user['slug'])
+						print(info("User found "+ user['slug']))
 						self.bruteforcing_pass(wordpress, user['slug'], passwords_list)
 
 
